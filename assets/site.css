@@ -34,7 +34,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(6, 7, 10, .82); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .site-header .container { display: flex; align-items: center; gap: 28px; height: 56px; }
 .brand { display: flex; align-items: center; gap: 10px; font: 700 15px var(--mono); letter-spacing: .14em; }
-.brand svg { width: 26px; height: 26px; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; box-shadow: 0 0 18px -4px rgba(200, 210, 225, .35); }
 .brand small { font: 500 10px var(--mono); color: var(--muted); letter-spacing: .12em; display: block; margin-top: -2px; }
 .nav { display: flex; gap: 2px; }
 .nav a { padding: 7px 12px; border-radius: var(--r); color: var(--muted); font-size: 13px; font-weight: 500; transition: color .15s, background .15s; }

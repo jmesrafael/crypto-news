@@ -1,11 +1,11 @@
 // Local dev server that mimics Vercel: /api/<name> runs api/<name>.js, clean URLs map to .html files.
-// Run: node server.js  ->  http://localhost:8787
+// Run: npm run dev  ->  http://localhost:8787
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
 const PORT = Number(process.env.PORT || 8787);
-const ROOT = __dirname;
+const ROOT = path.join(__dirname, '..');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
 const cache = new Map(); // simple 60s memo per API route so local dev doesn't hammer free APIs
 

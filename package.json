@@ -4,7 +4,7 @@
   "private": true,
   "description": "Latest crypto news from 11 free RSS feeds with a keyword long/short sentiment read.",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node scripts/dev-server.js"
   },
   "engines": {
     "node": ">=18"

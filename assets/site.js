@@ -117,7 +117,7 @@
   }
 
   // ---- shell
-  const LOGO = `<svg viewBox="0 0 32 32" fill="none"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13L16 2Z" stroke="var(--accent)" stroke-width="1.6"/><path d="M8 16h4l2-5 4 10 2-5h4" stroke="var(--accent2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const LOGO = `<img src="/assets/favicon.svg" alt="" width="30" height="30">`;
 
   function header() {
     const el = document.getElementById('site-header');

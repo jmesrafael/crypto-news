@@ -1,0 +1,5 @@
+# Local-only tooling: keeps Vercel serving the site as static pages + api/ functions.
+scripts/
+.github/
+.cache/
+README.md

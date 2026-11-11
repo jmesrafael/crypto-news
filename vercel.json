@@ -1,10 +1,14 @@
 {
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
   "cleanUrls": true,
   "regions": ["sin1"],
   "functions": {
     "api/calendar.js": { "includeFiles": "data/**" }
   },
   "headers": [
-    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }] }
+    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }] },
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=600, s-maxage=3600" }] }
   ]
 }
