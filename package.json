@@ -1,0 +1,12 @@
+{
+  "name": "crypto-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Latest crypto news from 11 free RSS feeds with a keyword long/short sentiment read.",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
