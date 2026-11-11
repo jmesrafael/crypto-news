@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse · News</title>
+<meta name="description" content="Live crypto, markets, macro, tech, AI, banking and world news with LONG / SHORT sentiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .mood { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 12px 14px; }
+  .featured { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+  .featured .side { display: grid; gap: 14px; }
+  .featured .side .card .img { aspect-ratio: 16/6.5; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .toolbar h2 { margin: 0 auto 0 0; font-size: 15px; }
+  input[type=search] { width: 180px; }
+  .more-btn { display: block; width: 100%; padding: 12px; background: var(--panel2); color: var(--muted); border: 0; border-top: 1px solid var(--line); font-size: 13px; }
+  @media (max-width: 760px) { .featured { grid-template-columns: 1fr; } .mood { grid-template-columns: 1fr; } input[type=search] { width: 100%; } }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div><h1>News Wire</h1><p id="status">Loading…</p></div>
+    <button class="btn" id="refresh">↻ Refresh</button>
+  </div>
+
+  <nav class="tabs" id="tabs"></nav>
+  <div class="panel mood section" id="mood" style="margin-top:14px"></div>
+  <section class="featured section" id="featured"></section>
+
+  <section class="section">
+    <div class="toolbar">
+      <h2 id="listTitle">Latest</h2>
+      <div class="seg" id="biasSeg"><button data-v="ALL" class="on">All</button><button data-v="LONG">Long</button><button data-v="SHORT">Short</button><button data-v="NEUTRAL">Neutral</button></div>
+      <label class="toggle"><input type="checkbox" id="impact"> ⚡ High impact</label>
+      <select id="asset"><option value="">All assets</option></select>
+      <select id="source"><option value="">All sources</option></select>
+      <input type="search" id="q" placeholder="Search headlines…">
+    </div>
+    <div class="panel news-list" id="list"></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script>
+const { esc, swr, newsRow, newsCard, biasBadge, setLive, store, CAT_LABEL } = CNP;
+const $ = s => document.querySelector(s);
+const CATS = [['all', 'All'], ['crypto', 'Crypto'], ['markets', 'Markets'], ['macro', 'Macro & Central Banks'], ['tech', 'Tech'], ['ai', 'AI'], ['banking', 'Banking & Payments'], ['world', 'World']];
+const params = new URLSearchParams(location.search);
+let data = { items: [], sources: [] }, pending = null, shown = 100;
+let filter = { cat: params.get('cat') || store.get('newsCat') || 'all', bias: 'ALL', asset: params.get('asset') || '', source: '', q: '', impact: false };
+const seen = new Set();
+const inCat = i => filter.cat === 'all' || i.category === filter.cat;
+
+function renderTabs() {
+  const counts = {}; data.items.forEach(i => counts[i.category] = (counts[i.category] || 0) + 1);
+  $('#tabs').innerHTML = CATS.filter(([k]) => k === 'all' || counts[k]).map(([k, l]) => `<button data-c="${k}" class="${filter.cat === k ? 'on' : ''}">${l}<small>${k === 'all' ? data.items.length : counts[k]}</small></button>`).join('');
+}
+function renderMood() {
+  const r = data.items.filter(i => inCat(i) && Date.now() - i.time < 12 * 3600e3);
+  const c = { LONG: 0, SHORT: 0, NEUTRAL: 0 }; r.forEach(i => c[i.bias]++);
+  const n = r.length || 1, pct = k => c[k] / n * 100, net = c.LONG - c.SHORT, lean = Math.abs(net) / n;
+  const [b, l] = net > 0 && lean > .08 ? ['LONG', 'LEANING BULLISH'] : net < 0 && lean > .08 ? ['SHORT', 'LEANING BEARISH'] : ['NEUTRAL', 'MIXED'];
+  $('#mood').innerHTML = `<span class="label">12h news mood${filter.cat !== 'all' ? ' · ' + esc(CAT_LABEL[filter.cat]) : ''} <span class="badge ${b}" style="margin-left:6px">${l}</span></span>
+    <div class="bar"><i style="width:${pct('LONG')}%;background:var(--long)"></i><i style="width:${pct('NEUTRAL')}%;background:#2a3342"></i><i style="width:${pct('SHORT')}%;background:var(--short)"></i></div>
+    <span class="mono muted" style="font-size:12px">▲ ${c.LONG} · ● ${c.NEUTRAL} · ▼ ${c.SHORT}</span>`;
+}
+function renderFeatured() {
+  const items = data.items.filter(inCat), pool = items.filter(i => Date.now() - i.time < 6 * 3600e3);
+  const rank = i => Math.abs(i.score) + (i.impact ? 5 : 0) + (i.image ? 3 : 0) - (Date.now() - i.time) / 3600e3;
+  const top = (pool.length >= 3 ? pool : items).slice().sort((a, b) => rank(b) - rank(a)).slice(0, 3);
+  $('#featured').innerHTML = top.length ? newsCard(top[0], { big: true }) + `<div class="side">${top.slice(1).map(i => newsCard(i)).join('')}</div>` : '';
+}
+function renderList() {
+  const q = filter.q.toLowerCase();
+  const rows = data.items.filter(i => inCat(i) && (filter.bias === 'ALL' || i.bias === filter.bias) && (!filter.impact || i.impact) &&
+    (!filter.asset || (i.assets || []).includes(filter.asset)) && (!filter.source || i.source === filter.source) && (!q || (i.title + ' ' + i.summary).toLowerCase().includes(q)));
+  $('#listTitle').textContent = `Latest ${filter.cat === 'all' ? '' : CAT_LABEL[filter.cat] + ' '}· ${rows.length}`;
+  $('#list').innerHTML = rows.length ? rows.slice(0, shown).map(i => newsRow(i, { fresh: seen.size && !seen.has(i.link) })).join('') +
+    (rows.length > shown ? `<button class="more-btn" id="more">Show more (${rows.length - shown} left)</button>` : '') : '<div class="empty">No news matches these filters.</div>';
+}
+function fillSelects() {
+  const items = data.items.filter(inCat);
+  const fill = (sel, values, want) => { sel.length = 1; values.forEach(v => sel.add(new Option(v, v))); sel.value = values.includes(want) ? want : ''; };
+  fill($('#asset'), [...new Set(items.flatMap(i => i.assets || []))].sort(), filter.asset);
+  fill($('#source'), [...new Set(items.map(i => i.source))].sort(), filter.source);
+  filter.asset = $('#asset').value; filter.source = $('#source').value;
+}
+const renderAll = () => { renderTabs(); fillSelects(); renderMood(); renderFeatured(); renderList(); };
+
+function apply(d, stale) {
+  data = d; pending = null;
+  $('#refresh').textContent = '↻ Refresh'; $('#refresh').classList.remove('primary');
+  renderAll(); setLive(!stale);
+  const ok = (d.sources || []).filter(s => s.ok).length;
+  $('#status').textContent = `${d.items.length} stories · ${ok}/${(d.sources || []).length} sources · ${stale ? 'saved copy from' : 'updated'} ${new Date(d.updated).toLocaleTimeString()}`;
+  setTimeout(() => d.items.forEach(i => seen.add(i.link)), 0);
+}
+function load(force) {
+  swr('/api/news', (d, meta) => {
+    if (!d || !d.items) return;
+    if (meta.stale || force || !seen.size || window.scrollY < 300) return apply(d, meta.stale);
+    const n = d.items.filter(i => !seen.has(i.link)).length;
+    if (n) { pending = d; $('#refresh').textContent = `↻ ${n} new`; $('#refresh').classList.add('primary'); }
+  }, { key: 'news' });
+}
+
+$('#tabs').onclick = e => { const b = e.target.closest('button'); if (!b) return; filter.cat = b.dataset.c; shown = 100; store.set('newsCat', filter.cat); renderAll(); };
+$('#biasSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; document.querySelectorAll('#biasSeg button').forEach(x => x.classList.toggle('on', x === b)); filter.bias = b.dataset.v; renderList(); };
+$('#impact').onchange = e => { filter.impact = e.target.checked; renderList(); };
+$('#asset').onchange = e => { filter.asset = e.target.value; renderList(); };
+$('#source').onchange = e => { filter.source = e.target.value; renderList(); };
+$('#q').oninput = e => { filter.q = e.target.value; renderList(); };
+$('#list').onclick = e => { if (e.target.id === 'more') { shown += 100; renderList(); } };
+$('#refresh').onclick = () => pending ? apply(pending) : load(true);
+
+load(true);
+setInterval(() => load(false), 60000);
+</script>
+</body>
+</html>

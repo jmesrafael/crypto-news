@@ -1,0 +1,55 @@
+name: Pulse highlights
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'   # every 3h: collect headlines into the rolling 8-day history
+    - cron: '0 23 * * *'    # 23:00 UTC = 07:00 Asia/Manila: publish weekly highlights
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Also publish highlights now'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pulse
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # History lives in the Actions cache (not git) so collecting doesn't create commits or redeploys.
+      - name: Restore history
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache
+          key: history-${{ github.run_id }}
+          restore-keys: history-
+
+      - name: Collect headlines
+        run: node scripts/pulse.js collect
+
+      - name: Save history
+        uses: actions/cache/save@v4
+        with:
+          path: .cache
+          key: history-${{ github.run_id }}
+
+      - name: Publish highlights
+        if: github.event.schedule == '0 23 * * *' || (github.event_name == 'workflow_dispatch' && inputs.publish)
+        run: |
+          node scripts/pulse.js publish
+          git config user.name "pulse-bot"
+          git config user.email "pulse-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "data: highlights $(TZ=Asia/Manila date +%F)" && git push)

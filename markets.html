@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markets · Pulse</title>
+<meta name="description" content="Live crypto market mood, watchlist, heatmap, top 100 coins, macro and Fear & Greed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .mk-row { display: grid; grid-template-columns: 1.6fr 1fr; gap: 14px; }
+  .mk-filter { display: flex; gap: 8px; align-items: center; }
+  @media (max-width: 1080px) { .mk-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main><div class="container">
+  <div class="page-title">
+    <div><h1>Markets</h1><p>Live mood, your watchlist, the top 100 coins, macro and sentiment. Prices refresh every 2 minutes.</p></div>
+    <div class="label" id="mk-updated">Loading…</div>
+  </div>
+
+  <div id="overview"></div>
+
+  <section class="section">
+    <div class="section-h"><h2>Heatmap</h2><span class="label">top 50 · 24h change · size by rank</span></div>
+    <div class="panel" id="heatmap"></div>
+  </section>
+
+  <section class="section mk-row">
+    <div>
+      <div class="section-h"><h2>Fear & Greed</h2><span class="label">30 days</span></div>
+      <div class="panel"><div class="panel-b" id="fgchart"></div></div>
+    </div>
+    <div>
+      <div class="section-h"><h2>Watchlist News</h2><span class="label">SOL · ZEC · ADA · NEAR · GALA</span><a class="more" href="/news">All news →</a></div>
+      <div class="panel"><div class="panel-b" id="wl-bias" style="display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line)"></div><div class="news-list" id="wl-news"><div class="empty">Loading…</div></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Top 100</h2><span class="label">click a column to sort</span>
+      <div class="mk-filter" style="margin-left:auto"><input type="search" id="q" placeholder="Filter coins…"></div></div>
+    <div class="panel" id="table"></div>
+  </section>
+</div></main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script src="/assets/widgets.js"></script>
+<script>
+(function () {
+  const W = window.CNPWidgets, $ = s => document.querySelector(s);
+  let data = null, q = '';
+
+  function filtered() {
+    if (!data || !q) return data;
+    const s = q.toLowerCase();
+    return { ...data, coins: data.coins.filter(c => c.name.toLowerCase().includes(s) || c.symbol.toLowerCase().includes(s)) };
+  }
+
+  function render(d, meta) {
+    if (d) data = d;
+    W.renderOverview($('#overview'), data);
+    W.renderHeatmap($('#heatmap'), data, 50);
+    W.renderFearGreedChart($('#fgchart'), data);
+    W.renderCoinTable($('#table'), filtered());
+    const stale = !meta || meta.stale || meta.error;
+    if (window.CNP.setLive) window.CNP.setLive(!stale);
+    $('#mk-updated').textContent = data && data.updated
+      ? (stale ? 'Saved copy · ' : 'Updated ') + new Date(data.updated).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      : (meta && meta.error ? 'Market data unavailable' : 'Loading…');
+  }
+
+  $('#q').oninput = e => { q = e.target.value.trim(); W.renderCoinTable($('#table'), filtered()); };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    render(null, null); // skeletons
+    const load = () => window.CNP.swr('/api/markets', (d, meta) => render(d, meta));
+    load();
+    setInterval(load, 120000);
+
+    // Watchlist news: last 3 days of headlines mentioning the watchlist coins, with a net news bias per coin.
+    const WL = ['SOL', 'ZEC', 'ADA', 'NEAR', 'GALA'];
+    window.CNP.swr('/api/news', d => {
+      if (!d || !d.items) return;
+      const hits = d.items.filter(i => (i.assets || []).some(a => WL.includes(a)));
+      $('#wl-bias').innerHTML = WL.map(s => {
+        const xs = hits.filter(i => i.assets.includes(s));
+        const net = xs.reduce((n, i) => n + (i.bias === 'LONG' ? 1 : i.bias === 'SHORT' ? -1 : 0), 0);
+        const b = !xs.length ? 'NEUTRAL' : net / xs.length > .15 ? 'LONG' : net / xs.length < -.15 ? 'SHORT' : 'NEUTRAL';
+        return `<span class="badge ${b}" title="${xs.length} headlines">${s} · ${xs.length ? b : 'no news'}${xs.length ? ' · ' + xs.length : ''}</span>`;
+      }).join('');
+      $('#wl-news').innerHTML = hits.slice(0, 7).map(i => window.CNP.newsRow(i)).join('') || '<div class="empty">No watchlist headlines in the last 3 days.</div>';
+    }, { key: 'news' });
+  });
+})();
+</script>
+</body>
+</html>

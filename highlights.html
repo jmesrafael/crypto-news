@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse · Weekly Highlights</title>
+<meta name="description" content="The week's biggest market-moving stories, ranked by how many outlets covered them. Published daily at 07:00 PHT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .stats { display: flex; gap: 22px; flex-wrap: wrap; font: 12px var(--mono); color: var(--muted); }
+  .stats b { color: var(--text); font-weight: 600; }
+  .lead { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 14px; }
+  .lead .hl.big { min-height: 440px; }
+  .lead-side { display: grid; gap: 14px; align-content: start; }
+  .story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .story-grid .hl { min-height: 300px; }
+  .roundups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .how { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .how code { font: 12px var(--mono); color: var(--accent2); background: var(--panel3); padding: 1px 5px; border-radius: 3px; }
+  @media (max-width: 1080px) { .lead { grid-template-columns: 1fr; } .story-grid, .roundups { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 760px) { .story-grid, .roundups { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div>
+      <h1>Highlights This Week</h1>
+      <p>The stories most outlets covered over the last 7 days. Each story stays on the list for the whole week, and the list republishes every day at 07:00 PHT.</p>
+    </div>
+    <select id="date" aria-label="Brief date"></select>
+  </div>
+  <div class="stats" id="stats"></div>
+
+  <section class="section lead" id="lead"><div class="hl big skeleton"></div><div class="lead-side"><div class="hl skeleton"></div><div class="hl skeleton"></div></div></section>
+  <section class="section">
+    <div class="section-h"><h2>More of the week</h2><span class="label">ranked</span></div>
+    <div class="story-grid" id="rest"></div>
+  </section>
+  <section class="section" id="roundup-sec" hidden>
+    <div class="section-h"><h2>Outlet weekly roundups</h2><span class="label">written by the outlets</span></div>
+    <div class="roundups" id="roundups"></div>
+  </section>
+  <section class="section panel">
+    <div class="panel-h"><span class="label">How this works</span></div>
+    <div class="panel-b how">
+      A scheduled job collects headlines from all sources every 3 hours. Every day at 07:00 PHT it groups headlines that describe the same story, using the uncommon words they share. Stories are ranked by <b>how many different outlets</b> covered them, whether they touch market-moving topics (⚡), how many days they kept running, and how strongly bullish or bearish the coverage is. No AI is involved.<br>
+      To pin a story by hand, add it to <code>data/pinned.json</code> as <code>{"title","link","summary","image","source","date"}</code>. Pins stay up for 7 days from their <code>date</code>, or until an <code>until</code> date if you set one. To republish right away, run the workflow from the GitHub Actions tab.
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script>
+const { esc, swr, highlightCard, newsCard, setLive } = CNP;
+const $ = s => document.querySelector(s);
+
+function render(d) {
+  if (!d) { $('#lead').innerHTML = '<div class="empty">No highlights published yet.</div>'; return; }
+  const pins = d.pinned || [], list = [...pins, ...(d.highlights || [])];
+  const fmt = t => new Date(t).toLocaleString('en-US', { timeZone: 'Asia/Manila', month: 'short', day: 'numeric' });
+  $('#stats').innerHTML = `<span>Published <b>${new Date(d.generated).toLocaleString('en-US', { timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })} PHT</b></span>
+    <span>Window <b>${fmt(d.window.from)} – ${fmt(d.window.to)}</b></span><span><b>${d.stats?.stories ?? '–'}</b> stories scanned</span><span><b>${(d.highlights || []).length}</b> highlights</span>${pins.length ? `<span><b>${pins.length}</b> pinned</span>` : ''}`;
+  const rk = k => k < pins.length ? 0 : k - pins.length + 1;
+  $('#lead').innerHTML = list.length ? highlightCard(list[0], { big: true, rank: rk(0), related: true }) +
+    `<div class="lead-side">${list.slice(1, 3).map((h, k) => highlightCard(h, { rank: rk(k + 1), related: true })).join('')}</div>` : '<div class="empty">No major multi-outlet stories this week yet.</div>';
+  $('#rest').innerHTML = list.slice(3).map((h, k) => highlightCard(h, { rank: rk(k + 3), related: true })).join('') || '<div class="empty">—</div>';
+  const r = d.roundups || [];
+  $('#roundup-sec').hidden = !r.length;
+  $('#roundups').innerHTML = r.map(i => newsCard({ ...i, bias: 'NEUTRAL' })).join('');
+}
+
+async function loadDates() {
+  try {
+    const dates = await (await fetch('/data/briefs/index.json', { cache: 'no-store' })).json();
+    $('#date').innerHTML = '<option value="">Latest</option>' + dates.map(d => `<option value="${esc(d)}">${new Date(d + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}</option>`).join('');
+  } catch { $('#date').hidden = true; }
+}
+$('#date').onchange = async e => {
+  const v = e.target.value;
+  if (!v) return swr('/data/highlights.json', render);
+  try { render(await (await fetch(`/data/briefs/${v}.json`)).json()); } catch { render(null); }
+};
+
+swr('/data/highlights.json', (d, m) => { render(d); if (m && !m.error) setLive(true); });
+loadDates();
+</script>
+</body>
+</html>

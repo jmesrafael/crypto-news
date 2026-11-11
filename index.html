@@ -3,313 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crypto News Pulse</title>
+<title>Pulse · Market Overview</title>
+<meta name="description" content="Crypto and global market overview: mood, watchlist, weekly highlights, key event countdowns and live news sentiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-  :root {
-    --bg: #0d1016; --panel: #151a23; --panel2: #1b2130; --line: #262e3f;
-    --text: #e6e9ef; --muted: #8a93a6; --long: #22c55e; --short: #ef4444; --neutral: #94a3b8; --accent: #f59e0b;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-  a { color: inherit; text-decoration: none; }
-  button { font: inherit; cursor: pointer; }
-  .wrap { max-width: 1140px; margin: 0 auto; padding: 16px 16px 60px; }
-  header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
-  h1 { font-size: 20px; margin: 0; letter-spacing: .3px; }
-  h1 span { color: var(--accent); }
-  .status { color: var(--muted); font-size: 12px; margin-left: auto; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--long); margin-right: 6px; animation: pulse 2s infinite; }
-  .dot.stale { background: var(--accent); }
-  @keyframes pulse { 50% { opacity: .3; } }
-  .btn { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; font-size: 12px; }
-  .btn:hover { border-color: #3a4560; }
-  .btn.newbtn { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 700; }
-
-  /* market strip */
-  .strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 12px; scrollbar-width: thin; }
-  .tick { flex: 0 0 auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 12px; display: grid; gap: 1px; min-width: 92px; }
-  .tick .s { color: var(--muted); font-size: 11px; }
-  .tick .p { font-weight: 650; font-variant-numeric: tabular-nums; }
-  .tick .c { font-size: 11px; font-variant-numeric: tabular-nums; }
-  .up { color: var(--long); } .dn { color: var(--short); }
-  .tick.fg .p { font-size: 13px; }
-  .sep { flex: 0 0 1px; background: var(--line); margin: 4px 2px; }
-
-  /* category tabs */
-  .tabs { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 12px; padding-bottom: 2px; }
-  .tabs button { flex: 0 0 auto; background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 13px; }
-  .tabs button.on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
-  .tabs button small { opacity: .65; margin-left: 4px; }
-
-  .mood { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; }
-  .mood b { font-size: 13px; }
-  .bar { height: 10px; border-radius: 6px; overflow: hidden; display: flex; background: var(--line); }
-  .bar i { display: block; height: 100%; }
-  .mood .legend { font-size: 12px; color: var(--muted); white-space: nowrap; }
-
-  .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; letter-spacing: .5px; padding: 3px 8px; border-radius: 5px; white-space: nowrap; }
-  .LONG { color: var(--long); background: color-mix(in srgb, var(--long) 14%, transparent); }
-  .SHORT { color: var(--short); background: color-mix(in srgb, var(--short) 14%, transparent); }
-  .NEUTRAL { color: var(--neutral); background: color-mix(in srgb, var(--neutral) 12%, transparent); }
-  .impact { color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
-
-  .featured { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; margin-bottom: 22px; }
-  .featured .side { display: grid; gap: 14px; }
-  .card { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .15s; }
-  .card:hover { border-color: #3a4560; }
-  .card .img { background: var(--panel2) center/cover no-repeat; aspect-ratio: 16/8; }
-  .side .card .img { aspect-ratio: 16/6; }
-  .card .body { padding: 12px 14px 14px; display: grid; gap: 6px; }
-  .card h2 { margin: 0; font-size: 20px; line-height: 1.25; }
-  .side .card h2 { font-size: 15px; }
-  .card p { margin: 0; color: var(--muted); font-size: 13px; }
-  .card .tags { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; }
-  .card .tags .badge { backdrop-filter: blur(6px); background: rgba(13,16,22,.82); }
-  .meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; color: var(--muted); font-size: 12px; }
-  .chip { font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--panel2); color: #c4cad6; border: 1px solid var(--line); }
-  .cat { text-transform: uppercase; letter-spacing: .4px; font-size: 10px; font-weight: 700; color: var(--muted); }
-
-  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
-  .toolbar h3 { margin: 0 auto 0 0; font-size: 15px; }
-  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .seg button { background: var(--panel); color: var(--muted); border: 0; padding: 6px 12px; font-size: 12px; }
-  .seg button + button { border-left: 1px solid var(--line); }
-  .seg button.on { background: var(--panel2); color: var(--text); }
-  .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; user-select: none; }
-  select, input[type=search] { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 12px; }
-  input[type=search] { width: 160px; }
-
-  .list { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-  .row { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center; padding: 11px 14px; border-top: 1px solid var(--line); }
-  .row:first-child { border-top: 0; }
-  .row:hover { background: var(--panel2); }
-  .row.fresh { box-shadow: inset 3px 0 0 var(--accent); }
-  .row .time { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
-  .row .title { font-weight: 550; }
-  .row .meta { margin-top: 3px; }
-  .row .right { display: grid; justify-items: end; gap: 4px; }
-  .str { width: 60px; height: 4px; border-radius: 3px; background: var(--line); overflow: hidden; }
-  .str i { display: block; height: 100%; }
-  .empty { padding: 30px; text-align: center; color: var(--muted); }
-  .more { display: block; width: 100%; padding: 12px; background: var(--panel2); color: var(--muted); border: 0; border-top: 1px solid var(--line); font-size: 13px; }
-  .note { color: var(--muted); font-size: 11px; margin-top: 14px; text-align: center; }
-
-  @media (max-width: 760px) {
-    .featured { grid-template-columns: 1fr; }
-    .row { grid-template-columns: 1fr auto; }
-    .row .time { grid-column: 1 / -1; }
-    .mood { grid-template-columns: 1fr; }
-    input[type=search] { width: 100%; }
-    .status { margin-left: 0; }
-  }
+  .split { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  .side-stack { display: grid; gap: 14px; }
+  .sector { display: grid; grid-template-columns: 92px 1fr 54px; gap: 10px; align-items: center; padding: 7px 0; font-size: 12.5px; }
+  .sector + .sector { border-top: 1px dashed var(--line); }
+  .sector .net { font: 600 11px var(--mono); text-align: right; }
+  .mentions { display: flex; flex-wrap: wrap; gap: 6px; }
+  .mention { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--line2); background: var(--panel2); font: 12px var(--mono); }
+  .mention i { width: 6px; height: 6px; border-radius: 50%; }
+  .ev { display: grid; grid-template-columns: 74px 38px 1fr auto; gap: 10px; align-items: center; padding: 8px 14px; border-top: 1px solid var(--line); font-size: 12.5px; }
+  .ev:first-child { border-top: 0; }
+  .ev .t { font: 11.5px var(--mono); color: var(--muted); }
+  .ev .c { font: 700 11px var(--mono); color: var(--accent2); }
+  .ev .v { font: 11px var(--mono); color: var(--muted); text-align: right; }
+  .ev.past { opacity: .5; }
+  .hero-sub { display: flex; gap: 14px; flex-wrap: wrap; font: 12px var(--mono); color: var(--muted); }
+  @media (max-width: 1080px) { .split { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Crypto News <span>Pulse</span></h1>
-    <div class="status"><span id="status">Loading…</span><button class="btn" id="refresh">↻ Refresh</button></div>
-  </header>
-
-  <div class="strip" id="strip"></div>
-  <nav class="tabs" id="tabs"></nav>
-  <div class="mood" id="mood"></div>
-  <section class="featured" id="featured"></section>
-
-  <div class="toolbar">
-    <h3 id="listTitle">Latest news</h3>
-    <div class="seg" id="biasSeg">
-      <button data-v="ALL" class="on">All</button>
-      <button data-v="LONG">Long</button>
-      <button data-v="SHORT">Short</button>
-      <button data-v="NEUTRAL">Neutral</button>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div>
+      <h1>Market Overview</h1>
+      <p class="hero-sub"><span id="today"></span><span id="brief-stamp"></span></p>
     </div>
-    <label class="toggle"><input type="checkbox" id="impact"> ⚡ High impact</label>
-    <select id="asset"><option value="">All assets</option></select>
-    <select id="source"><option value="">All sources</option></select>
-    <input type="search" id="q" placeholder="Search…">
   </div>
-  <div class="list" id="list"></div>
-  <div class="note">LONG / SHORT is an automatic keyword read of what a headline implies for crypto and risk assets. It is not trading advice. News refreshes every 60 s, prices every 60 s.</div>
-</div>
 
+  <section>
+    <div class="section-h"><h2>Key Events</h2><span class="label">countdown · PHT</span><a class="more" href="/calendar">Full calendar →</a></div>
+    <div class="cd-row" id="cd"><div class="cd skeleton" style="height:118px"></div><div class="cd skeleton"></div><div class="cd skeleton"></div><div class="cd skeleton"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Market Pulse</h2><span class="label">mood · watchlist · movers</span><a class="more" href="/markets">Markets →</a></div>
+    <div id="overview"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Highlights This Week</h2><span class="label" id="hl-label">biggest stories by outlet coverage</span><a class="more" href="/highlights">All highlights →</a></div>
+    <div class="hl-grid" id="hl"><div class="hl big skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div></div>
+  </section>
+
+  <section class="section split">
+    <div class="panel">
+      <div class="panel-h"><span class="label">Latest headlines</span><span class="meta" id="news-meta"></span><a class="more acc mono" style="font-size:12px" href="/news">All news →</a></div>
+      <div class="news-list" id="latest"><div class="empty">Loading…</div></div>
+    </div>
+    <div class="side-stack">
+      <div class="panel">
+        <div class="panel-h"><span class="label">News sentiment by sector</span><span class="meta">last 24h</span></div>
+        <div class="panel-b" id="sectors"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><span class="label">Most mentioned</span><span class="meta">24h · color = net bias</span></div>
+        <div class="panel-b"><div class="mentions" id="mentions"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><span class="label">High-impact this week</span><a class="meta acc" href="/calendar">calendar →</a></div>
+        <div id="week-ev"><div class="empty">Loading…</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script src="/assets/widgets.js"></script>
 <script>
+const { esc, ago, swr, newsRow, highlightCard, countdown, setLive, CAT_LABEL } = CNP;
 const $ = s => document.querySelector(s);
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const COLORS = { LONG: 'var(--long)', SHORT: 'var(--short)', NEUTRAL: 'var(--neutral)' };
-const ARROW = { LONG: '▲', SHORT: '▼', NEUTRAL: '●' };
-const CATS = [['all', 'All'], ['crypto', 'Crypto'], ['markets', 'Markets'], ['macro', 'Macro & Central Banks'], ['tech', 'Tech'], ['ai', 'AI'], ['banking', 'Banking & Payments'], ['world', 'World']];
-const CAT_LABEL = Object.fromEntries(CATS);
-const RETAIN_MS = 3 * 86400e3, CACHE_KEY = 'cnp:v2';
+$('#today').textContent = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Manila', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 
-let data = { items: [], sources: [], updated: 0 }, market = null;
-let filter = { cat: 'all', bias: 'ALL', asset: '', source: '', q: '', impact: false };
-let pending = null, shown = 100;
-const seen = new Set();
+// Market overview (widgets.js by the markets module)
+const renderMarkets = (d, meta) => { if (window.CNPWidgets) CNPWidgets.renderOverview($('#overview'), d); if (meta && !meta.error) setLive(!meta.stale); };
+if (window.CNPWidgets) CNPWidgets.renderOverview($('#overview'), null);
+swr('/api/markets', renderMarkets);
+setInterval(() => swr('/api/markets', renderMarkets), 120000);
 
-// ---------- local cache: the page always opens with the last news this browser saw
-const store = {
-  load() { try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || null; } catch { return null; } },
-  save(d) { try { localStorage.setItem(CACHE_KEY, JSON.stringify(d)); } catch {} },
-  pref(k, v) { try { if (v === undefined) return localStorage.getItem('cnp:' + k); localStorage.setItem('cnp:' + k, v); } catch {} },
-};
+// Countdowns + this week's high-impact events
+swr('/api/calendar', d => {
+  if (!d) { $('#cd').innerHTML = '<div class="empty">Calendar unavailable.</div>'; return; }
+  countdown($('#cd'), d.upcoming, { max: 4 });
+  const now = Date.now();
+  const hi = (d.week || []).filter(e => e.impact === 'High');
+  $('#week-ev').innerHTML = hi.length ? hi.slice(0, 10).map(e => `<div class="ev${e.time < now ? ' past' : ''}">
+      <span class="t">${new Date(e.time).toLocaleString('en-US', { timeZone: 'Asia/Manila', weekday: 'short', hour: '2-digit', minute: '2-digit' })}</span>
+      <span class="c">${esc(e.country)}</span><span>${esc(e.title)}</span>
+      <span class="v">${e.actual ? `<b class="${e.forecast && parseFloat(e.actual) > parseFloat(e.forecast) ? 'warn' : ''}">${esc(e.actual)}</b>` : esc(e.forecast || '')}${e.previous ? ` <span class="dim">/ ${esc(e.previous)}</span>` : ''}</span></div>`).join('')
+    : '<div class="empty">No high-impact events this week.</div>';
+});
 
-function mergeItems(a, b) {
-  const m = new Map();
-  for (const i of [...b, ...a]) m.set(i.link, i); // newer list (a) wins
-  const cutoff = Date.now() - RETAIN_MS;
-  return [...m.values()].filter(i => i.time > cutoff).sort((x, y) => y.time - x.time).slice(0, 1500);
-}
+// Weekly highlights (published daily 07:00 PHT by GitHub Actions)
+swr('/data/highlights.json', d => {
+  if (!d) { $('#hl').innerHTML = '<div class="empty">Highlights not published yet.</div>'; return; }
+  const list = [...(d.pinned || []), ...(d.highlights || [])].slice(0, 5);
+  $('#hl').innerHTML = list.map((h, k) => highlightCard(h, { big: k === 0, rank: h.pinned ? 0 : k + 1 - (d.pinned || []).length })).join('');
+  $('#brief-stamp').textContent = `Weekly brief: ${new Date(d.generated).toLocaleString('en-US', { timeZone: 'Asia/Manila', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })} PHT · ${d.stats?.stories || 0} stories scanned`;
+});
 
-function ago(t) {
-  const m = Math.round((Date.now() - t) / 60000);
-  if (m < 1) return 'now'; if (m < 60) return m + 'm';
-  const h = Math.floor(m / 60); return h < 24 ? h + 'h' : Math.floor(h / 24) + 'd';
-}
-const badge = i => `<span class="badge ${i.bias}">${ARROW[i.bias]} ${i.bias}${i.bias !== 'NEUTRAL' ? ' ' + i.strength + '%' : ''}</span>`;
-const impactBadge = i => i.impact ? `<span class="badge impact" title="Market-moving topic">⚡ IMPACT</span>` : '';
-const chips = i => (i.assets || []).slice(0, 4).map(a => `<span class="chip">${esc(a)}</span>`).join('');
-const catTag = i => `<span class="cat">${esc(CAT_LABEL[i.category] || i.category || '')}</span>`;
+// Live news: latest list, sector sentiment, mentions
+swr('/api/news', d => {
+  if (!d || !d.items) return;
+  const items = d.items;
+  $('#news-meta').textContent = `${items.length} stories`;
+  const top = items.filter(i => i.category === 'crypto' || i.impact).slice(0, 12);
+  $('#latest').innerHTML = top.map(i => newsRow(i)).join('');
 
-const inCat = i => filter.cat === 'all' || i.category === filter.cat;
+  const day = items.filter(i => Date.now() - i.time < 86400e3);
+  const cats = ['crypto', 'markets', 'macro', 'banking', 'tech', 'ai', 'world'];
+  $('#sectors').innerHTML = cats.map(c => {
+    const xs = day.filter(i => i.category === c);
+    if (!xs.length) return '';
+    const n = xs.length, L = xs.filter(i => i.bias === 'LONG').length, S = xs.filter(i => i.bias === 'SHORT').length;
+    const net = Math.round((L - S) / n * 100);
+    return `<div class="sector"><span>${esc(CAT_LABEL[c])} <span class="dim mono">${n}</span></span>
+      <div class="bar"><i style="width:${L / n * 100}%;background:var(--long)"></i><i style="width:${(n - L - S) / n * 100}%;background:#2a3342"></i><i style="width:${S / n * 100}%;background:var(--short)"></i></div>
+      <span class="net ${net > 5 ? 'up' : net < -5 ? 'dn' : 'muted'}">${net > 0 ? '+' : ''}${net}</span></div>`;
+  }).join('');
 
-// ---------- render
-function renderStrip() {
-  if (!market) return;
-  const fmt = (p, sym) => p == null ? '–' : sym === 'US 10Y' ? p.toFixed(2) + '%' : p >= 1000 ? p.toLocaleString(undefined, { maximumFractionDigits: 0 }) : p >= 1 ? p.toFixed(2) : p.toFixed(4);
-  const tick = t => `<div class="tick"><span class="s">${esc(t.sym)}</span><span class="p">${fmt(t.price, t.sym)}</span>
-    <span class="c ${t.change >= 0 ? 'up' : 'dn'}">${t.change == null ? '' : (t.change >= 0 ? '+' : '') + t.change.toFixed(2) + '%'}</span></div>`;
-  const fg = market.fearGreed;
-  const fgCol = !fg ? '' : fg.value < 25 ? 'dn' : fg.value < 45 ? 'dn' : fg.value <= 55 ? '' : 'up';
-  $('#strip').innerHTML =
-    (fg ? `<div class="tick fg" title="Crypto Fear & Greed Index (alternative.me)"><span class="s">Fear & Greed</span><span class="p ${fgCol}">${fg.value} · ${esc(fg.label)}</span><span class="c">${fg.prev != null ? 'yesterday ' + fg.prev : ''}</span></div><div class="sep"></div>` : '') +
-    market.crypto.map(tick).join('') + (market.macro.length ? '<div class="sep"></div>' + market.macro.map(tick).join('') : '');
-}
-
-function renderTabs() {
-  const counts = {};
-  data.items.forEach(i => counts[i.category] = (counts[i.category] || 0) + 1);
-  $('#tabs').innerHTML = CATS.filter(([k]) => k === 'all' || counts[k])
-    .map(([k, l]) => `<button data-c="${k}" class="${filter.cat === k ? 'on' : ''}">${l}<small>${k === 'all' ? data.items.length : counts[k]}</small></button>`).join('');
-}
-
-function renderMood() {
-  const recent = data.items.filter(i => inCat(i) && Date.now() - i.time < 12 * 3600e3);
-  const c = { LONG: 0, SHORT: 0, NEUTRAL: 0 };
-  recent.forEach(i => c[i.bias]++);
-  const n = recent.length || 1, pct = k => (c[k] / n * 100).toFixed(0);
-  const net = c.LONG - c.SHORT, lean = Math.abs(net) / n;
-  const label = net > 0 && lean > .08 ? ['LONG', 'Leaning bullish'] : net < 0 && lean > .08 ? ['SHORT', 'Leaning bearish'] : ['NEUTRAL', 'Mixed'];
-  $('#mood').innerHTML = `<b>12h mood${filter.cat !== 'all' ? ' · ' + esc(CAT_LABEL[filter.cat]) : ''}: <span class="badge ${label[0]}">${label[1]}</span></b>
-    <div class="bar"><i style="width:${pct('LONG')}%;background:var(--long)"></i><i style="width:${pct('NEUTRAL')}%;background:#3b4558"></i><i style="width:${pct('SHORT')}%;background:var(--short)"></i></div>
-    <span class="legend">▲ ${c.LONG} long · ● ${c.NEUTRAL} neutral · ▼ ${c.SHORT} short</span>`;
-}
-
-function renderFeatured() {
-  const items = data.items.filter(inCat);
-  const pool = items.filter(i => Date.now() - i.time < 6 * 3600e3);
-  const rank = i => Math.abs(i.score) + (i.impact ? 5 : 0) + (i.image ? 2 : 0) + (i.category === 'crypto' ? 1 : 0) - (Date.now() - i.time) / 3600e3;
-  const top = (pool.length >= 3 ? pool : items).slice().sort((a, b) => rank(b) - rank(a)).slice(0, 3);
-  const card = i => `<a class="card" href="${esc(i.link)}" target="_blank" rel="noopener">
-      <div class="tags">${badge(i)}${impactBadge(i)}</div>
-      <div class="img" style="${i.image ? `background-image:url('${esc(i.image)}')` : ''}"></div>
-      <div class="body">${catTag(i)}<h2>${esc(i.title)}</h2>${i.summary ? `<p>${esc(i.summary.slice(0, 160))}${i.summary.length > 160 ? '…' : ''}</p>` : ''}
-      <div class="meta">${esc(i.source)} · ${ago(i.time)} ago ${chips(i)}</div></div></a>`;
-  $('#featured').innerHTML = top.length ? card(top[0]) + `<div class="side">${top.slice(1).map(card).join('')}</div>` : '';
-}
-
-function renderList() {
-  const q = filter.q.toLowerCase();
-  const rows = data.items.filter(i => inCat(i) &&
-    (filter.bias === 'ALL' || i.bias === filter.bias) &&
-    (!filter.impact || i.impact) &&
-    (!filter.asset || (i.assets || []).includes(filter.asset)) &&
-    (!filter.source || i.source === filter.source) &&
-    (!q || (i.title + ' ' + i.summary).toLowerCase().includes(q)));
-  $('#listTitle').textContent = `Latest ${filter.cat === 'all' ? 'news' : CAT_LABEL[filter.cat]} · ${rows.length}`;
-  $('#list').innerHTML = rows.length ? rows.slice(0, shown).map(i => `<a class="row${seen.size && !seen.has(i.link) ? ' fresh' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener" title="${esc((i.keywords || []).join(', '))}">
-      <div class="time">${new Date(i.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}<br>${ago(i.time)} ago</div>
-      <div><div class="title">${esc(i.title)}</div><div class="meta">${catTag(i)} · ${esc(i.source)} ${chips(i)}</div></div>
-      <div class="right"><div style="display:flex;gap:4px">${impactBadge(i)}${badge(i)}</div><div class="str"><i style="width:${i.strength}%;background:${COLORS[i.bias]}"></i></div></div></a>`).join('')
-      + (rows.length > shown ? `<button class="more" id="more">Show more (${rows.length - shown} left)</button>` : '')
-    : '<div class="empty">No news matches these filters.</div>';
-}
-
-function fillSelects() {
-  const items = data.items.filter(inCat);
-  const fill = (sel, values) => {
-    const cur = sel.value; sel.length = 1;
-    values.forEach(v => sel.add(new Option(v, v)));
-    sel.value = values.includes(cur) ? cur : '';
-  };
-  fill($('#asset'), [...new Set(items.flatMap(i => i.assets || []))].sort());
-  fill($('#source'), [...new Set(items.map(i => i.source))].sort());
-  filter.asset = $('#asset').value; filter.source = $('#source').value;
-}
-
-function renderAll() { renderTabs(); fillSelects(); renderMood(); renderFeatured(); renderList(); }
-
-function setStatus(live) {
-  const ok = data.sources.filter(s => s.ok).length;
-  $('#status').innerHTML = `<span class="dot${live ? '' : ' stale'}"></span>${data.items.length} stories · ${data.sources.length ? `${ok}/${data.sources.length} sources · ` : ''}${live ? 'updated' : 'saved copy from'} ${data.updated ? new Date(data.updated).toLocaleTimeString() : '–'}${live ? '' : ' · refreshing…'}`;
-}
-
-// ---------- data
-async function loadNews({ apply } = {}) {
-  try {
-    const res = await fetch('/api/news', { cache: 'no-store' });
-    const fresh = await res.json();
-    const merged = { ...fresh, items: mergeItems(fresh.items, data.items) };
-    const newOnes = merged.items.filter(i => !seen.has(i.link)).length;
-    store.save(merged);
-    if (apply || !seen.size || window.scrollY < 200) { applyData(merged); }
-    else if (newOnes) { pending = merged; $('#refresh').textContent = `↻ ${newOnes} new`; $('#refresh').classList.add('newbtn'); }
-  } catch {
-    $('#status').innerHTML = `<span class="dot stale"></span>${data.items.length} stories (saved) · server unreachable, retrying…`;
-  }
-}
-
-function applyData(d) {
-  data = d; pending = null;
-  $('#refresh').textContent = '↻ Refresh'; $('#refresh').classList.remove('newbtn');
-  renderAll(); setStatus(true);
-  setTimeout(() => data.items.forEach(i => seen.add(i.link)), 0);
-}
-
-async function loadMarket() {
-  try { market = await (await fetch('/api/market', { cache: 'no-store' })).json(); renderStrip(); } catch {}
-}
-
-// ---------- events
-$('#tabs').onclick = e => {
-  const b = e.target.closest('button'); if (!b) return;
-  filter.cat = b.dataset.c; shown = 100; store.pref('cat', filter.cat); renderAll();
-};
-$('#biasSeg').onclick = e => {
-  const b = e.target.closest('button'); if (!b) return;
-  document.querySelectorAll('#biasSeg button').forEach(x => x.classList.toggle('on', x === b));
-  filter.bias = b.dataset.v; renderList();
-};
-$('#impact').onchange = e => { filter.impact = e.target.checked; renderList(); };
-$('#asset').onchange = e => { filter.asset = e.target.value; renderList(); };
-$('#source').onchange = e => { filter.source = e.target.value; renderList(); };
-$('#q').oninput = e => { filter.q = e.target.value; renderList(); };
-$('#list').onclick = e => { if (e.target.id === 'more') { shown += 100; renderList(); } };
-$('#refresh').onclick = () => pending ? applyData(pending) : ($('#status').innerHTML = '<span class="dot stale"></span>refreshing…', loadNews({ apply: true }), loadMarket());
-
-// ---------- boot: show the saved copy instantly, then pull fresh
-filter.cat = store.pref('cat') || 'all';
-const cached = store.load();
-if (cached && cached.items) {
-  data = { ...cached, items: mergeItems(cached.items, []) };
-  renderAll(); setStatus(false);
-  data.items.forEach(i => seen.add(i.link)); // anything after this is "new"
-}
-loadNews({ apply: true });
-loadMarket();
-setInterval(loadNews, 60000);
-setInterval(loadMarket, 60000);
-setInterval(() => { renderList(); }, 60000 * 2); // keep "x ago" labels current
+  const m = {};
+  day.forEach(i => (i.assets || []).forEach(a => { m[a] = m[a] || { n: 0, net: 0 }; m[a].n++; m[a].net += i.bias === 'LONG' ? 1 : i.bias === 'SHORT' ? -1 : 0; }));
+  $('#mentions').innerHTML = Object.entries(m).sort((a, b) => b[1].n - a[1].n).slice(0, 16).map(([a, v]) => {
+    const col = v.net / v.n > .15 ? 'var(--long)' : v.net / v.n < -.15 ? 'var(--short)' : 'var(--neutral)';
+    return `<a class="mention" href="/news?asset=${encodeURIComponent(a)}"><i style="background:${col}"></i>${esc(a)}<span class="dim">${v.n}</span></a>`;
+  }).join('') || '<span class="muted">No data.</span>';
+});
 </script>
 </body>
 </html>

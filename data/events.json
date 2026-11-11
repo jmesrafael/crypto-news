@@ -1,0 +1,4 @@
+[
+  { "title": "FOMC Rate Decision", "type": "FOMC", "date": "2026-12-09T14:00:00-05:00", "note": "Dec 8–9 meeting · statement 2:00 PM ET, presser 2:30 PM ET" },
+  { "title": "US CPI (November data)", "type": "CPI", "date": "2026-12-10T08:30:00-05:00", "note": "BLS release, 8:30 AM ET" }
+]

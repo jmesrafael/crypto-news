@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse · Economic Calendar</title>
+<meta name="description" content="Countdowns to CPI, FOMC, jobs data and the Bitcoin halving, plus this week's economic calendar in Philippine time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .toolbar h2 { margin: 0 auto 0 0; font-size: 15px; }
+  .day-h td { background: var(--panel2); font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent2); }
+  .imp { display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
+  .imp.High { background: var(--short); box-shadow: 0 0 6px var(--short); } .imp.Medium { background: var(--warn); } .imp.Low { background: #f1d16a55; } .imp.Holiday { background: var(--dim); }
+  tr.past td { opacity: .5; }
+  tr.nowline td { box-shadow: inset 0 2px 0 var(--accent); }
+  .key { font: 700 10px var(--mono); color: var(--warn); border: 1px solid rgba(245,165,36,.35); border-radius: 3px; padding: 1px 4px; margin-left: 6px; }
+  .tbl-wrap { overflow-x: auto; }
+  .cd-row.all { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div><h1>Economic Calendar</h1><p>Countdowns to the events that move markets, and this week's releases. All times are Philippine time (PHT).</p></div>
+  </div>
+
+  <section>
+    <div class="section-h"><h2>Countdowns</h2><span class="label">CPI · FOMC · NFP · PPI · halving</span></div>
+    <div class="cd-row all" id="cd"><div class="cd skeleton" style="height:118px"></div><div class="cd skeleton"></div><div class="cd skeleton"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="toolbar">
+      <h2>This week</h2>
+      <div class="seg" id="impSeg"><button data-v="High">High</button><button data-v="Medium" class="on">Medium+</button><button data-v="all">All</button></div>
+      <select id="country"><option value="">All currencies</option></select>
+    </div>
+    <div class="panel tbl-wrap"><table class="table" id="tbl"><tbody><tr><td class="empty">Loading…</td></tr></tbody></table></div>
+    <p class="muted" style="font-size:12px;margin-top:10px">Weekly data from the ForexFactory calendar. Dates further ahead (FOMC, CPI) come from <span class="mono">data/events.json</span>; edit that file to add or correct them. The halving date is estimated from the current block height and the average block time.</p>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script>
+const { esc, swr, countdown, setLive } = CNP;
+const $ = s => document.querySelector(s);
+let data = null, imp = 'Medium', country = '';
+const RANK = { High: 3, Medium: 2, Low: 1, Holiday: 0 };
+
+function renderTable() {
+  if (!data) return;
+  const now = Date.now();
+  const rows = data.week.filter(e => (imp === 'all' || RANK[e.impact] >= RANK[imp]) && (!country || e.country === country));
+  let lastDay = '', nowDone = false;
+  const html = rows.map(e => {
+    const day = new Date(e.time).toLocaleDateString('en-US', { timeZone: 'Asia/Manila', weekday: 'long', month: 'short', day: 'numeric' });
+    const head = day !== lastDay ? `<tr class="day-h"><td colspan="7">${day}</td></tr>` : ''; lastDay = day;
+    const isNext = !nowDone && e.time >= now; if (isNext) nowDone = true;
+    const beat = e.actual && e.forecast ? (parseFloat(e.actual) > parseFloat(e.forecast) ? 'up' : parseFloat(e.actual) < parseFloat(e.forecast) ? 'dn' : '') : '';
+    return head + `<tr class="${e.time < now ? 'past' : ''}${isNext ? ' nowline' : ''}">
+      <td class="mono">${new Date(e.time).toLocaleTimeString('en-US', { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit' })}</td>
+      <td class="mono acc">${esc(e.country)}</td><td><span class="imp ${esc(e.impact)}" title="${esc(e.impact)}"></span></td>
+      <td style="white-space:normal">${esc(e.title)}${e.type ? `<span class="key">${esc(e.type)}</span>` : ''}</td>
+      <td class="r mono ${beat}">${esc(e.actual || '')}</td><td class="r mono muted">${esc(e.forecast || '')}</td><td class="r mono dim">${esc(e.previous || '')}</td></tr>`;
+  }).join('');
+  $('#tbl').innerHTML = `<thead><tr><th>Time</th><th>Cur</th><th>Imp</th><th>Event</th><th class="r">Actual</th><th class="r">Forecast</th><th class="r">Previous</th></tr></thead><tbody>${html || '<tr><td colspan="7" class="empty">No events match.</td></tr>'}</tbody>`;
+}
+
+swr('/api/calendar', (d, m) => {
+  if (!d) { $('#cd').innerHTML = '<div class="empty">Calendar unavailable.</div>'; return; }
+  data = d; if (m && !m.error) setLive(!m.stale);
+  countdown($('#cd'), d.upcoming, { max: 12 });
+  const sel = $('#country'), cur = sel.value;
+  sel.length = 1; [...new Set(d.week.map(e => e.country))].sort().forEach(c => sel.add(new Option(c, c))); sel.value = cur;
+  renderTable();
+});
+$('#impSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; document.querySelectorAll('#impSeg button').forEach(x => x.classList.toggle('on', x === b)); imp = b.dataset.v; renderTable(); };
+$('#country').onchange = e => { country = e.target.value; renderTable(); };
+</script>
+</body>
+</html>

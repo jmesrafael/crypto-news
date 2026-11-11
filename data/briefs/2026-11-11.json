@@ -1,0 +1,995 @@
+{
+ "generated": 1794378708198,
+ "date": "2026-11-11",
+ "window": {
+  "from": 1793773908198,
+  "to": 1794378708198
+ },
+ "stats": {
+  "stories": 575,
+  "sources": 31
+ },
+ "pinned": [],
+ "highlights": [
+  {
+   "id": "jensen-huang-s-affair-with-alleged-chinese-spy-further-compl",
+   "title": "Jensen Huang's affair with alleged Chinese spy further complicates Nvidia’s China problem",
+   "summary": "The allegations against Jensen Huang have brought new attention to the Nvidia CEO's potential influence over U.S. policy on chip sales to China.",
+   "link": "https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html",
+   "source": "CNBC",
+   "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794191872-screenshot-2026-11-09-at-9-36-06am.jpg",
+   "category": "markets",
+   "firstSeen": 1794191972000,
+   "lastSeen": 1794359452000,
+   "sources": [
+    "Cryptonews",
+    "The Verge",
+    "BeInCrypto",
+    "Decrypt",
+    "MarketWatch",
+    "BBC Business",
+    "CNBC",
+    "TechCrunch AI",
+    "TechCrunch",
+    "CryptoPotato",
+    "CNBC Tech"
+   ],
+   "count": 18,
+   "bias": "SHORT",
+   "strength": 75,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 6,
+    "NEUTRAL": 12
+   },
+   "impact": true,
+   "score": 61.9,
+   "assets": [
+    "BTC",
+    "STOCKS"
+   ],
+   "keywords": [
+    "alleged",
+    "chinese",
+    "affair",
+    "spy",
+    "jensen",
+    "huang"
+   ],
+   "related": [
+    {
+     "title": "Analysts Split on How to Trade Nvidia After Jensen Huang Spy Scandal",
+     "link": "https://beincrypto.com/how-to-trade-nvidia-spy-scandal/",
+     "source": "BeInCrypto",
+     "time": 1794359452000,
+     "bias": "SHORT",
+     "image": "https://assets.beincrypto.com/img/YjccdBKDy7qwCF1VWwgPgjZwwFU=/smart/c912452218974e54b0c033ac4f4dd487"
+    },
+    {
+     "title": "Nvidia hires major US law firm to investigate alleged Chinese spy affair",
+     "link": "https://www.bbc.co.uk/news/articles/ck1wvwwl3x0go?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": 1794351135000,
+     "bias": "NEUTRAL",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4d6c/live/e7ad5400-dd59-11f1-b441-2b33b063138f.jpg"
+    },
+    {
+     "title": "Nvidia sells off for second day in fallout from Jensen Huang’s affair with alleged spy",
+     "link": "https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html",
+     "source": "CNBC",
+     "time": 1794348505000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Meet the former prosecutor Nvidia hired to investigate the Jensen Huang spy scandal",
+     "link": "https://www.marketwatch.com/story/meet-the-former-prosecutor-nvidia-hired-to-investigate-the-jensen-huang-spy-scandal-e8078f67?mod=mw_rss_topstories",
+     "source": "MarketWatch",
+     "time": 1794348300000,
+     "bias": "NEUTRAL",
+     "image": "https://images.mktw.net/im-14670166"
+    },
+    {
+     "title": "What we know so far about Jensen Huang's affair with suspected Chinese spy",
+     "link": "https://www.bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": 1794345756000,
+     "bias": "NEUTRAL",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2521/live/6ba67640-dc03-11f1-b441-2b33b063138f.jpg"
+    },
+    {
+     "title": "Nvidia hires law firm Wachtell Lipton to lead Jensen Huang affair probe",
+     "link": "https://www.cnbc.com/2026/11/10/nvidia-wachtell-lipton-huang-affair.html",
+     "source": "CNBC Tech",
+     "time": 1794340878000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "north-korean-hackers-are-creating-memecoins-to-wash-loot-fro",
+   "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
+   "summary": "North Korean hackers used six homemade memecoins to launder 117,000 NEAR, worth about $430,000, from the $6.3 billion Binance hack, Elliptic says.",
+   "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/c18c9af8ef94bcbc9a17fac89a01b83bfc76fd8f-5472x3648.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794147285000,
+   "lastSeen": 1794334327000,
+   "sources": [
+    "U.Today",
+    "Banking Dive",
+    "Cointelegraph",
+    "CoinDesk",
+    "Cryptonews",
+    "Decrypt"
+   ],
+   "count": 8,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 8,
+    "NEUTRAL": 0
+   },
+   "impact": false,
+   "score": 33.2,
+   "assets": [
+    "HYPE",
+    "BTC"
+   ],
+   "keywords": [
+    "memecoin",
+    "korean",
+    "north",
+    "hacker",
+    "hack",
+    "binance"
+   ],
+   "related": [
+    {
+     "title": "Mercado Bitcoin to resume cash withdrawals after $49M hack",
+     "link": "https://cointelegraph.com/news/pix-withdrawals-resume-mercado-bitcoin-hack",
+     "source": "Cointelegraph",
+     "time": 1794334327000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M732NFDQVGSJE1VGENNVNKQT/trading-app-crypto-messenger-phone.jpg"
+    },
+    {
+     "title": "North Korea Hackers Launches Elon Musk Memecoins to Launder $6.4B Binance Hack",
+     "link": "https://cryptonews.com/news/north-korea-memecoins-binance-hack/",
+     "source": "Cryptonews",
+     "time": 1794316697000,
+     "bias": "SHORT",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794316452-screenshot-2026-11-10-at-8-12-22pm.jpg"
+    },
+    {
+     "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
+     "link": "https://cointelegraph.com/news/north-korean-hackers-memecoins-launder-binance-hack-elliptic",
+     "source": "Cointelegraph",
+     "time": 1794255994000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M70X59B82FS5F3H9N89JXV87/hi-north-korea-hack-3.jpg"
+    },
+    {
+     "title": "Binance CFO departs one week after $6B hack",
+     "link": "https://www.bankingdive.com/news/binance-cfo-departs-one-week-6-billion-hack-cybersecurity-kaiser-ng/874224/",
+     "source": "Banking Dive",
+     "time": 1794253972000,
+     "bias": "SHORT",
+     "image": "https://imgproxy.divecdn.com/h7g_5-5z-XTs81Dv495lPxSzOE1z8EignHgfpsVMhY0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMzAyNjU5NTEzLmpwZ19yZXNpemUuanBn.webp"
+    },
+    {
+     "title": "Binance Hack Launderers Mint Elon Musk and Animal Meme Coins to Move Stolen Crypto",
+     "link": "https://decrypt.co/382873/binance-hack-elon-musk-animal-meme-coins-launder-stolen-crypto",
+     "source": "Decrypt",
+     "time": 1794252962000,
+     "bias": "SHORT",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/dprk-north-korea-hacker-decrypt-style-gID_7.jpg"
+    },
+    {
+     "title": "North Korean Hackers Flip Stolen Binance Funds Into NEAR Meme Coins",
+     "link": "https://u.today/north-korean-hackers-flip-stolen-binance-funds-into-near-meme-coins",
+     "source": "U.Today",
+     "time": 1794244405000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "japanese-yen-struggles-as-fed-rate-hike-odds-lift-us-dollar",
+   "title": "Japanese Yen struggles as Fed rate hike odds lift US Dollar",
+   "summary": "USD/JPY extends its gains for the second successive day, trading around 158.90 during Asian hours on Wednesday. The pair gained ground as the US Dollar (USD) received firm support following the latest inflation report, w",
+   "link": "https://www.fxstreet.com/news/japanese-yen-struggles-as-fed-rate-hike-odds-lift-usd-jpy-202611110201",
+   "source": "FXStreet",
+   "image": "https://editorial.fxsstatic.com/images/i/USDJPY-bearish-object.png",
+   "category": "markets",
+   "firstSeen": 1794328077000,
+   "lastSeen": 1794370681000,
+   "sources": [
+    "Decrypt",
+    "FXStreet",
+    "CNBC Finance",
+    "Cointelegraph",
+    "CNBC"
+   ],
+   "count": 8,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 8,
+    "NEUTRAL": 0
+   },
+   "impact": true,
+   "score": 31.7,
+   "assets": [
+    "BTC",
+    "RATES",
+    "USD"
+   ],
+   "keywords": [
+    "odds",
+    "dollar",
+    "rate",
+    "hike",
+    "inflation",
+    "fed"
+   ],
+   "related": [
+    {
+     "title": "New Zealand Dollar strengthens despite decreasing RBNZ rate hike odds",
+     "link": "https://www.fxstreet.com/news/new-zealand-dollar-strengthens-despite-decreasing-rbnz-rate-hike-odds-202611110418",
+     "source": "FXStreet",
+     "time": 1794370681000,
+     "bias": "SHORT",
+     "image": "https://editorial.fxsstatic.com/images/i/NZDUSD.png"
+    },
+    {
+     "title": "United States Dollar Index steadies on Fed rate-hike odds",
+     "link": "https://www.fxstreet.com/news/united-states-dollar-index-steadies-on-fed-rate-hike-odds-202611110347",
+     "source": "FXStreet",
+     "time": 1794368877000,
+     "bias": "SHORT",
+     "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object.png"
+    },
+    {
+     "title": "Fed’s Paulson: Further ‘gradual’ rate hikes appropriate given high inflation",
+     "link": "https://www.fxstreet.com/news/feds-paulson-further-gradual-rate-hikes-appropriate-given-high-inflation-202611110137",
+     "source": "FXStreet",
+     "time": 1794361052000,
+     "bias": "SHORT",
+     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_3.png"
+    },
+    {
+     "title": "GE Vernova sellers have it all wrong — plus, why Fed rate hike odds are soaring",
+     "link": "https://www.cnbc.com/investingclub/2026/11/10/ge-vernova-sellers-have-it-all-wrong-plus-why-fed-rate-hike-odds-are-soaring.html",
+     "source": "CNBC",
+     "time": 1794346573000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Hot US inflation raises odds of half-point Fed hike in December",
+     "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto",
+     "source": "Cointelegraph",
+     "time": 1794331869000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7336RAJMBE41VQRYSYWFP63/us-federal-reserve-1.jpg"
+    },
+    {
+     "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
+     "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
+     "source": "CNBC Finance",
+     "time": 1794330824000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "-i-sold-2-5-million-xrp-ripple-vet-david-schwartz-rebuts-cri",
+   "title": "'I Sold 2.5 Million XRP': Ripple Vet David Schwartz Rebuts Critics With Tax Proof",
+   "summary": "David Schwartz drops $1.7 million tax proof on 2.5 million XRP sales to shut down dumping claims and detail his de-risking strategy.",
+   "link": "https://u.today/i-sold-25-million-xrp-ripple-vet-david-schwartz-rebuts-critics-with-tax-proof",
+   "source": "U.Today",
+   "image": "https://cryptonews.com/wp-content/uploads/2026/07/1783682198-photo_2026-07-10_14-16-14.jpg",
+   "category": "crypto",
+   "firstSeen": 1794132600000,
+   "lastSeen": 1794375969000,
+   "sources": [
+    "U.Today",
+    "Cryptonews",
+    "BeInCrypto"
+   ],
+   "count": 10,
+   "bias": "SHORT",
+   "strength": 42,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 3,
+    "NEUTRAL": 7
+   },
+   "impact": false,
+   "score": 25.6,
+   "assets": [
+    "XRP",
+    "BTC",
+    "ETH",
+    "STOCKS"
+   ],
+   "keywords": [
+    "schwartz",
+    "ripple",
+    "xrp"
+   ],
+   "related": [
+    {
+     "title": "Ripple Ex-CTO David Schwartz Reveals How Much XRP, Ethereum, and Bitcoin He Owns",
+     "link": "https://beincrypto.com/david-schwartz-xrp-bitcoin-ethereum-holdings/",
+     "source": "BeInCrypto",
+     "time": 1794375969000,
+     "bias": "NEUTRAL",
+     "image": "https://assets.beincrypto.com/img/Z25ZyW9kgVgVU_YeP8qcJbiHnwU=/smart/220e70faa5834d7fbca0841be945b7c3"
+    },
+    {
+     "title": "Ripple's David Schwartz Reveals Massive XRP Sale",
+     "link": "https://u.today/ripples-david-schwartz-reveals-massive-xrp-sale",
+     "source": "U.Today",
+     "time": 1794374968000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Ripple Ex-CTO Tells Angry XRP Holders There’s No Secret Plan",
+     "link": "https://beincrypto.com/xrp-price-schwartz-no-secret-plan/",
+     "source": "BeInCrypto",
+     "time": 1794355582000,
+     "bias": "NEUTRAL",
+     "image": "https://assets.beincrypto.com/img/PIIfKc-FHWI96iq6NQcCYKYhSRM=/smart/ffcf19b48bc347d1bbc491a882de0a5a"
+    },
+    {
+     "title": "DeepSeek AI XRP Price Prediction: Could Ripple Really Go This High?",
+     "link": "https://cryptonews.com/news/deepseek-ai-xrp-price-prediction-ripple/",
+     "source": "Cryptonews",
+     "time": 1794337320000,
+     "bias": "NEUTRAL",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/07/1783682198-photo_2026-07-10_14-16-14.jpg"
+    },
+    {
+     "title": "Think Bigger!! Schwartz Calls for Higher XRP Price as 37 European Banks Embrace Ripple",
+     "link": "https://cryptonews.com/news/xrp-price-schwartz-higher-prices-37-european-banks-ripple/",
+     "source": "Cryptonews",
+     "time": 1794331320000,
+     "bias": "NEUTRAL",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794320313-screenshot-2026-11-10-at-9-17-57pm.jpg"
+    },
+    {
+     "title": "Ripple's Schwartz Debunks XRP Price Myth",
+     "link": "https://u.today/ripples-schwartz-debunks-xrp-price-myth",
+     "source": "U.Today",
+     "time": 1794258457000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief",
+   "title": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough",
+   "summary": "Bitcoin trades below $75,000 ahead of the October inflation data. Analysts warning that sustainable recovery depends on improving liquidity and spot ETF demand rather than temporary macro relief.",
+   "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/b5c969ee70de7444f1035edf7701cc88d16ae253-3000x2001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794280946000,
+   "lastSeen": 1794361357000,
+   "sources": [
+    "CoinDesk",
+    "Cryptonews",
+    "FXStreet"
+   ],
+   "count": 4,
+   "bias": "SHORT",
+   "strength": 51,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 3,
+    "NEUTRAL": 1
+   },
+   "impact": true,
+   "score": 21.2,
+   "assets": [
+    "BTC",
+    "STOCKS"
+   ],
+   "keywords": [
+    "test",
+    "face",
+    "warn",
+    "cpi",
+    "inflation",
+    "fed"
+   ],
+   "related": [
+    {
+     "title": "Fed’s Goolsbee: CPI was borderline disturbing on inflation",
+     "link": "https://www.fxstreet.com/news/feds-goolsbee-cpi-was-borderline-disturbing-on-inflation-202611110142",
+     "source": "FXStreet",
+     "time": 1794361357000,
+     "bias": "NEUTRAL",
+     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_1.png"
+    },
+    {
+     "title": "Fed’s Bowman warns CPI signals persistent US inflation pressures",
+     "link": "https://www.fxstreet.com/news/feds-bowman-warns-cpi-signals-persistent-us-inflation-pressures-202611102123",
+     "source": "FXStreet",
+     "time": 1794345814000,
+     "bias": "SHORT",
+     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_4.png"
+    },
+    {
+     "title": "LIVE – Will CPI Cause a Sell-Off? Asian Stocks and Bitcoin Face Fresh Test as NVIDIA Anxiety Grows",
+     "link": "https://cryptonews.com/news/will-cpi-cause-sell-off-asian-stocks-bitcoin-kospi/",
+     "source": "Cryptonews",
+     "time": 1794294420000,
+     "bias": "SHORT",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794294319-screenshot-2026-11-10-at-2-00-41pm.jpg"
+    }
+   ]
+  },
+  {
+   "id": "near-ai-breach-exposes-user-details-and-data-from-18-ai-agen",
+   "title": "Near AI Breach Exposes User Details and Data From 18 AI Agents",
+   "summary": "An SGLang flaw let an attacker reach internal systems and potentially view confidential AI requests, exposing the limits of hardware-backed privacy protections.",
+   "link": "https://decrypt.co/382965/near-ai-breach-exposes-user-details-data-ai-agents",
+   "source": "Decrypt",
+   "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/Hacker-hack-decrypt-style-04-gID_7.jpg",
+   "category": "crypto",
+   "firstSeen": 1794305833000,
+   "lastSeen": 1794351039000,
+   "sources": [
+    "The Block",
+    "Decrypt",
+    "Bitcoin.com"
+   ],
+   "count": 3,
+   "bias": "SHORT",
+   "strength": 84,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 3,
+    "NEUTRAL": 0
+   },
+   "impact": true,
+   "score": 20.8,
+   "assets": [
+    "NEAR"
+   ],
+   "keywords": [
+    "detail",
+    "18",
+    "breach",
+    "user",
+    "security",
+    "agent"
+   ],
+   "related": [
+    {
+     "title": "Near AI Confirms Security Breach Affecting 100 Users and 18 Agents",
+     "link": "https://news.bitcoin.com/security/near-ai-confirms-security-breach-affecting-100-users-18-agents/",
+     "source": "Bitcoin.com",
+     "time": 1794351039000,
+     "bias": "SHORT",
+     "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/near-ai-confirms-security-breach-affecting-100-users-and-18-agents-768x432.png"
+    },
+    {
+     "title": "NEAR AI says SGLang vulnerability exposed user account details in security breach",
+     "link": "https://www.theblock.co/news/defi/2026-11-10-near-ai-security-breach-437002",
+     "source": "The Block",
+     "time": 1794305833000,
+     "bias": "SHORT",
+     "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2024/05/20240508_Security_News_2.jpg"
+    }
+   ]
+  },
+  {
+   "id": "consumer-prices-rose-0-4-in-october-more-than-expected-compl",
+   "title": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight",
+   "summary": "The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding interest rates.",
+   "link": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html",
+   "source": "CNBC Economy",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/51b1716c6a080eb7ea2f00c7c72ad06e2dc13cf7-1920x1040.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794317529000,
+   "lastSeen": 1794354838000,
+   "sources": [
+    "CoinDesk",
+    "BBC Business",
+    "CNBC Economy"
+   ],
+   "count": 3,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 3,
+    "NEUTRAL": 0
+   },
+   "impact": true,
+   "score": 20.6,
+   "assets": [
+    "RATES"
+   ],
+   "keywords": [
+    "rose",
+    "0.4%",
+    "expected",
+    "october",
+    "inflation"
+   ],
+   "related": [
+    {
+     "title": "US inflation higher than expected in October - here's what is happening with prices",
+     "link": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": 1794321946000,
+     "bias": "SHORT",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bd50/live/e1cf6860-c7cf-11f1-9e10-4dcbd31d4273.jpg"
+    },
+    {
+     "title": "U.S. CPI rose stronger than expected 0.4% in October; core rate rose 0.3%",
+     "link": "https://www.coindesk.com/markets/2026/11/10/u-s-cpi-rose-stronger-than-expected-0-4-in-october-core-rate-rose-0-3",
+     "source": "CoinDesk",
+     "time": 1794317529000,
+     "bias": "SHORT",
+     "image": "https://cdn.sanity.io/images/s3y3vcno/production/51b1716c6a080eb7ea2f00c7c72ad06e2dc13cf7-1920x1040.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip"
+    }
+   ]
+  },
+  {
+   "id": "vitalik-buterin-declares-ethereum-eth-a-store-of-value-not-f",
+   "title": "Vitalik Buterin Declares Ethereum (ETH) a Store of Value, Not Fee-Burning Token",
+   "summary": "Ethereum co-founder Vitalik Buterin rejects the commercialization of ETH, declaring the asset a pure Store of Value.",
+   "link": "https://u.today/vitalik-buterin-declares-ethereum-eth-a-store-of-value-not-fee-burning-token",
+   "source": "U.Today",
+   "image": "https://cryptopotato.com/wp-content/uploads/2024/09/vitalik_buterin-scaled.jpg",
+   "category": "crypto",
+   "firstSeen": 1794156705000,
+   "lastSeen": 1794317091000,
+   "sources": [
+    "U.Today",
+    "CryptoPotato",
+    "Decrypt",
+    "Cointelegraph"
+   ],
+   "count": 5,
+   "bias": "SHORT",
+   "strength": 12,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 1,
+    "NEUTRAL": 4
+   },
+   "impact": false,
+   "score": 20.5,
+   "assets": [
+    "ETH"
+   ],
+   "keywords": [
+    "store",
+    "value",
+    "buterin",
+    "vitalik",
+    "eth",
+    "ethereum"
+   ],
+   "related": [
+    {
+     "title": "Morning Minute: Vitalik Recasts ETH as a Store of Value",
+     "link": "https://decrypt.co/382931/morning-minute-vitalik-recasts-eth-as-a-store-of-value",
+     "source": "Decrypt",
+     "time": 1794317091000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/Vitalik-Buterin-DecryptStyle3-scaled-gID_7.jpg"
+    },
+    {
+     "title": "Ex-employee sues Ethereum Foundation and Vitalik Buterin over firing",
+     "link": "https://cointelegraph.com/news/ex-employee-sues-ethereum-foundation-vitalik-buterin-over-firing",
+     "source": "Cointelegraph",
+     "time": 1794308211000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M72FWR1NA57RHTK5MYEQ38F1/lawsuit-editorial-illustration.jpeg"
+    },
+    {
+     "title": "Vitalik Buterin Moves On From ‘Ultrasound Money,’ Says ETH’s Value Is Stability",
+     "link": "https://decrypt.co/382837/vitalik-buterin-moves-on-from-ultrasound-money-says-eths-value-is-stability",
+     "source": "Decrypt",
+     "time": 1794244450000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/vitalik-buterin-ethereum-decrypt-style-05-1-gID_7.jpg"
+    },
+    {
+     "title": "Vitalik Buterin Makes the Case for Ethereum as a Store of Value",
+     "link": "https://cryptopotato.com/vitalik-buterin-makes-the-case-for-ethereum-as-a-store-of-value/",
+     "source": "CryptoPotato",
+     "time": 1794242671000,
+     "bias": "NEUTRAL",
+     "image": "https://cryptopotato.com/wp-content/uploads/2024/09/vitalik_buterin-scaled.jpg"
+    }
+   ]
+  },
+  {
+   "id": "coinbase-kalshi-kraken-parent-back-cftc-in-legal-fight-over",
+   "title": "Coinbase, Kalshi, Kraken parent back CFTC in legal fight over stock perpetual futures",
+   "summary": "The Capital Markets Alliance argues that the products fall under the Securities and Exchange Commission’s jurisdiction.",
+   "link": "https://www.coindesk.com/policy/2026/11/10/coinbase-kalshi-kraken-parent-back-cftc-in-legal-fight-over-stock-perpetual-futures",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/2ea663e27b7a8aedacb15a99a17ec144f1ef72ac-4928x2772.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794302070000,
+   "lastSeen": 1794366000000,
+   "sources": [
+    "CoinDesk",
+    "Cointelegraph",
+    "NewsBTC"
+   ],
+   "count": 4,
+   "bias": "SHORT",
+   "strength": 39,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 2,
+    "NEUTRAL": 2
+   },
+   "impact": true,
+   "score": 20.3,
+   "assets": [
+    "STOCKS"
+   ],
+   "keywords": [
+    "perpetual",
+    "cftc",
+    "fight",
+    "kalshi",
+    "future",
+    "coinbase"
+   ],
+   "related": [
+    {
+     "title": "Coinbase, Kalshi and Other Firms Back CFTC in Fight Over Stock Perpetuals",
+     "link": "https://www.newsbtc.com/regulation/coinbase-kalshi-cftc-single-stock-perpetuals-lawsuit/",
+     "source": "NewsBTC",
+     "time": 1794366000000,
+     "bias": "NEUTRAL",
+     "image": "https://www.newsbtc.com/wp-content/uploads/2026/11/N10-10_coinbase-kalshi-cftc-single-stock-perpetuals-lawsuit-750x422.png"
+    },
+    {
+     "title": "CFTC warns Kalshi of imminent charges over notification of contracts: Politico",
+     "link": "https://cointelegraph.com/news/cftc-warns-kalshi-imminent-charges-over-contracts",
+     "source": "Cointelegraph",
+     "time": 1794354591000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M73XRY62MBKPK389ZQG0QV22/hi-the-mathematics-of-cftc.jpg"
+    },
+    {
+     "title": "Coinbase, Kalshi join lawsuit backing CFTC over US stock perp futures",
+     "link": "https://cointelegraph.com/news/coinbase-kalshi-cftc-stock-perpetual-futures-lawsuit",
+     "source": "Cointelegraph",
+     "time": 1794311095000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M72DGPHCSG70YGY72DZ7EFS4/hinew-us-government-crypto-coinbase.jpg"
+    }
+   ]
+  },
+  {
+   "id": "securitize-pushes-into-6-trillion-asset-backed-finance-marke",
+   "title": "Securitize pushes into $6 trillion asset-backed finance market with River One acquisition",
+   "summary": "The tokenization firm unveiled an acquisition and a $50 million stock buyback as quarterly revenue rose 13%. SECZ shares jumped 10% after hours.",
+   "link": "https://www.coindesk.com/business/2026/11/09/securitize-pushes-into-usd6-trillion-asset-backed-finance-market-with-river-one-acquisition",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/0df058fe321b648948d8a5b690588aaafbb157fe-2048x1152.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794259453000,
+   "lastSeen": 1794373200000,
+   "sources": [
+    "CNBC Tech",
+    "CoinDesk",
+    "Cointelegraph",
+    "NewsBTC"
+   ],
+   "count": 4,
+   "bias": "LONG",
+   "strength": 18,
+   "sentimentCounts": {
+    "LONG": 2,
+    "SHORT": 0,
+    "NEUTRAL": 2
+   },
+   "impact": false,
+   "score": 19,
+   "assets": [
+    "STOCKS",
+    "USDT/USDC"
+   ],
+   "keywords": [
+    "river",
+    "acquisition",
+    "securitize",
+    "asset-backed",
+    "finance",
+    "one"
+   ],
+   "related": [
+    {
+     "title": "Securitize Plans River One Acquisition to Connect Stablecoin Capital With Asset-Backed Finance",
+     "link": "https://www.newsbtc.com/news/defi/securitize-river-one-acquisition-stablecoin-asset-backed-finance/",
+     "source": "NewsBTC",
+     "time": 1794373200000,
+     "bias": "NEUTRAL",
+     "image": "https://www.newsbtc.com/wp-content/uploads/2026/11/N10-12_securitize-river-one-acquisition-stablecoin-asset-backed-finance-750x422.png"
+    },
+    {
+     "title": "Securitize agrees to buy River One to expand into asset-backed lending",
+     "link": "https://cointelegraph.com/news/securitize-river-one-asset-backed-lending",
+     "source": "Cointelegraph",
+     "time": 1794296954000,
+     "bias": "LONG",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/09/01M1HFDYJCKJWQTKRMYKMVPJFP/hi-how-ondo-finance-plans-to-bring-tokenized-us-stocks-to-solana-3.jpg"
+    },
+    {
+     "title": "Tokenization platform Securitize gains 10% postmarket on Q3 results, move into asset-backed finance",
+     "link": "https://www.cnbc.com/2026/11/09/tokenization-platform-securitize-reports-gains-expands-into-asset-backed-finance.html",
+     "source": "CNBC Tech",
+     "time": 1794259453000,
+     "bias": "LONG",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "solana-set-for-another-tokenized-stock-venue-as-formation-no",
+   "title": "Solana Set for Another Tokenized Stock Venue as Formation Notifies the SEC",
+   "summary": "Operating under the SEC’s “Innovation Exemption,” the firm plans to list tokenized shares of Exodus, Forward Industries, and Galaxy Digital in early 2027, with the same voting and dividend rights as real stock.",
+   "link": "https://decrypt.co/382859/solana-tokenized-stock-venue-formation-sec",
+   "source": "Decrypt",
+   "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/crypto-trading-gen-z-decrypt-style-gID_7.jpg",
+   "category": "crypto",
+   "firstSeen": 1794228095000,
+   "lastSeen": 1794367820000,
+   "sources": [
+    "CoinDesk",
+    "Decrypt",
+    "Bitcoin.com"
+   ],
+   "count": 3,
+   "bias": "NEUTRAL",
+   "strength": 9,
+   "sentimentCounts": {
+    "LONG": 1,
+    "SHORT": 0,
+    "NEUTRAL": 2
+   },
+   "impact": true,
+   "score": 18.9,
+   "assets": [
+    "SOL",
+    "STOCKS"
+   ],
+   "keywords": [
+    "sec",
+    "formation",
+    "venue",
+    "tokenized",
+    "solana"
+   ],
+   "related": [
+    {
+     "title": "Formation Securities Plans Solana Tokenized Stock Trading Venue for Early 2027",
+     "link": "https://news.bitcoin.com/finance/formation-securities-solana-tokenized-stock-trading-venue-early-2027/",
+     "source": "Bitcoin.com",
+     "time": 1794367820000,
+     "bias": "NEUTRAL",
+     "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/solana-x402-lets-ai-agents-batch-usdc-payments-into-one-settlement-768x432.jpg"
+    },
+    {
+     "title": "Solana set for its first tokenized stock venue under SEC framework, listing Galaxy",
+     "link": "https://www.coindesk.com/business/2026/11/06/solana-lset-for-its-first-tokenized-stock-venue-under-sec-framework-listing-galaxy",
+     "source": "CoinDesk",
+     "time": 1794228095000,
+     "bias": "LONG",
+     "image": "https://cdn.sanity.io/images/s3y3vcno/production/2e14ef9e0ece47068da06c0d0405ba1e13c15bd8-3904x2196.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip"
+    }
+   ]
+  },
+  {
+   "id": "iran-war-live-us-house-blocks-hegseth-impeachment-with-11-de",
+   "title": "Iran war live: US House blocks Hegseth impeachment with 11 Democrats absent",
+   "summary": "US House blocks bid to impeach Defense Secretary Pete Hegseth over US-Israel war on Iran as 11 Democrats miss vote.",
+   "link": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?traffic_source=rss",
+   "source": "Al Jazeera",
+   "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5391/live/eb55ba30-dd67-11f1-a701-fddedf244c16.jpg",
+   "category": "world",
+   "firstSeen": 1794354401000,
+   "lastSeen": 1794367602000,
+   "sources": [
+    "CNBC",
+    "Al Jazeera",
+    "BBC World"
+   ],
+   "count": 4,
+   "bias": "SHORT",
+   "strength": 24,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 2,
+    "NEUTRAL": 2
+   },
+   "impact": true,
+   "score": 18.6,
+   "assets": [],
+   "keywords": [
+    "impeachment",
+    "hegseth",
+    "block",
+    "house"
+   ],
+   "related": [
+    {
+     "title": "US House blocks bid to impeach Defence Secretary Pete Hegseth, for now",
+     "link": "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": 1794367602000,
+     "bias": "NEUTRAL",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5391/live/eb55ba30-dd67-11f1-a701-fddedf244c16.jpg"
+    },
+    {
+     "title": "Republicans block Hegseth impeachment motion",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/11/republicans-block-hegseth-impeachment-motion?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": 1794361422000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Hegseth impeachment effort torpedoed in House",
+     "link": "https://www.cnbc.com/2026/11/10/pete-hegseth-impeachment-massie-iran.html",
+     "source": "CNBC",
+     "time": 1794354401000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  }
+ ],
+ "roundups": [
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "After the Equity Rout, CPI Sets Direction",
+   "summary": "The post After the Equity Rout, CPI Sets Direction appeared first on Bitfinex blog .",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/after-the-equity-rout-cpi-sets-direction/",
+   "image": null,
+   "time": 1794242040000
+  },
+  {
+   "source": "Cointelegraph",
+   "category": "crypto",
+   "title": "BTC price eyes $73K amid Nvidia volatility: Three things to know in Bitcoin this week",
+   "summary": "Bitcoin price action fell to its lowest levels since mid-August as Nvidia reports added to sell-side pressure across stock-market futures.",
+   "link": "https://cointelegraph.com/markets/btc-price-nvidia-volatility-three-things-bitcoin-this-week",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6ZPZ3XN7CEBDWKGJCADW5H6/ai-falling-stock-prices-960x644-960x644.webp",
+   "time": 1794218620000
+  },
+  {
+   "source": "Bitcoin.com",
+   "category": "crypto",
+   "title": "Weekly Report: Crypto Market Erases $100B Rally as Bitcoin, XRP Prices Slide",
+   "summary": "The crypto market endured a volatile first week of November, briefly gaining approximately $100 billion following the U.S. midterm elections before surrendering those gains amid a global technology stock sell-off. Post-E",
+   "link": "https://news.bitcoin.com/market-updates/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide/",
+   "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide-768x432.png",
+   "time": 1794153909000
+  },
+  {
+   "source": "Bitcoin.com",
+   "category": "crypto",
+   "title": "Blue Wave, Red Week — Week in Review",
+   "summary": "This editorial is from this week’s edition of the newsletter Week in Review, sent to subscribers on Friday. Subscribe to the newsletter to get this weekly editorial the second it’s finished. The newsletter also includes ",
+   "link": "https://news.bitcoin.com/opinion-and-analysis/blue-wave-red-week-week-in-review/",
+   "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/blue-wave-red-week--week-in-review-768x432.png",
+   "time": 1794146401000
+  },
+  {
+   "source": "TheSequence",
+   "category": "ai",
+   "title": "The Sequence Radar - Issue #967: Last Week in AI: The Models Got Smarter. The Money Got Nervous.",
+   "summary": "Wall Street discovers the limits of exponential optimism, while Google, OpenAI, and Thinking Machines keep making the future more interesting.",
+   "link": "https://thesequence.substack.com/p/the-sequence-radar-issue-967-last",
+   "image": "https://substackcdn.com/image/fetch/$s_!X_wB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff0c37cbd-e01e-4db9-a4be-cd6f2cf2e8db_1280x720.jpeg",
+   "time": 1794139420000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "Wall Street Week Ahead",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964825-wall-street-week-ahead?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794136436000
+  },
+  {
+   "source": "The Verge Installer",
+   "category": "tech",
+   "title": "Zelda is back and better than ever",
+   "summary": "Hi, friends! Welcome to Installer No. 151, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, get psyched because it's officially Bad Holiday Movie Season, and also you can read all t",
+   "link": "https://www.theverge.com/tech/1028930/zelda-ocarina-godzilla-minus-zero-affinity-installer",
+   "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Installer-151.jpg?quality=90&strip=all&crop=0,0,100,100",
+   "time": 1794059341000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "What Moved Markets This Week",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964579-what-moved-markets-this-week?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794051446000
+  },
+  {
+   "source": "FXStreet",
+   "category": "markets",
+   "title": "Forecasting the upcoming week: When it comes to US inflation, size matters",
+   "summary": "The US Dollar (USD) maintained its bullish momentum in place for the second consecutive week, regaining strong upside traction in the second half of the week after investors seem to have digested the results from the US ",
+   "link": "https://www.fxstreet.com/analysis/forecasting-the-upcoming-week-when-it-comes-to-us-inflation-size-matters-202611061844",
+   "image": "https://editorial.fxsstatic.com/images/i/inflation-01.jpg",
+   "time": 1793990648000
+  },
+  {
+   "source": "FXStreet",
+   "category": "markets",
+   "title": "US Dollar Weekly Forecast: A resilient Greenback faces its next big test",
+   "summary": "The US Dollar (USD) weathered the post-US midterm election results better than expected, adding to the previous week’s bullish move and managing to keep the trade above the key 102.00 barrier on the US Dollar Index (DXY)",
+   "link": "https://www.fxstreet.com/analysis/us-dollar-weekly-forecast-the-dollar-survives-the-midterms-now-comes-inflation-202611061837",
+   "image": "https://editorial.fxsstatic.com/images/i/discover-59.png",
+   "time": 1793990236000
+  },
+  {
+   "source": "O'Reilly Radar",
+   "category": "ai",
+   "title": "This Week in AI: The Cost of Progress",
+   "summary": "New frontier models arrived this week as investors showed signs of growing cautious about AI spending. On the latest episode of This Week in AI, we examined those developments, along with research into how models learn a",
+   "link": "https://www.oreilly.com/radar/this-week-in-ai-the-cost-of-progress/",
+   "image": "https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/08/USE_THIS_thisweek-ai-radar-1600x840-1.png",
+   "time": 1793984106000
+  },
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "ETF Outflows And Spot Selling Test Bitcoin’s Recovery",
+   "summary": "Bitcoin has recovered into the $77,000-$80,000 support band after a brief election-night dip below the short-term holder cost basis. US spot bitcoin exchange-traded funds (ETFs) have recorded $1.16 billion of net outflow",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/etf-outflows-and-spot-selling-test-bitcoins-recovery/",
+   "image": "https://blog.bitfinex.com/wp-content/uploads/2026/11/image-25-1024x556.png?ver=1793799098",
+   "time": 1793799542000
+  },
+  {
+   "source": "Bitcoin.com",
+   "category": "crypto",
+   "title": "The $6 Billion Wake-up Call — Week in Review",
+   "summary": "This editorial is from this week’s edition of the newsletter Week in Review, sent to subscribers on Friday. Subscribe to the newsletter to get this weekly editorial the second it’s finished. The newsletter also includes ",
+   "link": "https://news.bitcoin.com/opinion-and-analysis/the-6-billion-wake-up-call-week-in-review/",
+   "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/the-6-billion-wake-up-call--week-in-review-768x432.png",
+   "time": 1793541607000
+  },
+  {
+   "source": "TheSequence",
+   "category": "ai",
+   "title": "The Sequence Radar - Issue #963: This Week in AI: The Future Has a Payment Schedule",
+   "summary": "Next Week in The Sequence:",
+   "link": "https://thesequence.substack.com/p/the-sequence-radar-issue-963-this",
+   "image": "https://substackcdn.com/image/fetch/$s_!qp4g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccb70fb2-7a2d-4469-babb-84249e12d751_1280x720.jpeg",
+   "time": 1793534628000
+  }
+ ]
+}
