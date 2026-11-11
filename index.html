@@ -123,7 +123,7 @@ swr('/api/news', d => {
   $('#latest').innerHTML = top.map(i => newsRow(i)).join('');
 
   const day = items.filter(i => Date.now() - i.time < 86400e3);
-  const cats = ['crypto', 'markets', 'macro', 'banking', 'tech', 'ai', 'world'];
+  const cats = ['crypto', 'markets', 'macro', 'banking', 'tech', 'ai', 'security', 'world'];
   $('#sectors').innerHTML = cats.map(c => {
     const xs = day.filter(i => i.category === c);
     if (!xs.length) return '';

@@ -1,7 +1,7 @@
 // Pulse — shared shell + helpers for every page. Exposes window.CNP.
 // Each page has <div id="site-header"></div> at the top and <div id="site-footer"></div> at the bottom.
 (function () {
-  const PAGES = [['/', 'Overview'], ['/markets', 'Markets'], ['/highlights', 'Weekly Highlights'], ['/news', 'News'], ['/calendar', 'Calendar']];
+  const PAGES = [['/', 'Overview'], ['/markets', 'Markets'], ['/highlights', 'Highlights'], ['/ai', 'AI & Tech'], ['/security', 'Hacks & Security'], ['/news', 'News'], ['/calendar', 'Calendar']];
   const here = location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/') || '/';
 
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -55,9 +55,11 @@
 
   // ---- news item renderers (shared by Overview / News / Highlights)
   const ARROW = { LONG: '▲', SHORT: '▼', NEUTRAL: '●' };
-  const CAT_LABEL = { crypto: 'Crypto', markets: 'Markets', macro: 'Macro', tech: 'Tech', ai: 'AI', banking: 'Banking', world: 'World' };
+  const CAT_LABEL = { crypto: 'Crypto', markets: 'Markets', macro: 'Macro', tech: 'Tech', ai: 'AI', banking: 'Banking', world: 'World', security: 'Security' };
   const biasBadge = i => `<span class="badge ${i.bias}">${ARROW[i.bias] || ''} ${i.bias}${i.bias !== 'NEUTRAL' && i.strength != null ? ' ' + i.strength + '%' : ''}</span>`;
-  const impactBadge = i => i.impact ? '<span class="badge impact" title="Market-moving topic">⚡ IMPACT</span>' : '';
+  const impactBadge = i => (i.launch ? '<span class="badge pin" title="Launch / release">🚀 LAUNCH</span>' : '') +
+    (i.viral ? '<span class="badge viral" title="Covered by many outlets">🔥 VIRAL</span>' : '') +
+    (i.impact ? '<span class="badge impact" title="Market-moving topic">⚡ IMPACT</span>' : '');
   const chips = i => (i.assets || []).slice(0, 4).map(a => `<span class="chip">${esc(a)}</span>`).join('');
   const catTag = i => `<span class="cat">${esc(CAT_LABEL[i.category] || i.category || '')}</span>`;
   const BIAS_COLOR = { LONG: 'var(--long)', SHORT: 'var(--short)', NEUTRAL: 'var(--neutral)' };
@@ -84,7 +86,7 @@
     const withRel = related && h.related && h.related.length; // nested links aren't allowed, so cards with related links are <div>s
     const open = withRel ? '<div' : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
     return `${open} class="hl${big ? ' big' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#101b33,#0a0c10)'}">
-      <div class="hl-tags">${h.pinned ? '<span class="badge pin">📌 PINNED</span>' : ''}${biasBadge(h)}${impactBadge(h)}${n ? `<span class="badge NEUTRAL">${n} OUTLETS</span>` : ''}</div>
+      <div class="hl-tags">${h.pinned ? '<span class="badge pin">📌 PINNED</span>' : ''}${biasBadge(h)}${impactBadge({ ...h, viral: n >= 4 })}${n ?`<span class="badge NEUTRAL">${n} OUTLETS</span>` : ''}</div>
       <div class="hl-body">
         ${rank ? `<span class="rank">#${rank}</span>` : ''}${catTag(h)}
         <h3 class="hl-title">${withRel ? `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title)}</h3>
@@ -95,7 +97,7 @@
   }
 
   // ---- countdowns: el gets cards for events [{title,type,time,note,estimated}], ticking every second
-  const TYPE_ICON = { CPI: '◆', FOMC: '◉', NFP: '▣', PPI: '◇', GDP: '▤', PCE: '◈', Halving: '₿' };
+  const TYPE_ICON = { CPI: '◆', FOMC: '◉', NFP: '▣', PPI: '◇', GDP: '▤', PCE: '◈', Halving: '₿', Earnings: '$', IPO: '🔔' };
   function countdown(el, events, { max = 4 } = {}) {
     if (!el) return;
     const list = (events || []).filter(e => e.time > Date.now() - 3600e3).slice(0, max);

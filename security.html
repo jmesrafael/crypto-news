@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-512.png">
+<meta name="theme-color" content="#06070a">
+<meta property="og:site_name" content="Pulse Market Intel">
+<meta property="og:image" content="/assets/icon-512.png">
+<title>Pulse · Hacks & Security</title>
+<meta name="description" content="Crypto exploits with dollar amounts, actively exploited vulnerabilities (CISA KEV), trending security stories and a live security news wire with sentiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .kpi { padding: 14px 16px; }
+  .kpi .v.red { color: var(--short); text-shadow: 0 0 22px rgba(240,65,76,.35); }
+  .kpi .bar { margin-top: 8px; height: 5px; }
+  .ransom { color: #ff5c7a; background: rgba(255,92,122,.12); border-color: rgba(255,92,122,.35); }
+  .two { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  .tbl-wrap { overflow-x: auto; }
+  .hk-name { font-weight: 600; }
+  .hk-tech { color: var(--muted); font-size: 12px; white-space: normal; max-width: 220px; }
+  .amt { font: 600 13px var(--mono); color: var(--short); text-align: right; }
+  .chips { display: flex; gap: 4px; flex-wrap: wrap; }
+  .kev { display: grid; gap: 5px; padding: 12px 14px; border-top: 1px solid var(--line); }
+  .kev:first-child { border-top: 0; }
+  .kev-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .kev-top a { font: 700 12px var(--mono); color: var(--accent2); }
+  .kev-top a:hover { text-decoration: underline; }
+  .kev-prod { font: 11px var(--mono); color: var(--muted); }
+  .kev-name { font-size: 13px; font-weight: 550; line-height: 1.35; }
+  .kev-meta { display: flex; gap: 12px; font: 11px var(--mono); color: var(--dim); }
+  .kev-meta .due { color: var(--warn); }
+  .kev-meta .due.over { color: var(--short); }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .toolbar h2 { margin: 0 auto 0 0; font-size: 15px; }
+  input[type=search] { width: 200px; }
+  .more-btn { display: block; width: 100%; padding: 12px; background: var(--panel2); color: var(--muted); border: 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .more-btn:hover { color: var(--text); }
+  .sub-note { font: 11px var(--mono); color: var(--dim); }
+  @media (max-width: 1080px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .two { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .kpis { grid-template-columns: 1fr 1fr; } input[type=search] { width: 100%; } }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div>
+      <h1>Hacks &amp; Security</h1>
+      <p>Crypto exploits, actively exploited vulnerabilities and the security stories outlets are covering. Sentiment is a keyword read of each headline.</p>
+    </div>
+    <span class="sub-note" id="updated"></span>
+  </div>
+
+  <section class="kpis" id="kpis">
+    <div class="panel kpi"><div class="skeleton" style="height:48px"></div></div><div class="panel kpi"><div class="skeleton" style="height:48px"></div></div>
+    <div class="panel kpi"><div class="skeleton" style="height:48px"></div></div><div class="panel kpi"><div class="skeleton" style="height:48px"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Trending now</h2><span class="label">security stories covered by several outlets · 48h</span></div>
+    <div class="hl-grid" id="trending"><div class="hl big skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div></div>
+  </section>
+
+  <section class="section two">
+    <div class="panel">
+      <div class="panel-h"><span class="label">Crypto exploits · last 30 days</span><span class="meta">DeFiLlama</span></div>
+      <div class="tbl-wrap"><table class="table" id="hacks"><tbody><tr><td class="empty">Loading…</td></tr></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="label">Actively exploited · CISA KEV</span><span class="meta">latest additions</span></div>
+      <div id="kev"><div class="empty">Loading…</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Crypto security headlines</h2><span class="label">hacks · exploits · scams · laundering</span><a class="more" href="/news?cat=crypto">Crypto news →</a></div>
+    <div class="panel news-list" id="cryptosec"><div class="empty">Loading…</div></div>
+  </section>
+
+  <section class="section">
+    <div class="toolbar">
+      <h2 id="wireTitle">Security wire</h2>
+      <div class="seg" id="seg"><button data-v="all" class="on">All</button><button data-v="impact">⚡ High impact</button><button data-v="short">▼ Short</button></div>
+      <input type="search" id="q" placeholder="Search security news…">
+    </div>
+    <div class="panel news-list" id="wire"><div class="empty">Loading…</div></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script>
+const { esc, ago, swr, newsRow, highlightCard, newsCard, fmtBig, setLive } = CNP;
+const $ = s => document.querySelector(s);
+const SEC_RE = /hack|exploit|drain|stolen|breach|phish|scam|rug|attack|vulnerab|launder|compromis/i;
+let news = null, tech = null, wireMode = 'all', wireQ = '', shown = 30;
+const fmtDate = t => new Date(t).toLocaleDateString('en-US', { timeZone: 'Asia/Manila', month: 'short', day: 'numeric' });
+
+function renderKpis() {
+  const h = tech && tech.hacks, kev = (tech && tech.kev) || [];
+  const weekKev = kev.filter(v => v.added > Date.now() - 7 * 86400e3).length;
+  const sec = news ? news.items.filter(i => i.category === 'security' && Date.now() - i.time < 86400e3) : [];
+  const shortPct = sec.length ? Math.round(sec.filter(i => i.bias === 'SHORT').length / sec.length * 100) : 0;
+  $('#kpis').innerHTML = `
+    <div class="panel kpi"><div class="label">Crypto stolen · 30d</div><div class="v red">${h ? fmtBig(h.total30d) : '–'}</div><div class="s muted">${h ? 'across ' + h.count30d + ' exploits' : 'unavailable'}</div></div>
+    <div class="panel kpi"><div class="label">Crypto exploits · 30d</div><div class="v">${h ? h.count30d : '–'}</div><div class="s muted">${h && h.items[0] ? 'latest: ' + esc(h.items[0].name) + ' · ' + ago(h.items[0].time) + ' ago' : ''}</div></div>
+    <div class="panel kpi"><div class="label">Exploited CVEs · this week</div><div class="v warn">${tech && tech.kev ? weekKev : '–'}</div><div class="s muted">added to CISA KEV</div></div>
+    <div class="panel kpi"><div class="label">Security headlines · 24h</div><div class="v">${news ? sec.length : '–'}</div><div class="s ${shortPct > 50 ? 'dn' : 'muted'}">${shortPct}% read SHORT</div><div class="bar"><i style="width:${shortPct}%;background:var(--short)"></i><i style="width:${100 - shortPct}%;background:#2a3342"></i></div></div>`;
+}
+
+function renderTrending() {
+  if (!news) return;
+  const tr = (news.trending && news.trending.security) || [];
+  if (tr.length) {
+    // highlightCard (site.js) adds the 🔥 VIRAL badge itself when 4+ outlets cover a story.
+    $('#trending').innerHTML = tr.slice(0, 5).map((h, k) => highlightCard(h, { big: k === 0, rank: k + 1 })).join('');
+  } else {
+    const xs = news.items.filter(i => i.category === 'security' && i.image).slice(0, 5);
+    $('#trending').innerHTML = xs.length ? xs.map((i, k) => newsCard(i, { big: k === 0 })).join('') : '<div class="empty">No security stories yet.</div>';
+  }
+}
+
+function renderHacks() {
+  const h = tech && tech.hacks;
+  if (!h) { $('#hacks').innerHTML = '<tbody><tr><td class="empty">Hack data unavailable.</td></tr></tbody>'; return; }
+  if (!h.items.length) { $('#hacks').innerHTML = '<tbody><tr><td class="empty">No crypto exploits in the last 30 days.</td></tr></tbody>'; return; }
+  $('#hacks').innerHTML = `<thead><tr><th>Date</th><th>Protocol</th><th>Chains</th><th>Technique</th><th class="r">Amount</th></tr></thead><tbody>` +
+    h.items.slice(0, 18).map(x => `<tr>
+      <td class="mono muted">${fmtDate(x.time)}</td>
+      <td><span class="hk-name">${esc(x.name)}</span>${x.bridge ? ' <span class="badge impact">BRIDGE</span>' : ''}${x.returned ? ' <span class="badge LONG" title="Funds returned">RETURNED</span>' : ''}</td>
+      <td><div class="chips">${(x.chains || []).slice(0, 3).map(c => `<span class="chip">${esc(c)}</span>`).join('')}${(x.chains || []).length > 3 ? `<span class="chip">+${x.chains.length - 3}</span>` : ''}</div></td>
+      <td class="hk-tech">${esc(x.technique || x.classification || '')}</td>
+      <td class="amt">${x.amount ? fmtBig(x.amount) : '<span class="dim">n/a</span>'}</td></tr>`).join('') + '</tbody>';
+}
+
+function renderKev() {
+  const kev = tech && tech.kev;
+  if (!kev) { $('#kev').innerHTML = '<div class="empty">CISA KEV unavailable.</div>'; return; }
+  $('#kev').innerHTML = kev.slice(0, 10).map(v => {
+    const days = Math.ceil((v.due - Date.now()) / 86400e3);
+    return `<div class="kev">
+      <div class="kev-top"><a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.cve)}</a><span class="kev-prod">${esc(v.vendor)} · ${esc(v.product)}</span>${v.ransomware ? '<span class="badge ransom">🔒 RANSOMWARE</span>' : ''}</div>
+      <div class="kev-name" title="${esc(v.description || '')}">${esc(v.name)}</div>
+      <div class="kev-meta"><span>added ${fmtDate(v.added)}</span><span class="due${days < 0 ? ' over' : ''}">${days < 0 ? 'patch deadline passed' : `patch by ${fmtDate(v.due)} · ${days}d left`}</span></div></div>`;
+  }).join('');
+}
+
+function renderCryptoSec() {
+  if (!news) return;
+  const xs = news.items.filter(i => i.category === 'crypto' && SEC_RE.test(i.title)).slice(0, 10);
+  $('#cryptosec').innerHTML = xs.map(i => newsRow(i)).join('') || '<div class="empty">No crypto security headlines in the last 3 days.</div>';
+}
+
+function renderWire() {
+  if (!news) return;
+  const q = wireQ.toLowerCase();
+  const rows = news.items.filter(i => i.category === 'security' &&
+    (wireMode === 'all' || (wireMode === 'impact' && i.impact) || (wireMode === 'short' && i.bias === 'SHORT')) &&
+    (!q || (i.title + ' ' + (i.summary || '')).toLowerCase().includes(q)));
+  $('#wireTitle').textContent = `Security wire · ${rows.length}`;
+  $('#wire').innerHTML = rows.length ? rows.slice(0, shown).map(i => newsRow(i)).join('') +
+    (rows.length > shown ? `<button class="more-btn" id="more">Show more (${rows.length - shown} left)</button>` : '') : '<div class="empty">No security news matches.</div>';
+}
+
+function stamp(meta) {
+  if (meta && !meta.error) setLive(!meta.stale);
+  const t = Math.max(news ? news.updated : 0, tech ? tech.updated : 0);
+  if (t) $('#updated').textContent = 'updated ' + new Date(t).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
+function loadNews() {
+  swr('/api/news', (d, meta) => {
+    if (!d || !d.items) { if (!news) ['#trending', '#cryptosec', '#wire'].forEach(s => $(s).innerHTML = '<div class="empty">News unavailable.</div>'); return; }
+    news = d; renderKpis(); renderTrending(); renderCryptoSec(); renderWire(); stamp(meta);
+  }, { key: 'news' });
+}
+function loadTech() {
+  swr('/api/tech', (d, meta) => { tech = d; renderKpis(); renderHacks(); renderKev(); stamp(meta); });
+}
+
+$('#seg').onclick = e => { const b = e.target.closest('button'); if (!b) return; document.querySelectorAll('#seg button').forEach(x => x.classList.toggle('on', x === b)); wireMode = b.dataset.v; shown = 30; renderWire(); };
+$('#q').oninput = e => { wireQ = e.target.value; shown = 30; renderWire(); };
+$('#wire').onclick = e => { if (e.target.id === 'more') { shown += 30; renderWire(); } };
+
+loadNews(); loadTech();
+setInterval(loadNews, 120000);
+setInterval(loadTech, 600000);
+</script>
+</body>
+</html>

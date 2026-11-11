@@ -55,7 +55,7 @@
 <script>
 const { esc, swr, newsRow, newsCard, biasBadge, setLive, store, CAT_LABEL } = CNP;
 const $ = s => document.querySelector(s);
-const CATS = [['all', 'All'], ['crypto', 'Crypto'], ['markets', 'Markets'], ['macro', 'Macro & Central Banks'], ['tech', 'Tech'], ['ai', 'AI'], ['banking', 'Banking & Payments'], ['world', 'World']];
+const CATS = [['all', 'All'], ['crypto', 'Crypto'], ['markets', 'Markets'], ['macro', 'Macro & Central Banks'], ['tech', 'Tech'], ['ai', 'AI'], ['banking', 'Banking & Payments'], ['security', 'Security'], ['world', 'World']];
 const params = new URLSearchParams(location.search);
 let data = { items: [], sources: [] }, pending = null, shown = 100;
 let filter = { cat: params.get('cat') || store.get('newsCat') || 'all', bias: 'ALL', asset: params.get('asset') || '', source: '', q: '', impact: false };

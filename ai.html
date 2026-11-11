@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-512.png">
+<meta name="theme-color" content="#06070a">
+<meta property="og:site_name" content="Pulse Market Intel">
+<meta property="og:image" content="/assets/icon-512.png">
+<title>Pulse · AI & Tech</title>
+<meta name="description" content="AI and tech news: trending stories, model launches, lab announcements, what's viral on Hacker News, and big-tech earnings and IPO reminders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .split { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  .hn { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--line); }
+  .hn:first-child { border-top: 0; }
+  .hn:hover { background: var(--panel2); }
+  .hn .rk { font: 700 12px var(--mono); color: var(--dim); text-align: right; }
+  .hn .t { font-weight: 550; line-height: 1.35; }
+  .hn .d { font: 11px var(--mono); color: var(--muted); margin-top: 3px; }
+  .hn .heat { display: grid; justify-items: end; gap: 4px; font: 600 12px var(--mono); }
+  .hn .heat small { font-weight: 400; color: var(--muted); font-size: 11px; }
+  .hn .heat .bar { width: 70px; height: 4px; }
+  .hot { color: #ff7a45; }
+  .tbl-wrap { overflow-x: auto; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .toolbar h2 { margin: 0 auto 0 0; font-size: 15px; }
+  input[type=search] { width: 180px; }
+  .more-btn { display: block; width: 100%; padding: 12px; background: var(--panel2); color: var(--muted); border: 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .lab { font: 700 10px var(--mono); color: var(--accent2); border: 1px solid rgba(34,211,238,.3); border-radius: 3px; padding: 1px 5px; }
+  @media (max-width: 1080px) { .split { grid-template-columns: 1fr; } .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 760px) { input[type=search] { width: 100%; } }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+  <div class="page-title">
+    <div><h1>AI & Tech</h1><p>Model launches, what AI labs are announcing, what's viral in tech, and reminders for the big-tech earnings and IPOs that move markets.</p></div>
+    <nav class="tabs" id="scope"><button data-k="ai+tech" class="on">AI + Tech</button><button data-k="ai">AI only</button><button data-k="tech">Tech only</button></nav>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="section">
+    <div class="section-h"><h2>Reminders</h2><span class="label">big-tech earnings · IPOs · countdown PHT</span><a class="more" href="#upcoming">Full list ↓</a></div>
+    <div class="cd-row" id="cd"><div class="cd skeleton" style="height:118px"></div><div class="cd skeleton"></div><div class="cd skeleton"></div><div class="cd skeleton"></div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-h"><h2>Trending Now</h2><span class="label">stories covered by 2+ outlets · last 48h</span></div>
+    <div class="hl-grid" id="trend"><div class="hl big skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div><div class="hl skeleton"></div></div>
+  </section>
+
+  <section class="section split">
+    <div class="panel">
+      <div class="panel-h"><span class="label">🚀 Launches & lab announcements</span><span class="meta">OpenAI · Google · NVIDIA · Anthropic · Hugging Face</span></div>
+      <div class="news-list" id="launches"><div class="empty">Loading…</div></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="label">🔥 Viral on Hacker News</span><a class="meta acc" href="https://news.ycombinator.com" target="_blank" rel="noopener">front page →</a></div>
+      <div id="hn"><div class="empty">Loading…</div></div>
+    </div>
+  </section>
+
+  <section class="section grid g2" id="upcoming">
+    <div class="panel">
+      <div class="panel-h"><span class="label">$ Big-tech & crypto-stock earnings</span><span class="meta">next 2 weeks · $150B+ or watchlist</span></div>
+      <div class="tbl-wrap"><table class="table" id="earn"><tbody><tr><td class="empty">Loading…</td></tr></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="label">🔔 IPO calendar</span><span class="meta">Nasdaq / NYSE</span></div>
+      <div class="tbl-wrap"><table class="table" id="ipo"><tbody><tr><td class="empty">Loading…</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="toolbar">
+      <h2 id="wireTitle">AI & Tech wire</h2>
+      <div class="seg" id="biasSeg"><button data-v="ALL" class="on">All</button><button data-v="LONG">Long</button><button data-v="SHORT">Short</button><button data-v="NEUTRAL">Neutral</button></div>
+      <label class="toggle"><input type="checkbox" id="launchOnly"> 🚀 Launches</label>
+      <label class="toggle"><input type="checkbox" id="impactOnly"> ⚡ High impact</label>
+      <input type="search" id="q" placeholder="Search AI & tech…">
+    </div>
+    <div class="panel news-list" id="wire"></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<script src="/assets/site.js"></script>
+<script>
+const { esc, ago, swr, newsRow, highlightCard, newsCard, countdown, fmtBig, setLive } = CNP;
+const $ = s => document.querySelector(s);
+const LABS = new Set(['OpenAI', 'Google AI', 'NVIDIA Blog', 'Hugging Face']);
+const LAB_RE = /\b(anthropic|claude|openai|chatgpt|gpt-?\d|deepmind|gemini|xai|grok|meta ai|llama|mistral|deepseek|nvidia)\b/i;
+let news = null, tech = null, scope = 'ai+tech', shown = 40;
+let filter = { bias: 'ALL', launch: false, impact: false, q: '' };
+const cats = () => scope.split('+');
+const inScope = i => cats().includes(i.category);
+
+function renderKpis() {
+  const items = news ? news.items.filter(inScope) : [];
+  const day = items.filter(i => Date.now() - i.time < 86400e3);
+  const L = day.filter(i => i.bias === 'LONG').length, S = day.filter(i => i.bias === 'SHORT').length;
+  const launches = items.filter(i => i.launch && Date.now() - i.time < 72 * 3600e3).length;
+  const nextEarn = (tech?.earnings || []).find(e => e.time > Date.now());
+  const k = (label, v, s) => `<div class="panel kpi panel-b"><div class="label">${label}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
+  $('#kpis').innerHTML =
+    k('Headlines · 24h', day.length, `<span class="up">▲ ${L}</span> · <span class="dn">▼ ${S}</span> · ● ${day.length - L - S}`) +
+    k('Launches · 72h', launches, 'models, chips, products') +
+    k('Top on HN', tech?.hn?.[0] ? `<span class="hot">${tech.hn[0].points}</span>` : '–', tech?.hn?.[0] ? esc(tech.hn[0].title.slice(0, 38)) + '…' : '') +
+    k('Next big earnings', nextEarn ? esc(nextEarn.symbol) : '–', nextEarn ? `${new Date(nextEarn.time).toLocaleDateString('en-US', { timeZone: 'Asia/Manila', month: 'short', day: 'numeric' })} · ${esc(nextEarn.session)}` : '');
+}
+
+function renderTrending() {
+  const list = (news?.trending?.[scope] || []);
+  if (list.length) $('#trend').innerHTML = list.slice(0, 5).map((h, k) => highlightCard(h, { big: k === 0, rank: k + 1 })).join('');
+  else {
+    const xs = (news?.items || []).filter(i => inScope(i) && i.image).slice(0, 5);
+    $('#trend').innerHTML = xs.map((i, k) => newsCard(i, { big: k === 0 })).join('') || '<div class="empty">Nothing trending yet.</div>';
+  }
+}
+
+function renderLaunches() {
+  const xs = (news?.items || []).filter(i => Date.now() - i.time < 72 * 3600e3 &&
+    (LABS.has(i.source) || (inScope(i) && (i.launch || (i.category === 'ai' && LAB_RE.test(i.title))))));
+  xs.sort((a, b) => (b.launch - a.launch) || (b.time - a.time));
+  $('#launches').innerHTML = xs.slice(0, 10).map(i => newsRow(i)).join('') || '<div class="empty">No launches in the last 72h.</div>';
+}
+
+function renderHN() {
+  const xs = tech?.hn || [];
+  const max = Math.max(1, ...xs.map(h => h.points));
+  $('#hn').innerHTML = xs.length ? xs.slice(0, 12).map((h, k) => `<a class="hn" href="${esc(h.url)}" target="_blank" rel="noopener">
+      <span class="rk">${k + 1}</span>
+      <div><div class="t">${esc(h.title)}</div><div class="d">${esc(h.domain)} · ${ago(h.time)} ago · <span class="acc" onclick="event.preventDefault();window.open('${esc(h.hnUrl)}','_blank')">${h.comments} comments</span></div></div>
+      <div class="heat"><span class="${h.points >= 400 ? 'hot' : ''}">${h.points >= 400 ? '🔥 ' : ''}${h.points}<small> pts</small></span><div class="bar"><i style="width:${h.points / max * 100}%;background:#ff7a45"></i></div></div></a>`).join('')
+    : '<div class="empty">Hacker News unavailable.</div>';
+}
+
+function renderUpcoming() {
+  const now = Date.now();
+  const earn = (tech?.earnings || []).filter(e => e.time > now - 6 * 3600e3);
+  const ipos = (tech?.ipos || []);
+  const when = t => new Date(t).toLocaleString('en-US', { timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric' });
+  $('#earn').innerHTML = earn.length ? `<thead><tr><th>Date (PHT)</th><th>Company</th><th>Session</th><th class="r">Mkt cap</th><th class="r">EPS est.</th></tr></thead><tbody>` +
+    earn.map(e => `<tr><td class="mono">${when(e.time)}</td><td><b>${esc(e.symbol)}</b> <span class="muted">${esc(e.name)}</span></td><td class="muted">${esc(e.session)}</td><td class="r mono">${fmtBig(e.marketCap)}</td><td class="r mono">${esc(e.epsForecast || '–')}</td></tr>`).join('') + '</tbody>'
+    : '<tbody><tr><td class="empty">No big earnings in the next 2 weeks (or the earnings calendar is unavailable).</td></tr></tbody>';
+  $('#ipo').innerHTML = ipos.length ? `<thead><tr><th>Date</th><th>Company</th><th>Exch.</th><th class="r">Price</th><th class="r">Size</th><th>Status</th></tr></thead><tbody>` +
+    ipos.map(i => `<tr class="${i.time < now ? 'muted' : ''}"><td class="mono">${when(i.time)}</td><td><b>${esc(i.symbol)}</b> <span class="muted">${esc(i.company)}</span></td><td class="muted">${esc(i.exchange)}</td><td class="r mono">$${esc(i.price)}</td><td class="r mono">${fmtBig(i.value)}</td><td><span class="badge ${i.status === 'Priced' ? 'NEUTRAL' : 'pin'}">${esc(i.status.toUpperCase())}</span></td></tr>`).join('') + '</tbody>'
+    : '<tbody><tr><td class="empty">No IPOs scheduled (or the IPO calendar is unavailable).</td></tr></tbody>';
+
+  // Countdown reminders: mega-cap / watchlist earnings first (NVDA etc.), then the largest upcoming IPOs.
+  const evs = [
+    ...earn.filter(e => e.time > now).map(e => ({ title: `${e.symbol} earnings`, type: 'Earnings', country: e.symbol, time: e.time, note: `${e.name} · ${e.session}${e.marketCap ? ' · ' + fmtBig(e.marketCap) : ''}`, w: e.marketCap || 0 })),
+    ...ipos.filter(i => i.status === 'Upcoming' && i.time > now).map(i => ({ title: `${i.company} IPO`, type: 'IPO', country: i.symbol, time: i.time, note: `${i.exchange} · $${i.price} · ${fmtBig(i.value)}`, w: (i.value || 0) * 20 })),
+  ].sort((a, b) => b.w - a.w).slice(0, 4).sort((a, b) => a.time - b.time);
+  countdown($('#cd'), evs, { max: 4 });
+}
+
+function renderWire() {
+  const q = filter.q.toLowerCase();
+  const rows = (news?.items || []).filter(i => inScope(i) && (filter.bias === 'ALL' || i.bias === filter.bias) &&
+    (!filter.launch || i.launch) && (!filter.impact || i.impact) && (!q || (i.title + ' ' + i.summary + ' ' + i.source).toLowerCase().includes(q)));
+  $('#wireTitle').textContent = `${scope === 'ai' ? 'AI' : scope === 'tech' ? 'Tech' : 'AI & Tech'} wire · ${rows.length}`;
+  $('#wire').innerHTML = rows.length ? rows.slice(0, shown).map(i => newsRow(i)).join('') +
+    (rows.length > shown ? `<button class="more-btn" id="more">Show more (${rows.length - shown} left)</button>` : '') : '<div class="empty">No stories match.</div>';
+}
+
+const renderNews = () => { renderKpis(); renderTrending(); renderLaunches(); renderWire(); };
+
+swr('/api/news', (d, m) => { if (!d || !d.items) return; news = d; renderNews(); if (m && !m.error) setLive(!m.stale); }, { key: 'news' });
+swr('/api/tech', d => { if (!d) return; tech = d; renderKpis(); renderHN(); renderUpcoming(); });
+setInterval(() => swr('/api/news', d => { if (d && d.items) { news = d; renderNews(); } }, { key: 'news' }), 120000);
+setInterval(() => swr('/api/tech', d => { if (d) { tech = d; renderHN(); renderUpcoming(); } }), 600000);
+
+$('#scope').onclick = e => { const b = e.target.closest('button'); if (!b) return; document.querySelectorAll('#scope button').forEach(x => x.classList.toggle('on', x === b)); scope = b.dataset.k; shown = 40; renderNews(); };
+$('#biasSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; document.querySelectorAll('#biasSeg button').forEach(x => x.classList.toggle('on', x === b)); filter.bias = b.dataset.v; renderWire(); };
+$('#launchOnly').onchange = e => { filter.launch = e.target.checked; renderWire(); };
+$('#impactOnly').onchange = e => { filter.impact = e.target.checked; renderWire(); };
+$('#q').oninput = e => { filter.q = e.target.value; renderWire(); };
+$('#wire').onclick = e => { if (e.target.id === 'more') { shown += 40; renderWire(); } };
+</script>
+</body>
+</html>
