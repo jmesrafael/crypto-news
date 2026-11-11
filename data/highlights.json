@@ -1,13 +1,13 @@
 {
- "generated": 1794378708198,
+ "generated": 1794378935055,
  "date": "2026-11-11",
  "window": {
-  "from": 1793773908198,
-  "to": 1794378708198
+  "from": 1793774135055,
+  "to": 1794378935055
  },
  "stats": {
-  "stories": 575,
-  "sources": 31
+  "stories": 537,
+  "sources": 30
  },
  "pinned": [],
  "highlights": [
@@ -199,97 +199,6 @@
    ]
   },
   {
-   "id": "japanese-yen-struggles-as-fed-rate-hike-odds-lift-us-dollar",
-   "title": "Japanese Yen struggles as Fed rate hike odds lift US Dollar",
-   "summary": "USD/JPY extends its gains for the second successive day, trading around 158.90 during Asian hours on Wednesday. The pair gained ground as the US Dollar (USD) received firm support following the latest inflation report, w",
-   "link": "https://www.fxstreet.com/news/japanese-yen-struggles-as-fed-rate-hike-odds-lift-usd-jpy-202611110201",
-   "source": "FXStreet",
-   "image": "https://editorial.fxsstatic.com/images/i/USDJPY-bearish-object.png",
-   "category": "markets",
-   "firstSeen": 1794328077000,
-   "lastSeen": 1794370681000,
-   "sources": [
-    "Decrypt",
-    "FXStreet",
-    "CNBC Finance",
-    "Cointelegraph",
-    "CNBC"
-   ],
-   "count": 8,
-   "bias": "SHORT",
-   "strength": 100,
-   "sentimentCounts": {
-    "LONG": 0,
-    "SHORT": 8,
-    "NEUTRAL": 0
-   },
-   "impact": true,
-   "score": 31.7,
-   "assets": [
-    "BTC",
-    "RATES",
-    "USD"
-   ],
-   "keywords": [
-    "odds",
-    "dollar",
-    "rate",
-    "hike",
-    "inflation",
-    "fed"
-   ],
-   "related": [
-    {
-     "title": "New Zealand Dollar strengthens despite decreasing RBNZ rate hike odds",
-     "link": "https://www.fxstreet.com/news/new-zealand-dollar-strengthens-despite-decreasing-rbnz-rate-hike-odds-202611110418",
-     "source": "FXStreet",
-     "time": 1794370681000,
-     "bias": "SHORT",
-     "image": "https://editorial.fxsstatic.com/images/i/NZDUSD.png"
-    },
-    {
-     "title": "United States Dollar Index steadies on Fed rate-hike odds",
-     "link": "https://www.fxstreet.com/news/united-states-dollar-index-steadies-on-fed-rate-hike-odds-202611110347",
-     "source": "FXStreet",
-     "time": 1794368877000,
-     "bias": "SHORT",
-     "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object.png"
-    },
-    {
-     "title": "Fed’s Paulson: Further ‘gradual’ rate hikes appropriate given high inflation",
-     "link": "https://www.fxstreet.com/news/feds-paulson-further-gradual-rate-hikes-appropriate-given-high-inflation-202611110137",
-     "source": "FXStreet",
-     "time": 1794361052000,
-     "bias": "SHORT",
-     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_3.png"
-    },
-    {
-     "title": "GE Vernova sellers have it all wrong — plus, why Fed rate hike odds are soaring",
-     "link": "https://www.cnbc.com/investingclub/2026/11/10/ge-vernova-sellers-have-it-all-wrong-plus-why-fed-rate-hike-odds-are-soaring.html",
-     "source": "CNBC",
-     "time": 1794346573000,
-     "bias": "SHORT",
-     "image": null
-    },
-    {
-     "title": "Hot US inflation raises odds of half-point Fed hike in December",
-     "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto",
-     "source": "Cointelegraph",
-     "time": 1794331869000,
-     "bias": "SHORT",
-     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7336RAJMBE41VQRYSYWFP63/us-federal-reserve-1.jpg"
-    },
-    {
-     "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
-     "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
-     "source": "CNBC Finance",
-     "time": 1794330824000,
-     "bias": "SHORT",
-     "image": null
-    }
-   ]
-  },
-  {
    "id": "-i-sold-2-5-million-xrp-ripple-vet-david-schwartz-rebuts-cri",
    "title": "'I Sold 2.5 Million XRP': Ripple Vet David Schwartz Rebuts Critics With Tax Proof",
    "summary": "David Schwartz drops $1.7 million tax proof on 2.5 million XRP sales to shut down dumping claims and detail his de-risking strategy.",
@@ -304,16 +213,16 @@
     "Cryptonews",
     "BeInCrypto"
    ],
-   "count": 10,
+   "count": 9,
    "bias": "SHORT",
    "strength": 42,
    "sentimentCounts": {
     "LONG": 0,
     "SHORT": 3,
-    "NEUTRAL": 7
+    "NEUTRAL": 6
    },
    "impact": false,
-   "score": 25.6,
+   "score": 24.6,
    "assets": [
     "XRP",
     "BTC",
@@ -343,14 +252,6 @@
      "image": null
     },
     {
-     "title": "Ripple Ex-CTO Tells Angry XRP Holders There’s No Secret Plan",
-     "link": "https://beincrypto.com/xrp-price-schwartz-no-secret-plan/",
-     "source": "BeInCrypto",
-     "time": 1794355582000,
-     "bias": "NEUTRAL",
-     "image": "https://assets.beincrypto.com/img/PIIfKc-FHWI96iq6NQcCYKYhSRM=/smart/ffcf19b48bc347d1bbc491a882de0a5a"
-    },
-    {
      "title": "DeepSeek AI XRP Price Prediction: Could Ripple Really Go This High?",
      "link": "https://cryptonews.com/news/deepseek-ai-xrp-price-prediction-ripple/",
      "source": "Cryptonews",
@@ -373,70 +274,14 @@
      "time": 1794258457000,
      "bias": "NEUTRAL",
      "image": null
-    }
-   ]
-  },
-  {
-   "id": "bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief",
-   "title": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough",
-   "summary": "Bitcoin trades below $75,000 ahead of the October inflation data. Analysts warning that sustainable recovery depends on improving liquidity and spot ETF demand rather than temporary macro relief.",
-   "link": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
-   "source": "CoinDesk",
-   "image": "https://cdn.sanity.io/images/s3y3vcno/production/b5c969ee70de7444f1035edf7701cc88d16ae253-3000x2001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-   "category": "crypto",
-   "firstSeen": 1794280946000,
-   "lastSeen": 1794361357000,
-   "sources": [
-    "CoinDesk",
-    "Cryptonews",
-    "FXStreet"
-   ],
-   "count": 4,
-   "bias": "SHORT",
-   "strength": 51,
-   "sentimentCounts": {
-    "LONG": 0,
-    "SHORT": 3,
-    "NEUTRAL": 1
-   },
-   "impact": true,
-   "score": 21.2,
-   "assets": [
-    "BTC",
-    "STOCKS"
-   ],
-   "keywords": [
-    "test",
-    "face",
-    "warn",
-    "cpi",
-    "inflation",
-    "fed"
-   ],
-   "related": [
-    {
-     "title": "Fed’s Goolsbee: CPI was borderline disturbing on inflation",
-     "link": "https://www.fxstreet.com/news/feds-goolsbee-cpi-was-borderline-disturbing-on-inflation-202611110142",
-     "source": "FXStreet",
-     "time": 1794361357000,
-     "bias": "NEUTRAL",
-     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_1.png"
     },
     {
-     "title": "Fed’s Bowman warns CPI signals persistent US inflation pressures",
-     "link": "https://www.fxstreet.com/news/feds-bowman-warns-cpi-signals-persistent-us-inflation-pressures-202611102123",
-     "source": "FXStreet",
-     "time": 1794345814000,
-     "bias": "SHORT",
-     "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_4.png"
-    },
-    {
-     "title": "LIVE – Will CPI Cause a Sell-Off? Asian Stocks and Bitcoin Face Fresh Test as NVIDIA Anxiety Grows",
-     "link": "https://cryptonews.com/news/will-cpi-cause-sell-off-asian-stocks-bitcoin-kospi/",
+     "title": "Ripple Insider Sold 2.5M XRP, But Still Thinks Its Price Could Flip Bitcoin",
+     "link": "https://cryptonews.com/news/ripple-insider-sold-2-5m-xrp-flip-bitcoin-price/",
      "source": "Cryptonews",
-     "time": 1794294420000,
+     "time": 1794245220000,
      "bias": "SHORT",
-     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794294319-screenshot-2026-11-10-at-2-00-41pm.jpg"
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794228133-screenshot-2026-11-09-at-7-41-01pm.jpg"
     }
    ]
   },
@@ -652,9 +497,9 @@
    "keywords": [
     "perpetual",
     "cftc",
-    "fight",
-    "kalshi",
     "future",
+    "kalshi",
+    "fight",
     "coinbase"
    ],
    "related": [
@@ -862,6 +707,132 @@
      "image": null
     }
    ]
+  },
+  {
+   "id": "coinbase-joins-circle-ripple-with-final-occ-approval-for-fed",
+   "title": "Coinbase Joins Circle, Ripple With Final OCC Approval for Federal Trust Bank Charter",
+   "summary": "The exchange will move its institutional crypto custody business under federal oversight, building on its 2018 New York trust charter.",
+   "link": "https://decrypt.co/382816/coinbase-joins-circle-ripple-with-final-occ-approval-for-federal-trust-bank-charter",
+   "source": "Decrypt",
+   "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/Coinbase_logo-nft-nyc-decrypt-style-scaled-gID_7.jpg",
+   "category": "crypto",
+   "firstSeen": 1794223946000,
+   "lastSeen": 1794264036000,
+   "sources": [
+    "Cryptonews",
+    "Decrypt",
+    "Banking Dive",
+    "CryptoPotato"
+   ],
+   "count": 4,
+   "bias": "LONG",
+   "strength": 27,
+   "sentimentCounts": {
+    "LONG": 3,
+    "SHORT": 0,
+    "NEUTRAL": 1
+   },
+   "impact": false,
+   "score": 18.2,
+   "assets": [
+    "XRP"
+   ],
+   "keywords": [
+    "occ",
+    "charter",
+    "approval",
+    "join",
+    "trust",
+    "coinbase"
+   ],
+   "related": [
+    {
+     "title": "Coinbase Joins Ripple as OCC Gives Green Light to Trust Bank Charter",
+     "link": "https://cryptopotato.com/coinbase-joins-ripple-as-occ-gives-green-light-to-trust-bank-charter/",
+     "source": "CryptoPotato",
+     "time": 1794264036000,
+     "bias": "NEUTRAL",
+     "image": "https://cryptopotato.com/wp-content/uploads/2024/02/Coinbase_WallStreet.jpg"
+    },
+    {
+     "title": "Coinbase secures unconditional trust charter",
+     "link": "https://www.bankingdive.com/news/coinbase-secures-unconditional-trust-charter/874135/",
+     "source": "Banking Dive",
+     "time": 1794245030000,
+     "bias": "LONG",
+     "image": "https://imgproxy.divecdn.com/KulG3cgJI9Ts6y-F_g9Wflea6LdSPXfJqr-GZNKnaUg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Db2luYi5qcGc=.webp"
+    },
+    {
+     "title": "Coinbase Bank Gets Full OCC Approval as Ripple Leads Crypto Banking Push",
+     "link": "https://cryptonews.com/news/coinbase-bank-occ-approval-ripple/",
+     "source": "Cryptonews",
+     "time": 1794223946000,
+     "bias": "LONG",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794223720-screenshot-2026-11-09-at-6-28-18pm.jpg"
+    }
+   ]
+  },
+  {
+   "id": "ring-known-for-its-doorbell-cameras-launches-a-home-security",
+   "title": "Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot",
+   "summary": "Amazon-owned Ring is pushing into robotics with the launch of a home security drone and a rolling robot designed to patrol and protect businesses.",
+   "link": "https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/",
+   "source": "TechCrunch AI",
+   "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/DSC01268.jpg?quality=90&strip=all&crop=0,0,100,100",
+   "category": "ai",
+   "firstSeen": 1794317400000,
+   "lastSeen": 1794350101000,
+   "sources": [
+    "TechCrunch AI",
+    "The Verge AI",
+    "CNBC",
+    "Ars Technica"
+   ],
+   "count": 4,
+   "bias": "LONG",
+   "strength": 12,
+   "sentimentCounts": {
+    "LONG": 1,
+    "SHORT": 0,
+    "NEUTRAL": 3
+   },
+   "impact": false,
+   "score": 17.2,
+   "assets": [],
+   "keywords": [
+    "amazon",
+    "camera",
+    "ring",
+    "robot",
+    "drone",
+    "home"
+   ],
+   "related": [
+    {
+     "title": "Ring cameras go mobile as Amazon debuts AI-powered security drone and robot",
+     "link": "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
+     "source": "Ars Technica",
+     "time": 1794350101000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/Ring-Drone-1152x648.jpeg"
+    },
+    {
+     "title": "Amazon's Ring unveils flying drone and robot to patrol homes and businesses",
+     "link": "https://www.cnbc.com/2026/11/10/amazons-ring-unveils-flying-drone-robot-to-patrol-homes-businesses.html",
+     "source": "CNBC",
+     "time": 1794339839000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Hands-on with Ring’s new AI drone camera for your home",
+     "link": "https://www.theverge.com/tech/1030601/ring-drone-cam-hands-on-price-release-date-ai-pilot",
+     "source": "The Verge AI",
+     "time": 1794317400000,
+     "bias": "NEUTRAL",
+     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/DSC01268.jpg?quality=90&strip=all&crop=0,0,100,100"
+    }
+   ]
   }
  ],
  "roundups": [
@@ -902,15 +873,6 @@
    "time": 1794146401000
   },
   {
-   "source": "TheSequence",
-   "category": "ai",
-   "title": "The Sequence Radar - Issue #967: Last Week in AI: The Models Got Smarter. The Money Got Nervous.",
-   "summary": "Wall Street discovers the limits of exponential optimism, while Google, OpenAI, and Thinking Machines keep making the future more interesting.",
-   "link": "https://thesequence.substack.com/p/the-sequence-radar-issue-967-last",
-   "image": "https://substackcdn.com/image/fetch/$s_!X_wB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff0c37cbd-e01e-4db9-a4be-cd6f2cf2e8db_1280x720.jpeg",
-   "time": 1794139420000
-  },
-  {
    "source": "Seeking Alpha",
    "category": "markets",
    "title": "Wall Street Week Ahead",
@@ -938,24 +900,6 @@
    "time": 1794051446000
   },
   {
-   "source": "FXStreet",
-   "category": "markets",
-   "title": "Forecasting the upcoming week: When it comes to US inflation, size matters",
-   "summary": "The US Dollar (USD) maintained its bullish momentum in place for the second consecutive week, regaining strong upside traction in the second half of the week after investors seem to have digested the results from the US ",
-   "link": "https://www.fxstreet.com/analysis/forecasting-the-upcoming-week-when-it-comes-to-us-inflation-size-matters-202611061844",
-   "image": "https://editorial.fxsstatic.com/images/i/inflation-01.jpg",
-   "time": 1793990648000
-  },
-  {
-   "source": "FXStreet",
-   "category": "markets",
-   "title": "US Dollar Weekly Forecast: A resilient Greenback faces its next big test",
-   "summary": "The US Dollar (USD) weathered the post-US midterm election results better than expected, adding to the previous week’s bullish move and managing to keep the trade above the key 102.00 barrier on the US Dollar Index (DXY)",
-   "link": "https://www.fxstreet.com/analysis/us-dollar-weekly-forecast-the-dollar-survives-the-midterms-now-comes-inflation-202611061837",
-   "image": "https://editorial.fxsstatic.com/images/i/discover-59.png",
-   "time": 1793990236000
-  },
-  {
    "source": "O'Reilly Radar",
    "category": "ai",
    "title": "This Week in AI: The Cost of Progress",
@@ -981,15 +925,6 @@
    "link": "https://news.bitcoin.com/opinion-and-analysis/the-6-billion-wake-up-call-week-in-review/",
    "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/the-6-billion-wake-up-call--week-in-review-768x432.png",
    "time": 1793541607000
-  },
-  {
-   "source": "TheSequence",
-   "category": "ai",
-   "title": "The Sequence Radar - Issue #963: This Week in AI: The Future Has a Payment Schedule",
-   "summary": "Next Week in The Sequence:",
-   "link": "https://thesequence.substack.com/p/the-sequence-radar-issue-963-this",
-   "image": "https://substackcdn.com/image/fetch/$s_!qp4g!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fccb70fb2-7a2d-4469-babb-84249e12d751_1280x720.jpeg",
-   "time": 1793534628000
   }
  ]
 }
