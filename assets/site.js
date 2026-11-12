@@ -79,21 +79,54 @@
       <div class="meta">${esc(i.source)} · ${ago(i.time)} ago ${chips(i)}</div></div></a>`;
   }
 
+  // ---- outlet logos: feed name -> domain, favicon fetched by the viewer's browser
+  const SRC_DOMAIN = {
+    'Cointelegraph': 'cointelegraph.com', 'CoinDesk': 'coindesk.com', 'Decrypt': 'decrypt.co', 'The Block': 'theblock.co',
+    'CryptoSlate': 'cryptoslate.com', 'Cryptonews': 'cryptonews.com', 'Bitcoin.com': 'bitcoin.com', 'NewsBTC': 'newsbtc.com',
+    'U.Today': 'u.today', 'BeInCrypto': 'beincrypto.com', 'CryptoPotato': 'cryptopotato.com', 'CNBC': 'cnbc.com',
+    'CNBC Economy': 'cnbc.com', 'CNBC Tech': 'cnbc.com', 'CNBC Finance': 'cnbc.com', 'MarketWatch': 'marketwatch.com',
+    'MarketWatch Pulse': 'marketwatch.com', 'WSJ Markets': 'wsj.com', 'Investing.com': 'investing.com', 'FXStreet': 'fxstreet.com',
+    'BBC Business': 'bbc.co.uk', 'BBC World': 'bbc.co.uk', 'Federal Reserve': 'federalreserve.gov', 'ECB': 'ecb.europa.eu',
+    'TechCrunch': 'techcrunch.com', 'TechCrunch AI': 'techcrunch.com', 'The Verge': 'theverge.com', 'The Verge AI': 'theverge.com',
+    'Ars Technica': 'arstechnica.com', 'Finextra': 'finextra.com', 'Banking Dive': 'bankingdive.com', 'Payments Dive': 'paymentsdive.com',
+    'Al Jazeera': 'aljazeera.com', 'OpenAI': 'openai.com', 'Google AI': 'blog.google', 'NVIDIA Blog': 'nvidia.com',
+    'Hugging Face': 'huggingface.co', 'Wired AI': 'wired.com', 'Wired Security': 'wired.com', 'Engadget': 'engadget.com',
+    'The Hacker News': 'thehackernews.com', 'BleepingComputer': 'bleepingcomputer.com', 'Krebs on Security': 'krebsonsecurity.com',
+    'SecurityWeek': 'securityweek.com', 'The Record': 'therecord.media', 'Dark Reading': 'darkreading.com', 'Seeking Alpha': 'seekingalpha.com',
+  };
+  const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
+  function srcLogo(name, link) {
+    const d = SRC_DOMAIN[name] || hostOf(link);
+    const initial = esc((name || '?').trim()[0] || '?');
+    return d ? `<img class="src-logo" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=64" alt="" title="${esc(name)}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('i'),{className:'src-logo',textContent:'${initial}'}))">`
+      : `<i class="src-logo" title="${esc(name)}">${initial}</i>`;
+  }
+
   // ---- weekly highlight card (from data/highlights.json)
+  // Minimal face: bias % pill, icon flags, outlet logo stack, glass headline panel. Related reports appear on hover/focus.
   function highlightCard(h, { big, rank, related } = {}) {
-    const days = Math.max(1, Math.round((h.lastSeen - h.firstSeen) / 86400e3) + 1);
-    const n = (h.sources || []).length;
-    const withRel = related && h.related && h.related.length; // nested links aren't allowed, so cards with related links are <div>s
-    const open = withRel ? '<div' : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
+    const days = h.firstSeen ? Math.max(1, Math.round((h.lastSeen - h.firstSeen) / 86400e3) + 1) : 0;
+    const srcs = [...new Set(h.sources || [])];
+    const n = srcs.length;
+    const rel = related && h.related && h.related.length ? h.related : null;
+    const tag = rel ? 'div' : 'a'; // nested links aren't allowed, so cards with related links are <div>s
+    const open = rel ? `<div tabindex="0"` : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
+    const pct = h.bias !== 'NEUTRAL' && h.strength != null ? h.strength + '%' : '';
+    const flags = [h.pinned && ['📌', 'Pinned'], h.launch && ['🚀', 'Launch / release'], n >= 4 && ['🔥', 'Viral · ' + n + ' outlets'], h.impact && ['⚡', 'Market-moving']]
+      .filter(Boolean).map(([i, t]) => `<span class="hl-pill ico" title="${t}">${i}</span>`).join('');
+    const stack = n ? `<span class="hl-pill srcs" title="${esc(srcs.join(', '))}">${srcs.slice(0, 4).map(s => srcLogo(s)).join('')}${n > 4 ? `<b>+${n - 4}</b>` : ''}</span>` : '';
+    const coins = (h.assets || []).slice(0, big ? 4 : 3).map(a => `<span class="hl-coin">${esc(a)}</span>`).join('');
+    const kicker = [rank ? `<b>#${rank}</b>` : '', esc(CAT_LABEL[h.category] || h.category || ''), days ? days + 'd' : h.date ? esc(h.date) : ''].filter(Boolean).join('<i>·</i>');
+    const title = rel ? `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title);
     return `${open} class="hl${big ? ' big' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
-      <div class="hl-tags">${h.pinned ? '<span class="badge pin">📌 PINNED</span>' : ''}${biasBadge(h)}${impactBadge({ ...h, viral: n >= 4 })}${n ?`<span class="badge NEUTRAL">${n} OUTLETS</span>` : ''}</div>
-      <div class="hl-body">
-        ${rank ? `<span class="rank">#${rank}</span>` : ''}${catTag(h)}
-        <h3 class="hl-title">${withRel ? `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title)}</h3>
-        ${big && h.summary ? `<p>${esc(h.summary.slice(0, 220))}${h.summary.length > 220 ? '…' : ''}</p>` : ''}
-        <div class="hl-meta">${n ? `<span class="src-dots">${'<i></i>'.repeat(Math.min(n, 12))}</span>` : ''}${esc(h.source || '')}${h.firstSeen ? ` · ${days}d running · ${h.count} reports` : h.date ? ' · ' + esc(h.date) : ''} ${chips(h)}</div>
-        ${withRel ? `<div class="hl-related">${h.related.slice(0, 4).map(r => `<a href="${esc(r.link)}" target="_blank" rel="noopener"><span>${esc(r.source)}</span>${esc(r.title)}</a>`).join('')}</div>` : ''}
-      </div>${withRel ? '</div>' : '</a>'}`;
+      <div class="hl-tags"><span class="hl-pill bias ${h.bias}" title="${esc(h.bias)}${pct ? ' · ' + pct + ' strength' : ''}">${ARROW[h.bias] || '●'}${pct ? ' ' + pct : ''}</span>${flags}${stack}</div>
+      <div class="hl-glass">
+        <div class="hl-kicker">${kicker}</div>
+        <h3 class="hl-title">${title}</h3>
+        ${big && h.summary ? `<p>${esc(h.summary.slice(0, 200))}${h.summary.length > 200 ? '…' : ''}</p>` : ''}
+        ${coins ? `<div class="hl-coins">${coins}</div>` : ''}
+        ${rel ? `<div class="hl-related">${rel.slice(0, 3).map(r => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${srcLogo(r.source, r.link)}<span>${esc(r.title)}</span></a>`).join('')}</div>` : ''}
+      </div></${tag}>`;
   }
 
   // ---- countdowns: el gets cards for events [{title,type,time,note,estimated}], ticking every second
