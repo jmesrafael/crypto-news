@@ -40,7 +40,7 @@
       <div class="panel"><div class="panel-b" id="fgchart"></div></div>
     </div>
     <div>
-      <div class="section-h"><h2>Watchlist News</h2><span class="label">SOL · ZEC · ADA · NEAR · GALA</span><a class="more" href="/news">All news →</a></div>
+      <div class="section-h"><h2>Watchlist News</h2><span class="label">SOL · ZEC · ADA · NEAR · GALA · ETH · SUI · ARB</span><a class="more" href="/news">All news →</a></div>
       <div class="panel"><div class="panel-b" id="wl-bias" style="display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line)"></div><div class="news-list" id="wl-news"><div class="empty">Loading…</div></div></div>
     </div>
   </section>
@@ -88,7 +88,7 @@
     setInterval(load, 120000);
 
     // Watchlist news: last 3 days of headlines mentioning the watchlist coins, with a net news bias per coin.
-    const WL = ['SOL', 'ZEC', 'ADA', 'NEAR', 'GALA'];
+    const WL = ['SOL', 'ZEC', 'ADA', 'NEAR', 'GALA', 'ETH', 'SUI', 'ARB'];
     window.CNP.swr('/api/news', d => {
       if (!d || !d.items) return;
       const hits = d.items.filter(i => (i.assets || []).some(a => WL.includes(a)));

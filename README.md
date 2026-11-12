@@ -6,7 +6,7 @@ A dark-terminal dashboard covering market mood, your watchlist, the week's bigge
 
 | Page | What's on it |
 |---|---|
-| `/` Overview | Countdowns (FOMC, CPI, PPI, NFP, halving) · market mood gauge · **watchlist** (SOL, ZEC, ADA, NEAR, GALA) · Fear & Greed · KPIs · top coins with 7d charts · gainers/losers · macro · this week's highlights · latest headlines · sector sentiment · most-mentioned assets · high-impact events |
+| `/` Overview | Countdowns (FOMC, CPI, PPI, NFP, halving) · market mood gauge · **watchlist** (SOL, ZEC, ADA, NEAR, GALA, ETH, SUI, ARB) · Fear & Greed · KPIs · top coins with 7d charts · gainers/losers · macro · this week's highlights · latest headlines · sector sentiment · most-mentioned assets · high-impact events |
 | `/markets` | Everything above, plus a top-50 heatmap, 30-day Fear & Greed chart, watchlist news and a sortable top-100 table |
 | `/highlights` | The week's biggest stories, ranked by how many outlets covered them, with related coverage, outlet weekly roundups and an archive of past daily briefs |
 | `/ai` AI & Tech | Trending AI/tech stories (2+ outlets, 48h) · 🚀 launches & lab announcements (OpenAI, Google, NVIDIA, Hugging Face, Anthropic via Google News) · 🔥 viral on Hacker News · countdown reminders + tables for big-tech earnings (Nasdaq) and IPOs · AI/tech wire with sentiment |
