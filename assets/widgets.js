@@ -9,7 +9,7 @@
   .w-kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
   .w-kpis .panel { padding: 12px 14px; }
   .w-mood { padding: 16px 18px; display: grid; grid-template-columns: 170px 1fr; gap: 18px; align-items: center; overflow: hidden; }
-  .w-mood::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(420px 180px at 0% 0%, var(--mood-glow, rgba(77,141,255,.12)), transparent 70%); }
+  .w-mood::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(420px 180px at 0% 0%, var(--mood-glow, rgba(255,255,255,.05)), transparent 70%); }
   .w-mood .big { font: 700 26px/1.1 var(--mono); letter-spacing: .02em; margin: 6px 0 2px; }
   .w-mood .mom { font: 600 13px var(--mono); display: inline-flex; align-items: center; gap: 6px; }
   .w-mood ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 5px; }

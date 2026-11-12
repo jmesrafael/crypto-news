@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-512.png">
-<meta name="theme-color" content="#06070a">
+<meta name="theme-color" content="#0a0a0a">
 <meta property="og:site_name" content="Pulse Market Intel">
 <meta property="og:image" content="/assets/icon-512.png">
 <title>Pulse · Hacks & Security</title>
 <meta name="description" content="Crypto exploits with dollar amounts, actively exploited vulnerabilities (CISA KEV), trending security stories and a live security news wire with sentiment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
   .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
@@ -110,7 +110,7 @@ function renderKpis() {
     <div class="panel kpi"><div class="label">Crypto stolen · 30d</div><div class="v red">${h ? fmtBig(h.total30d) : '–'}</div><div class="s muted">${h ? 'across ' + h.count30d + ' exploits' : 'unavailable'}</div></div>
     <div class="panel kpi"><div class="label">Crypto exploits · 30d</div><div class="v">${h ? h.count30d : '–'}</div><div class="s muted">${h && h.items[0] ? 'latest: ' + esc(h.items[0].name) + ' · ' + ago(h.items[0].time) + ' ago' : ''}</div></div>
     <div class="panel kpi"><div class="label">Exploited CVEs · this week</div><div class="v warn">${tech && tech.kev ? weekKev : '–'}</div><div class="s muted">added to CISA KEV</div></div>
-    <div class="panel kpi"><div class="label">Security headlines · 24h</div><div class="v">${news ? sec.length : '–'}</div><div class="s ${shortPct > 50 ? 'dn' : 'muted'}">${shortPct}% read SHORT</div><div class="bar"><i style="width:${shortPct}%;background:var(--short)"></i><i style="width:${100 - shortPct}%;background:#2a3342"></i></div></div>`;
+    <div class="panel kpi"><div class="label">Security headlines · 24h</div><div class="v">${news ? sec.length : '–'}</div><div class="s ${shortPct > 50 ? 'dn' : 'muted'}">${shortPct}% read SHORT</div><div class="bar"><i style="width:${shortPct}%;background:var(--short)"></i><i style="width:${100 - shortPct}%;background:var(--track)"></i></div></div>`;
 }
 
 function renderTrending() {

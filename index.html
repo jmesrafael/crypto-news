@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-512.png">
-<meta name="theme-color" content="#06070a">
+<meta name="theme-color" content="#0a0a0a">
 <meta property="og:site_name" content="Pulse Market Intel">
 <meta property="og:image" content="/assets/icon-512.png">
 <title>Pulse · Market Overview</title>
 <meta name="description" content="Crypto and global market overview: mood, watchlist, weekly highlights, key event countdowns and live news sentiment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
   .split { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 14px; align-items: start; }
@@ -130,7 +130,7 @@ swr('/api/news', d => {
     const n = xs.length, L = xs.filter(i => i.bias === 'LONG').length, S = xs.filter(i => i.bias === 'SHORT').length;
     const net = Math.round((L - S) / n * 100);
     return `<div class="sector"><span>${esc(CAT_LABEL[c])} <span class="dim mono">${n}</span></span>
-      <div class="bar"><i style="width:${L / n * 100}%;background:var(--long)"></i><i style="width:${(n - L - S) / n * 100}%;background:#2a3342"></i><i style="width:${S / n * 100}%;background:var(--short)"></i></div>
+      <div class="bar"><i style="width:${L / n * 100}%;background:var(--long)"></i><i style="width:${(n - L - S) / n * 100}%;background:var(--track)"></i><i style="width:${S / n * 100}%;background:var(--short)"></i></div>
       <span class="net ${net > 5 ? 'up' : net < -5 ? 'dn' : 'muted'}">${net > 0 ? '+' : ''}${net}</span></div>`;
   }).join('');
 

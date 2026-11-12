@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-512.png">
-<meta name="theme-color" content="#06070a">
+<meta name="theme-color" content="#0a0a0a">
 <meta property="og:site_name" content="Pulse Market Intel">
 <meta property="og:image" content="/assets/icon-512.png">
 <title>Pulse · News</title>
 <meta name="description" content="Live crypto, markets, macro, tech, AI, banking and world news with LONG / SHORT sentiment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
   .mood { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 12px 14px; }
@@ -72,7 +72,7 @@ function renderMood() {
   const n = r.length || 1, pct = k => c[k] / n * 100, net = c.LONG - c.SHORT, lean = Math.abs(net) / n;
   const [b, l] = net > 0 && lean > .08 ? ['LONG', 'LEANING BULLISH'] : net < 0 && lean > .08 ? ['SHORT', 'LEANING BEARISH'] : ['NEUTRAL', 'MIXED'];
   $('#mood').innerHTML = `<span class="label">12h news mood${filter.cat !== 'all' ? ' · ' + esc(CAT_LABEL[filter.cat]) : ''} <span class="badge ${b}" style="margin-left:6px">${l}</span></span>
-    <div class="bar"><i style="width:${pct('LONG')}%;background:var(--long)"></i><i style="width:${pct('NEUTRAL')}%;background:#2a3342"></i><i style="width:${pct('SHORT')}%;background:var(--short)"></i></div>
+    <div class="bar"><i style="width:${pct('LONG')}%;background:var(--long)"></i><i style="width:${pct('NEUTRAL')}%;background:var(--track)"></i><i style="width:${pct('SHORT')}%;background:var(--short)"></i></div>
     <span class="mono muted" style="font-size:12px">▲ ${c.LONG} · ● ${c.NEUTRAL} · ▼ ${c.SHORT}</span>`;
 }
 function renderFeatured() {

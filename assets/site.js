@@ -85,7 +85,7 @@
     const n = (h.sources || []).length;
     const withRel = related && h.related && h.related.length; // nested links aren't allowed, so cards with related links are <div>s
     const open = withRel ? '<div' : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
-    return `${open} class="hl${big ? ' big' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#101b33,#0a0c10)'}">
+    return `${open} class="hl${big ? ' big' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
       <div class="hl-tags">${h.pinned ? '<span class="badge pin">📌 PINNED</span>' : ''}${biasBadge(h)}${impactBadge({ ...h, viral: n >= 4 })}${n ?`<span class="badge NEUTRAL">${n} OUTLETS</span>` : ''}</div>
       <div class="hl-body">
         ${rank ? `<span class="rank">#${rank}</span>` : ''}${catTag(h)}
