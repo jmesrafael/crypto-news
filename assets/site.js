@@ -72,13 +72,18 @@
     NEUTRAL: svg(`<path ${STROKE} d="M2 8h11.5"/><path ${STROKE} d="M10 4.5 13.5 8 10 11.5"/>`),
     BOLT: svg('<path fill="currentColor" d="M9.6.8 2.8 9.2h4.1L6 15.2l7.2-8.6H9.1z"/>'),
   };
-  const biasIcon = i => `<span class="bias-ic ${i.bias}" title="${esc(i.bias)}${i.strength != null && i.bias !== 'NEUTRAL' ? ' · ' + i.strength + '%' : ''}">${ICON[i.bias] || ICON.NEUTRAL}</span>`;
+  const BIAS_TIP = { LONG: 'Bullish read (LONG)', SHORT: 'Bearish read (SHORT)', NEUTRAL: 'Neutral read' };
+  const biasIcon = i => `<span class="bias-ic ${i.bias}" title="${BIAS_TIP[i.bias] || ''}${i.strength != null && i.bias !== 'NEUTRAL' ? ' · ' + i.strength + '% strength' : ''}">${ICON[i.bias] || ICON.NEUTRAL}</span>`;
 
   // ---- "don't miss" tier: scheduled macro prints, central banks and crypto shocks.
   // Broader `impact` from the server stays as data; only these events get the bolt + highlight (sentiment strength alone
   // flagged gossip like CEO scandals, so it is deliberately not a trigger).
   const CRITICAL = /\b(cpi|ppi|pce|core inflation|inflation (data|report|rate|print)|fomc|fed (rate|decision|minutes|chair|meeting)|powell|rate (hike|cut|decision)s?|jobs report|non-?farm|payrolls|unemployment rate|gdp|recession|ecb|lagarde|boj|bank of japan|sec (approv\w*|sues|charges|rejects?|delays?)|etfs? (approv\w*|denied|rejected|launch\w*)|hack(ed|s|er)?|exploit(ed|s)?|drain(ed)?|bankrupt\w*|insolven\w*|delist\w*|liquidations?|halts? (withdrawals|trading)|emergency|crash(es|ed)?|tariffs?)\b/i;
   const isHot = i => CRITICAL.test(i.title || '');
+  // ⚡ shows for every high-impact story; "don't miss" events also get the amber row/card highlight
+  const boltIcon = (i, cls = 'bolt') => isHot(i)
+    ? `<span class="${cls} bolt" title="Don't miss: major scheduled or market-shock event (CPI, Fed, jobs, hacks, ETF rulings…)">${ICON.BOLT}</span>`
+    : i.impact ? `<span class="${cls} bolt" title="High impact: market-moving topic">${ICON.BOLT}</span>` : '';
 
   // ---- coin badges: crypto gets its logo, watchlist coins get the accent ring; macro assets stay plain text
   const CRYPTO = new Set(['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'DOGE', 'ADA', 'AVAX', 'LINK', 'TON', 'SUI', 'HYPE', 'ZEC', 'NEAR', 'GALA', 'ARB']);
@@ -87,7 +92,8 @@
   function coinBadge(a) {
     const s = String(a), crypto = CRYPTO.has(s);
     const logo = crypto ? `<img src="${ICON_CDN}${s.toLowerCase()}.svg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('i'),{textContent:'${esc(s[0])}'}))">` : '';
-    return `<span class="coin${crypto ? ' crypto' : ''}${WATCH.has(s) ? ' watch' : ''}" title="${esc(s)}">${logo}${esc(s)}</span>`;
+    const tip = `Story mentions ${s}${WATCH.has(s) ? ' · on your watchlist' : ''}`;
+    return `<span class="coin${crypto ? ' crypto' : ''}${WATCH.has(s) ? ' watch' : ''}" title="${esc(tip)}">${logo}${esc(s)}</span>`;
   }
   // crypto first so the coin is always visible even when the list is cut
   const coinBadges = (i, max = 4) => (i.assets || []).slice().sort((a, b) => CRYPTO.has(b) - CRYPTO.has(a)).slice(0, max).map(coinBadge).join('');
@@ -99,12 +105,12 @@
       <div class="time">${new Date(i.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}<br>${ago(i.time)} ago</div>
       <div class="thumb"${i.image ? ` style="background-image:url('${esc(i.image)}')"` : ''}></div>
       <div><div class="title">${esc(i.title)}</div><div class="meta">${catTag(i)}<span class="dim">/</span>${esc(i.source)} ${coinBadges(i)}</div></div>
-      <div class="right"><div class="sig">${hot ? `<span class="bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : ''}${biasIcon(i)}</div><div class="str"><i style="width:${i.strength || 0}%;background:${BIAS_COLOR[i.bias]}"></i></div></div></a>`;
+      <div class="right"><div class="sig">${boltIcon(i)}${biasIcon(i)}</div><div class="str"><i style="width:${i.strength || 0}%;background:${BIAS_COLOR[i.bias]}"></i></div></div></a>`;
   }
   function newsCard(i, { big } = {}) {
     const hot = isHot(i);
     return `<a class="card${big ? ' big' : ''}${hot ? ' hot' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
-      <div class="tags"><span class="hl-pill bias ${i.bias}">${biasIcon(i)}</span>${hot ? `<span class="hl-pill ico bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : ''}</div>
+      <div class="tags"><span class="hl-pill bias ${i.bias}">${biasIcon(i)}</span>${boltIcon(i, 'hl-pill ico')}</div>
       <div class="img" style="${i.image ? `background-image:url('${esc(i.image)}')` : ''}"></div>
       <div class="body">${catTag(i)}<h3>${esc(i.title)}</h3>${i.summary && big ? `<p>${esc(i.summary.slice(0, 180))}${i.summary.length > 180 ? '…' : ''}</p>` : ''}
       <div class="meta">${esc(i.source)} · ${ago(i.time)} ago ${coinBadges(i)}</div></div></a>`;
@@ -144,15 +150,17 @@
     const open = rel ? `<div tabindex="0"` : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
     const pct = h.bias !== 'NEUTRAL' && h.strength != null ? h.strength + '%' : '';
     const hot = isHot(h);
-    const flags = (hot ? `<span class="hl-pill ico bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : '') +
-      [h.pinned && ['📌', 'Pinned'], h.launch && ['🚀', 'Launch / release'], n >= 4 && ['🔥', 'Viral · ' + n + ' outlets']]
+    const flags = boltIcon(h, 'hl-pill ico') +
+      [h.pinned && ['📌', 'Pinned by you'], h.launch && ['🚀', 'Launch / release'], n >= 4 && ['🔥', 'Viral: covered by ' + n + ' outlets']]
       .filter(Boolean).map(([i, t]) => `<span class="hl-pill ico" title="${t}">${i}</span>`).join('');
-    const stack = n ? `<span class="hl-pill srcs" title="${esc(srcs.join(', '))}">${srcs.slice(0, 4).map(s => srcLogo(s)).join('')}${n > 4 ? `<b>+${n - 4}</b>` : ''}</span>` : '';
+    const stack = n ? `<span class="hl-pill srcs" title="Covered by ${n} outlet${n > 1 ? 's' : ''}: ${esc(srcs.join(', '))}">${srcs.slice(0, 4).map(s => srcLogo(s)).join('')}${n > 4 ? `<b>+${n - 4}</b>` : ''}</span>` : '';
     const coins = coinBadges(h, big ? 5 : 4);
     const kicker = [rank ? `<b>#${rank}</b>` : '', esc(CAT_LABEL[h.category] || h.category || ''), days ? days + 'd' : h.date ? esc(h.date) : ''].filter(Boolean).join('<i>·</i>');
     const title = rel ? `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title);
-    return `${open} class="hl${big ? ' big' : ''}${hot ? ' hot' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
-      <div class="hl-tags"><span class="hl-pill bias ${h.bias}" title="${esc(h.bias)}${pct ? ' · ' + pct + ' strength' : ''}">${ICON[h.bias] || ICON.NEUTRAL}${pct ? ' ' + pct : ''}</span>${flags}${stack}</div>
+    return `${open} class="hl${big ? ' big' : ''}${hot ? ' hot' : ''}">
+      <div class="hl-img" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
+        <div class="hl-tags"><span class="hl-pill bias ${h.bias}" title="${BIAS_TIP[h.bias] || ''}${pct ? ' · ' + pct + ' strength' : ''}">${ICON[h.bias] || ICON.NEUTRAL}${pct ? ' ' + pct : ''}</span>${flags}${stack}</div>
+      </div>
       <div class="hl-glass">
         <div class="hl-kicker">${kicker}</div>
         <h3 class="hl-title">${title}</h3>
@@ -164,6 +172,65 @@
 
   // ---- countdowns: el gets cards for events [{title,type,time,note,estimated}], ticking every second
   const TYPE_ICON = { CPI: '◆', FOMC: '◉', NFP: '▣', PPI: '◇', GDP: '▤', PCE: '◈', Halving: '₿', Earnings: '$', IPO: '🔔' };
+
+  // ---- event playbook: what the release is and the usual crypto/risk-asset reaction.
+  // dir: how "actual above forecast" usually reads for risk assets (-1 bearish, +1 bullish, 0 depends) — used to colour beats/misses.
+  // hi / lo: [condition, bias] for a print above / below forecast. Typical reactions only, never a guarantee.
+  const EVENT_GUIDE = {
+    CPI: { what: 'US consumer inflation, the main input to the Fed rate path.', dir: -1,
+      hi: ['Hotter than forecast', 'SHORT'], lo: ['Cooler than forecast', 'LONG'],
+      note: 'Hotter: rate-cut odds fall, USD and yields rise, BTC/alts usually sell off. Cooler: cut odds rise, risk-on. Core CPI matters more than headline. Biggest moves in the first 15–30 min.' },
+    PPI: { what: 'Producer (wholesale) prices, an early hint of where CPI goes next.', dir: -1,
+      hi: ['Hotter than forecast', 'SHORT'], lo: ['Cooler than forecast', 'LONG'],
+      note: 'Same direction as CPI but usually a smaller move. A hot PPI right before CPI raises the odds of a hot CPI.' },
+    PCE: { what: "The Fed's preferred inflation gauge.", dir: -1,
+      hi: ['Hotter than forecast', 'SHORT'], lo: ['Cooler than forecast', 'LONG'],
+      note: 'Often expected after CPI/PPI are out, so surprises are smaller; a clear miss still moves rate-cut odds.' },
+    FOMC: { what: 'Fed interest-rate decision, then the Powell press conference.', dir: -1,
+      hi: ['Hike / hawkish tone', 'SHORT'], lo: ['Cut / dovish tone', 'LONG'],
+      note: 'The decision is usually priced in; the statement, dot plot and press conference drive the move. Expect whipsaws in the first 30–60 min.' },
+    NFP: { what: 'US jobs added last month (non-farm payrolls).', dir: -1,
+      hi: ['Stronger than forecast', 'SHORT'], lo: ['Softer than forecast', 'LONG'],
+      note: 'Strong jobs keep the Fed tight (risk-off). A mild miss is risk-on, but a very large miss can trigger recession fear and sell-offs too.' },
+    Unemployment: { what: 'US unemployment rate.', dir: 1,
+      hi: ['Higher than forecast', 'LONG'], lo: ['Lower than forecast', 'SHORT'],
+      note: 'Higher unemployment raises rate-cut odds (risk-on), but a sharp jump reads as recession risk.' },
+    'Jobless Claims': { what: 'Weekly new US unemployment claims.', dir: 1,
+      hi: ['More claims than forecast', 'LONG'], lo: ['Fewer claims', 'SHORT'],
+      note: 'Usually a small move unless far from forecast; rising claims = cooling labour market = more cuts.' },
+    'Retail Sales': { what: 'US consumer spending.', dir: -1,
+      hi: ['Stronger than forecast', 'SHORT'], lo: ['Weaker than forecast', 'LONG'],
+      note: 'Strong spending keeps inflation and rates higher; mild effect on crypto.' },
+    GDP: { what: 'US economic growth (quarterly).', dir: 0,
+      hi: ['Stronger growth', 'NEUTRAL'], lo: ['Weaker growth', 'NEUTRAL'],
+      note: 'Mixed: strong growth is good for earnings but keeps rates high; a big miss raises recession fear. Usually a small move.' },
+    'Fed Speak': { what: 'Powell or Fed officials speaking.', dir: 0,
+      hi: ['Hawkish (rates higher for longer)', 'SHORT'], lo: ['Dovish (cuts coming)', 'LONG'],
+      note: 'Watch for comments on the next meeting; unscheduled remarks can move markets fast.' },
+    Halving: { what: 'Bitcoin block reward halves: new supply drops 50%.', dir: 0,
+      hi: ['Historically, 6–18 months after', 'LONG'], lo: ['On the day itself', 'NEUTRAL'],
+      note: 'Long-run supply shock; little effect on the day, often "sell the news" short term.' },
+    Earnings: { what: 'Big-tech earnings: they move the Nasdaq, and crypto often follows.', dir: 1,
+      hi: ['Beat + strong guidance', 'LONG'], lo: ['Miss / weak guidance', 'SHORT'],
+      note: 'Guidance and AI capex comments matter more than the headline numbers.' },
+    IPO: { what: 'Large IPO listing.', dir: 0,
+      hi: ['Strong debut', 'LONG'], lo: ['Weak debut', 'SHORT'],
+      note: 'A read on risk appetite; crypto-company IPOs can move related tokens.' },
+  };
+  const guideTip = g => g ? `${g.what}\n▲ ${g.hi[0]} → ${g.hi[1]}\n▼ ${g.lo[0]} → ${g.lo[1]}\n${g.note}\n(Typical reaction, not a guarantee.)` : '';
+  // colour for an actual vs forecast print, from the risk-asset point of view (green = bullish for crypto)
+  function beatClass(type, actual, forecast) {
+    const a = parseFloat(actual), f = parseFloat(forecast);
+    if (isNaN(a) || isNaN(f) || a === f) return '';
+    const g = EVENT_GUIDE[type], dir = g ? g.dir : 1;
+    if (!dir) return '';
+    return (a > f) === (dir > 0) ? 'up' : 'dn';
+  }
+  function playbook(type) {
+    const g = EVENT_GUIDE[type]; if (!g) return '';
+    const line = ([cond, bias]) => `<div class="pb ${bias}">${ICON[bias] || ICON.NEUTRAL}<span>${esc(cond)}</span><b>${bias === 'NEUTRAL' ? 'mixed' : bias}</b></div>`;
+    return `<div class="cd-what">${esc(g.what)}</div><div class="cd-play" title="${esc(guideTip(g))}">${line(g.lo)}${line(g.hi)}</div>`;
+  }
   function countdown(el, events, { max = 4 } = {}) {
     if (!el) return;
     const list = (events || []).filter(e => e.time > Date.now() - 3600e3).slice(0, max);
@@ -173,6 +240,8 @@
         <div class="cd-title">${esc(e.title)}</div>
         <div class="cd-clock mono" data-t="${e.time}"></div>
         <div class="cd-when">${new Date(e.time).toLocaleString('en-US', { timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })} PHT${e.note ? ' · ' + esc(e.note) : ''}</div>
+        ${e.forecast || e.previous ? `<div class="cd-fc mono">${e.forecast ? `<span title="Consensus forecast">F <b>${esc(e.forecast)}</b></span>` : ''}${e.previous ? `<span title="Previous release">P <b>${esc(e.previous)}</b></span>` : ''}</div>` : ''}
+        ${playbook(e.type)}
       </div>`).join('');
     const tick = () => el.querySelectorAll('.cd-clock').forEach(c => {
       let s = Math.max(0, Math.floor((+c.dataset.t - Date.now()) / 1000));
@@ -231,6 +300,6 @@
 
   function setLive(ok) { const d = document.getElementById('live-dot'); if (d) { d.classList.toggle('stale', !ok); d.textContent = ok ? 'LIVE' : 'CACHED'; } }
 
-  window.CNP = { esc, ago, fmtPrice, fmtPct, fmtBig, cls, sparkline, store, swr, newsRow, newsCard, highlightCard, countdown, biasBadge, impactBadge, chips, coinBadge, coinBadges, biasIcon, isHot, ICON, catTag, CAT_LABEL, BIAS_COLOR, setLive };
+  window.CNP = { esc, ago, fmtPrice, fmtPct, fmtBig, cls, sparkline, store, swr, newsRow, newsCard, highlightCard, countdown, biasBadge, impactBadge, chips, coinBadge, coinBadges, biasIcon, isHot, ICON, EVENT_GUIDE, guideTip, beatClass, playbook, catTag, CAT_LABEL, BIAS_COLOR, setLive };
   document.addEventListener('DOMContentLoaded', () => { header(); footer(); });
 })();

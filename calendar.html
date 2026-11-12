@@ -66,11 +66,12 @@ function renderTable() {
     const day = new Date(e.time).toLocaleDateString('en-US', { timeZone: 'Asia/Manila', weekday: 'long', month: 'short', day: 'numeric' });
     const head = day !== lastDay ? `<tr class="day-h"><td colspan="7">${day}</td></tr>` : ''; lastDay = day;
     const isNext = !nowDone && e.time >= now; if (isNext) nowDone = true;
-    const beat = e.actual && e.forecast ? (parseFloat(e.actual) > parseFloat(e.forecast) ? 'up' : parseFloat(e.actual) < parseFloat(e.forecast) ? 'dn' : '') : '';
+    // green/red = bullish/bearish for crypto, so a hotter-than-forecast CPI/PPI shows red (CNP.beatClass knows each event's direction)
+    const beat = e.actual && e.forecast ? CNP.beatClass(e.type, e.actual, e.forecast) : '';
     return head + `<tr class="${e.time < now ? 'past' : ''}${isNext ? ' nowline' : ''}">
       <td class="mono">${new Date(e.time).toLocaleTimeString('en-US', { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit' })}</td>
       <td class="mono acc">${esc(e.country)}</td><td><span class="imp ${esc(e.impact)}" title="${esc(e.impact)}"></span></td>
-      <td style="white-space:normal">${esc(e.title)}${e.type ? `<span class="key">${esc(e.type)}</span>` : ''}</td>
+      <td style="white-space:normal">${esc(e.title)}${e.type ? `<span class="key" title="${esc(CNP.guideTip(CNP.EVENT_GUIDE[e.type]) || e.type)}">${esc(e.type)}</span>` : ''}</td>
       <td class="r mono ${beat}">${esc(e.actual || '')}</td><td class="r mono muted">${esc(e.forecast || '')}</td><td class="r mono dim">${esc(e.previous || '')}</td></tr>`;
   }).join('');
   $('#tbl').innerHTML = `<thead><tr><th>Time</th><th>Cur</th><th>Imp</th><th>Event</th><th class="r">Actual</th><th class="r">Forecast</th><th class="r">Previous</th></tr></thead><tbody>${html || '<tr><td colspan="7" class="empty">No events match.</td></tr>'}</tbody>`;
