@@ -60,23 +60,54 @@
   const impactBadge = i => (i.launch ? '<span class="badge pin" title="Launch / release">🚀 LAUNCH</span>' : '') +
     (i.viral ? '<span class="badge viral" title="Covered by many outlets">🔥 VIRAL</span>' : '') +
     (i.impact ? '<span class="badge impact" title="Market-moving topic">⚡ IMPACT</span>' : '');
-  const chips = i => (i.assets || []).slice(0, 4).map(a => `<span class="chip">${esc(a)}</span>`).join('');
   const catTag = i => `<span class="cat">${esc(CAT_LABEL[i.category] || i.category || '')}</span>`;
   const BIAS_COLOR = { LONG: 'var(--long)', SHORT: 'var(--short)', NEUTRAL: 'var(--neutral)' };
 
+  // ---- icons (inline SVG, inherit currentColor)
+  const svg = (p, s = 14) => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 16 16" aria-hidden="true">${p}</svg>`;
+  const STROKE = 'fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"';
+  const ICON = {
+    LONG: svg(`<path ${STROKE} d="M1.5 12 6 7.5l3 3L14.5 5"/><path ${STROKE} d="M10.5 5h4v4"/>`),
+    SHORT: svg(`<path ${STROKE} d="M1.5 4 6 8.5l3-3L14.5 11"/><path ${STROKE} d="M10.5 11h4V7"/>`),
+    NEUTRAL: svg(`<path ${STROKE} d="M2 8h11.5"/><path ${STROKE} d="M10 4.5 13.5 8 10 11.5"/>`),
+    BOLT: svg('<path fill="currentColor" d="M9.6.8 2.8 9.2h4.1L6 15.2l7.2-8.6H9.1z"/>'),
+  };
+  const biasIcon = i => `<span class="bias-ic ${i.bias}" title="${esc(i.bias)}${i.strength != null && i.bias !== 'NEUTRAL' ? ' · ' + i.strength + '%' : ''}">${ICON[i.bias] || ICON.NEUTRAL}</span>`;
+
+  // ---- "don't miss" tier: scheduled macro prints, central banks and crypto shocks.
+  // Broader `impact` from the server stays as data; only these events get the bolt + highlight (sentiment strength alone
+  // flagged gossip like CEO scandals, so it is deliberately not a trigger).
+  const CRITICAL = /\b(cpi|ppi|pce|core inflation|inflation (data|report|rate|print)|fomc|fed (rate|decision|minutes|chair|meeting)|powell|rate (hike|cut|decision)s?|jobs report|non-?farm|payrolls|unemployment rate|gdp|recession|ecb|lagarde|boj|bank of japan|sec (approv\w*|sues|charges|rejects?|delays?)|etfs? (approv\w*|denied|rejected|launch\w*)|hack(ed|s|er)?|exploit(ed|s)?|drain(ed)?|bankrupt\w*|insolven\w*|delist\w*|liquidations?|halts? (withdrawals|trading)|emergency|crash(es|ed)?|tariffs?)\b/i;
+  const isHot = i => CRITICAL.test(i.title || '');
+
+  // ---- coin badges: crypto gets its logo, watchlist coins get the accent ring; macro assets stay plain text
+  const CRYPTO = new Set(['BTC', 'ETH', 'SOL', 'XRP', 'BNB', 'DOGE', 'ADA', 'AVAX', 'LINK', 'TON', 'SUI', 'HYPE', 'ZEC', 'NEAR', 'GALA', 'ARB']);
+  const WATCH = new Set(['SOL', 'NEAR', 'ADA', 'GALA', 'ETH', 'SUI', 'ARB', 'ZEC']);
+  const ICON_CDN = 'https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.18.1/svg/color/';
+  function coinBadge(a) {
+    const s = String(a), crypto = CRYPTO.has(s);
+    const logo = crypto ? `<img src="${ICON_CDN}${s.toLowerCase()}.svg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('i'),{textContent:'${esc(s[0])}'}))">` : '';
+    return `<span class="coin${crypto ? ' crypto' : ''}${WATCH.has(s) ? ' watch' : ''}" title="${esc(s)}">${logo}${esc(s)}</span>`;
+  }
+  // crypto first so the coin is always visible even when the list is cut
+  const coinBadges = (i, max = 4) => (i.assets || []).slice().sort((a, b) => CRYPTO.has(b) - CRYPTO.has(a)).slice(0, max).map(coinBadge).join('');
+  const chips = coinBadges;
+
   function newsRow(i, { fresh } = {}) {
-    return `<a class="news-row${fresh ? ' fresh' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener" title="${esc((i.keywords || []).join(', '))}">
+    const hot = isHot(i);
+    return `<a class="news-row${fresh ? ' fresh' : ''}${hot ? ' hot' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener" title="${esc((i.keywords || []).join(', '))}">
       <div class="time">${new Date(i.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}<br>${ago(i.time)} ago</div>
       <div class="thumb"${i.image ? ` style="background-image:url('${esc(i.image)}')"` : ''}></div>
-      <div><div class="title">${esc(i.title)}</div><div class="meta">${catTag(i)}<span class="dim">/</span>${esc(i.source)} ${chips(i)}</div></div>
-      <div class="right"><div style="display:flex;gap:4px">${impactBadge(i)}${biasBadge(i)}</div><div class="str"><i style="width:${i.strength || 0}%;background:${BIAS_COLOR[i.bias]}"></i></div></div></a>`;
+      <div><div class="title">${esc(i.title)}</div><div class="meta">${catTag(i)}<span class="dim">/</span>${esc(i.source)} ${coinBadges(i)}</div></div>
+      <div class="right"><div class="sig">${hot ? `<span class="bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : ''}${biasIcon(i)}</div><div class="str"><i style="width:${i.strength || 0}%;background:${BIAS_COLOR[i.bias]}"></i></div></div></a>`;
   }
   function newsCard(i, { big } = {}) {
-    return `<a class="card${big ? ' big' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
-      <div class="tags">${biasBadge(i)}${impactBadge(i)}</div>
+    const hot = isHot(i);
+    return `<a class="card${big ? ' big' : ''}${hot ? ' hot' : ''}" href="${esc(i.link)}" target="_blank" rel="noopener">
+      <div class="tags"><span class="hl-pill bias ${i.bias}">${biasIcon(i)}</span>${hot ? `<span class="hl-pill ico bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : ''}</div>
       <div class="img" style="${i.image ? `background-image:url('${esc(i.image)}')` : ''}"></div>
       <div class="body">${catTag(i)}<h3>${esc(i.title)}</h3>${i.summary && big ? `<p>${esc(i.summary.slice(0, 180))}${i.summary.length > 180 ? '…' : ''}</p>` : ''}
-      <div class="meta">${esc(i.source)} · ${ago(i.time)} ago ${chips(i)}</div></div></a>`;
+      <div class="meta">${esc(i.source)} · ${ago(i.time)} ago ${coinBadges(i)}</div></div></a>`;
   }
 
   // ---- outlet logos: feed name -> domain, favicon fetched by the viewer's browser
@@ -112,14 +143,16 @@
     const tag = rel ? 'div' : 'a'; // nested links aren't allowed, so cards with related links are <div>s
     const open = rel ? `<div tabindex="0"` : `<a href="${esc(h.link)}" target="_blank" rel="noopener"`;
     const pct = h.bias !== 'NEUTRAL' && h.strength != null ? h.strength + '%' : '';
-    const flags = [h.pinned && ['📌', 'Pinned'], h.launch && ['🚀', 'Launch / release'], n >= 4 && ['🔥', 'Viral · ' + n + ' outlets'], h.impact && ['⚡', 'Market-moving']]
+    const hot = isHot(h);
+    const flags = (hot ? `<span class="hl-pill ico bolt" title="High impact — don't miss">${ICON.BOLT}</span>` : '') +
+      [h.pinned && ['📌', 'Pinned'], h.launch && ['🚀', 'Launch / release'], n >= 4 && ['🔥', 'Viral · ' + n + ' outlets']]
       .filter(Boolean).map(([i, t]) => `<span class="hl-pill ico" title="${t}">${i}</span>`).join('');
     const stack = n ? `<span class="hl-pill srcs" title="${esc(srcs.join(', '))}">${srcs.slice(0, 4).map(s => srcLogo(s)).join('')}${n > 4 ? `<b>+${n - 4}</b>` : ''}</span>` : '';
-    const coins = (h.assets || []).slice(0, big ? 4 : 3).map(a => `<span class="hl-coin">${esc(a)}</span>`).join('');
+    const coins = coinBadges(h, big ? 5 : 4);
     const kicker = [rank ? `<b>#${rank}</b>` : '', esc(CAT_LABEL[h.category] || h.category || ''), days ? days + 'd' : h.date ? esc(h.date) : ''].filter(Boolean).join('<i>·</i>');
     const title = rel ? `<a href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.title)}</a>` : esc(h.title);
-    return `${open} class="hl${big ? ' big' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
-      <div class="hl-tags"><span class="hl-pill bias ${h.bias}" title="${esc(h.bias)}${pct ? ' · ' + pct + ' strength' : ''}">${ARROW[h.bias] || '●'}${pct ? ' ' + pct : ''}</span>${flags}${stack}</div>
+    return `${open} class="hl${big ? ' big' : ''}${hot ? ' hot' : ''}" style="${h.image ? `background-image:url('${esc(h.image)}')` : 'background-image:linear-gradient(135deg,#1d1f1c,#0a0a0a)'}">
+      <div class="hl-tags"><span class="hl-pill bias ${h.bias}" title="${esc(h.bias)}${pct ? ' · ' + pct + ' strength' : ''}">${ICON[h.bias] || ICON.NEUTRAL}${pct ? ' ' + pct : ''}</span>${flags}${stack}</div>
       <div class="hl-glass">
         <div class="hl-kicker">${kicker}</div>
         <h3 class="hl-title">${title}</h3>
@@ -198,6 +231,6 @@
 
   function setLive(ok) { const d = document.getElementById('live-dot'); if (d) { d.classList.toggle('stale', !ok); d.textContent = ok ? 'LIVE' : 'CACHED'; } }
 
-  window.CNP = { esc, ago, fmtPrice, fmtPct, fmtBig, cls, sparkline, store, swr, newsRow, newsCard, highlightCard, countdown, biasBadge, impactBadge, chips, catTag, CAT_LABEL, BIAS_COLOR, setLive };
+  window.CNP = { esc, ago, fmtPrice, fmtPct, fmtBig, cls, sparkline, store, swr, newsRow, newsCard, highlightCard, countdown, biasBadge, impactBadge, chips, coinBadge, coinBadges, biasIcon, isHot, ICON, catTag, CAT_LABEL, BIAS_COLOR, setLive };
   document.addEventListener('DOMContentLoaded', () => { header(); footer(); });
 })();

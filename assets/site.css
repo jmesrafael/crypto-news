@@ -193,7 +193,6 @@ main, section, .panel { min-width: 0; }
 .hl:not(:has(.hl-related)):hover .hl-title { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .hl p { margin: 0; color: #cfcfca; font-size: 13.5px; line-height: 1.5; max-width: 70ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .hl-coins { display: flex; gap: 5px; flex-wrap: wrap; }
-.hl-coin { font: 600 10.5px var(--mono); letter-spacing: .04em; padding: 2px 7px; border-radius: 99px; color: #dcdcd8; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.10); }
 /* related reports: hidden until the card is hovered or tapped */
 .hl-related { display: grid; gap: 4px; max-height: 0; opacity: 0; overflow: hidden; margin-top: -8px; transition: max-height .3s ease, opacity .2s ease, margin-top .3s ease; }
 .hl:hover .hl-related, .hl:focus-within .hl-related { max-height: 90px; opacity: 1; margin-top: 2px; }
@@ -201,6 +200,26 @@ main, section, .panel { min-width: 0; }
 .hl-related a:hover { color: #fff; }
 .hl-related a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 .hl-related .src-logo { width: 16px; height: 16px; border-width: 1px; }
+/* ---------- signal icons, coin badges, "don't miss" highlight ---------- */
+.ic { display: block; flex: 0 0 auto; }
+.bias-ic { display: inline-flex; align-items: center; }
+.bias-ic.LONG, .hl-pill.bias.LONG { color: var(--long); }
+.bias-ic.SHORT, .hl-pill.bias.SHORT { color: var(--short); }
+.bias-ic.NEUTRAL, .hl-pill.bias.NEUTRAL { color: var(--neutral); }
+.bolt { color: var(--warn); display: inline-flex; filter: drop-shadow(0 0 5px rgba(245,165,36,.55)); }
+.hl-pill.bolt { border-color: rgba(245,165,36,.45); }
+.news-row .sig { display: flex; gap: 8px; align-items: center; }
+.coin { display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 7px; border-radius: 99px; font: 600 10.5px var(--mono); letter-spacing: .03em;
+  color: #d8d8d4; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.11); white-space: nowrap; }
+.coin.crypto { padding-left: 3px; }
+.coin img, .coin i { width: 14px; height: 14px; border-radius: 50%; flex: 0 0 auto; }
+.coin i { display: inline-flex; align-items: center; justify-content: center; font: 700 8.5px var(--sans); font-style: normal; background: var(--metal); color: #111; }
+.coin.watch { border-color: rgba(var(--accent-rgb), .55); color: var(--text); box-shadow: 0 0 10px -4px var(--glow); }
+.news-row.hot { background: linear-gradient(90deg, rgba(245,165,36,.10), rgba(245,165,36,.02) 55%, transparent); box-shadow: inset 3px 0 0 var(--warn); }
+.news-row.hot:hover { background: linear-gradient(90deg, rgba(245,165,36,.15), var(--panel2) 60%); }
+.news-row.hot .title { color: #fff; }
+.card.hot, .hl.hot { border-color: rgba(245,165,36,.5); box-shadow: 0 0 0 1px rgba(245,165,36,.15), 0 0 32px -10px rgba(245,165,36,.5); }
+.hl.hot .hl-glass { border-color: rgba(245,165,36,.28); }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .hl-glass, .hl-pill { background: rgba(14,14,14,.86); } }
 .rank { font: 700 12px var(--mono); color: var(--metal); }
 
