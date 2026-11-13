@@ -1,0 +1,1183 @@
+{
+ "generated": 1794539132653,
+ "date": "2026-11-13",
+ "window": {
+  "from": 1793934332653,
+  "to": 1794539132653
+ },
+ "stats": {
+  "stories": 2243,
+  "sources": 232
+ },
+ "pinned": [],
+ "highlights": [
+  {
+   "id": "jensen-huang-resigns-as-nvidia-ceo-exits-board-shares-plunge",
+   "title": "Jensen Huang resigns as Nvidia CEO, exits board; shares plunge",
+   "summary": "Colette Kress will remain Nvidia’s chief financial officer while serving as interim CEO as the board searches for a permanent successor.",
+   "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member",
+   "source": "Cointelegraph",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M78FFGSYBN954VJZWS39264X/jensen-with-exact-cointelegraph-branding-1.png",
+   "category": "crypto",
+   "firstSeen": 1794339641000,
+   "lastSeen": 1794526445000,
+   "sources": [
+    "CNBC Tech",
+    "The Verge AI",
+    "BeInCrypto",
+    "Al Jazeera",
+    "Wired AI",
+    "CryptoPotato",
+    "Cryptonews",
+    "Investing.com",
+    "Decrypt",
+    "Cointelegraph",
+    "TechCrunch",
+    "MarketWatch",
+    "CryptoSlate",
+    "CNBC",
+    "The Block",
+    "CoinDesk",
+    "Engadget",
+    "Fortune",
+    "BBC Business"
+   ],
+   "count": 42,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 1,
+    "SHORT": 12,
+    "NEUTRAL": 29
+   },
+   "impact": true,
+   "score": 110.2,
+   "assets": [
+    "STOCKS",
+    "BTC",
+    "HYPE",
+    "RATES"
+   ],
+   "keywords": [
+    "resign",
+    "ceo",
+    "jensen",
+    "huang"
+   ],
+   "related": [
+    {
+     "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+     "link": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": 1794526445000,
+     "bias": "SHORT",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f66c/live/4f0358a0-def1-11f1-bb80-c5cef03337ce.jpg"
+    },
+    {
+     "title": "Who can replace Jensen Huang as Nvidia CEO? These four names are buzzing in AI circles.",
+     "link": "https://www.marketwatch.com/story/who-can-replace-jensen-huang-as-nvidia-ceo-these-four-names-are-buzzing-in-ai-circles-66c31ec2?mod=mw_rss_topstories",
+     "source": "MarketWatch",
+     "time": 1794524220000,
+     "bias": "NEUTRAL",
+     "image": "https://images.mktw.net/im-25209832"
+    },
+    {
+     "title": "Silicon Valley Is Still Defending Jensen Huang",
+     "link": "https://www.wired.com/story/silicon-valley-is-still-defending-jensen-huang/",
+     "source": "Wired AI",
+     "time": 1794522583000,
+     "bias": "NEUTRAL",
+     "image": "https://media.wired.com/photos/6af5104da36e580e1eb299b6/master/pass/Model-Behavior-Silicon-Valley-Waiting-for-Jensen-Scandal-to-Blow-Over-Business.jpg"
+    },
+    {
+     "title": "Who will replace Jensen Huang? Here's our early thoughts on the search for Nvidia's next CEO",
+     "link": "https://www.cnbc.com/investingclub/2026/11/12/jensen-huang-ceo-replacement-jim-cramer.html",
+     "source": "CNBC",
+     "time": 1794513642000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Why did Nvidia CEO Jensen Huang resign, and who is Colette Kress?",
+     "link": "https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": 1794512740000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Exclusive-Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+     "link": "https://www.investing.com/news/stock-market-news/exclusiveformer-nvidia-ceo-huang-had-a-relationship-with-a-second-employee-sources-say-5023034",
+     "source": "Investing.com",
+     "time": 1794511822000,
+     "bias": "NEUTRAL",
+     "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB24G_L.jpg"
+    }
+   ]
+  },
+  {
+   "id": "nvidia-ceo-jensen-huang-s-affair-with-alleged-chinese-spy-a",
+   "title": "Nvidia CEO Jensen Huang’s affair with alleged Chinese spy: a timeline",
+   "summary": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+   "link": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+   "source": "TechCrunch",
+   "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794191872-screenshot-2026-11-09-at-9-36-06am.jpg",
+   "category": "tech",
+   "firstSeen": 1794191972000,
+   "lastSeen": 1794538595000,
+   "sources": [
+    "Cryptonews",
+    "BeInCrypto",
+    "The Verge AI",
+    "Decrypt",
+    "Wired AI",
+    "TechCrunch AI",
+    "CryptoPotato",
+    "Engadget",
+    "Ars Technica",
+    "CNBC",
+    "BBC Business",
+    "CNBC Tech",
+    "TechCrunch",
+    "Al Jazeera",
+    "CNBC Finance",
+    "MarketWatch",
+    "Cointelegraph"
+   ],
+   "count": 41,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 3,
+    "SHORT": 13,
+    "NEUTRAL": 25
+   },
+   "impact": true,
+   "score": 106,
+   "assets": [
+    "BTC",
+    "STOCKS"
+   ],
+   "keywords": [
+    "spy",
+    "affair",
+    "jensen",
+    "huang"
+   ],
+   "related": [
+    {
+     "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
+     "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
+     "source": "CNBC Finance",
+     "time": 1794538595000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Former Nvidia CEO Huang had third alleged affair: Reuters",
+     "link": "https://cointelegraph.com/news/former-nvidia-ceo-huang-had-third-alleged-affair-reuters",
+     "source": "Cointelegraph",
+     "time": 1794533187000,
+     "bias": "NEUTRAL",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6TF8XXVHRYCKDRNDMW19WCP/analys-analytics-bisiness-man-woman-down-city-crash-nvidia.jpg"
+    },
+    {
+     "title": "Cramer says Jensen Huang betrayed Nvidia shareholders. How to pick up the pieces",
+     "link": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-exit-cramer.html",
+     "source": "CNBC",
+     "time": 1794525296000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Jensen Huang was having a third affair, Reuters reports",
+     "link": "https://techcrunch.com/2026/11/12/jensen-huang-was-having-a-third-affair-reuters-reports/",
+     "source": "TechCrunch",
+     "time": 1794515207000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Jensen Huang’s $470 Billion Affair",
+     "link": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huangs-dollar470-billion-affair/",
+     "source": "Wired AI",
+     "time": 1794509998000,
+     "bias": "NEUTRAL",
+     "image": "https://media.wired.com/photos/6af4e95d91c3d23473376fc7/master/pass/Uncanny-Valley-Jensen-Spy-Business.jpg"
+    },
+    {
+     "title": "The Jensen Huang scandal is hardly over",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+     "source": "The Verge AI",
+     "time": 1794505473000,
+     "bias": "NEUTRAL",
+     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Nvidia_Jensen_huang_03.jpg?quality=90&strip=all&crop=0,0,100,100"
+    }
+   ]
+  },
+  {
+   "id": "anthropic-targets-valuation-of-up-to-1-4-trillion-for-blockb",
+   "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O.",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPaWplYjFtNjRwemt5Y0dEYV9Wem5ET3FLYXpQOFo0MWttT0hPOW5HN3BRM3hYZWU0YUYwdUJIemhKR0Q4aGw4dWxGbWZ6QlZZcHM3Sm5kMkZsaVVaOE1jOVJueHFSMERPS3lPZHptelZseENfMk0zeGlPUGtZODJEaUZuUmVYbXNucG1xVW1HZw?oc=5",
+   "source": "The New York Times",
+   "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b401/live/fd7836e0-dbdf-11f1-b348-cb75a5659779.jpg",
+   "category": "tech",
+   "firstSeen": 1794225982000,
+   "lastSeen": 1794528825000,
+   "sources": [
+    "BBC Business",
+    "Business Insider Africa",
+    "The Wealth Advisor",
+    "Reuters",
+    "Mashable",
+    "Moomoo",
+    "The New York Times",
+    "Forbes",
+    "The Verge AI",
+    "The Defiant",
+    "Yahoo Finance",
+    "Latin Times",
+    "Fortune",
+    "조선일보",
+    "Crypto Briefing",
+    "Barchart.com",
+    "investingLive",
+    "Crowdfund Insider",
+    "CNBC",
+    "Decrypt",
+    "TechCrunch AI",
+    "TechCrunch",
+    "Brave New Coin"
+   ],
+   "count": 28,
+   "bias": "LONG",
+   "strength": 42,
+   "sentimentCounts": {
+    "LONG": 9,
+    "SHORT": 3,
+    "NEUTRAL": 16
+   },
+   "impact": false,
+   "score": 104.6,
+   "assets": [
+    "STOCKS"
+   ],
+   "keywords": [
+    "$1.4",
+    "target",
+    "valuation"
+   ],
+   "related": [
+    {
+     "title": "Anthropic IPO Arrives On Crypto.com Stocks Amid $1.4 Trillion Valuation Push",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYmJTRHYxZlRGUlNUYmRVMFVKRUo4UURlOVN5VENqNk9ZcTJGcDgwb1d2V1RzVWx0R2dhTmtuSlM0emhfVGtQQkFnY3VmQVdFaFVrRHpaSlJoVm01MDZqbTlTMTZhVl81dy1XNjMwLWttanVOOFoyMEs5QzZXcnlZejJwUERYNHAwd2I2MFFwN2RYbm9yUFFMZi15dzNEZ3JkbHBCNkg4MnFKelNQYTVJX1UtS2RUVlBLZzJMaHY3VFdIdw?oc=5",
+     "source": "Crowdfund Insider",
+     "time": 1794528825000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO targets around $1 trillion valuation, half the $2 trillion once whispered",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUJhaGkxYXVVenU5LURFQjVvY19xWVgtRHFUczBNUk42TzREYTYxcFNPeG9RU18yZnhCRFpZdzdDaTBYZkdSWkVha2JoQzZ6RHFfZzU4aGdncnBzdEV4UmFyZHhuMm5jNV9TamVVQ2ZZX0daZjN1aklvY2pYRHFrZHhkZWMzeW03MHMzTTdDMkRPSDR6aThUZGJUUnE2R2tyc0xPYUFxVmh4Rk1DQTI2QUZBalRyZjZlSlE?oc=5",
+     "source": "investingLive",
+     "time": 1794523033000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic Targets November 19 IPO With $1.4 Trillion Valuation and $64 Billion Share Sale",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWWJlVUhyQk1mVU9xdWt3SGZLOG54SjFfOE5SQlFNOGMyaHQ4N05tMXpobU1wNnpjMHFOdncyMjlCZ0p5SFltSWdTTjB6TmdCU3dvQS1sYWpBSlB1OW5zM2lVbFVlNTE3bE1ITVM1SlNtRmRrM195WHY4NXlaUVMzLU0zS1BJYkpRODk5ZGRhZmNVQUJEbjBmSG5PZGRBTjhBRjdrZ1hiMTZ5b0tnV2hWMXpOUFBpV0ZEcnNabmxQQQ?oc=5",
+     "source": "The Wealth Advisor",
+     "time": 1794521643000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Anthropic targets $1.4T IPO amid AI valuation debate",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWHE2MGcwbThZbk1ZTmlBRGpoTlZoRUQ2Zk1Cc2tGNG9WMHJ0U2dBenJYUllWeWpXRTQxRHM4UGpodS1MemtXakNQSkpocWlZSlYyTGltSXlxRFdYVXNoWFFFVzJBR3l4VkZDTU9GUnBFMEJMYkFIaTNLNGR0bVc3VzVMMHI?oc=5",
+     "source": "Crypto Briefing",
+     "time": 1794499786000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches IPO Roadshow at $1.4 Trillion Valuation. What That Means for Future ANT Stock Investors.",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVl9iaDduYkU0UElfT3RqNGJlaVZzdXJ0R1FOdzJzLVhZRGwteGROdUtxMHFONkN6RFB3VzNHM1I0WTRKcVdkcHJwNDl3LTBzYmZtZFVTc0FIMGNIOTJiWGU4QjFIZHN5d3NVcnR0M2tFbTQ4TjZjYW11OW1sRkZWemVhYlZONDJ2R01ROHhrZlQxMVdORTF5TFRVbWZIRFV1TFZhLVJKcWJPUFp2ZDNwTkdyM2JZbG4tdkNUNDBVVkJISVFGdlBLQTRjM0dZb2c1ZjNObEl3dW9hQzdKdm8zemRB?oc=5",
+     "source": "Barchart.com",
+     "time": 1794414029000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches IPO Roadshow at $1.4 Trillion Valuation. What That Means for Future ANT Stock Investors.",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOG5fa0pQRmlla3FTYnBxaXhsWEtvODRUYVhGYWRpMW1ONjYzaWM4M25HV2FpQ3d3bmI0ZGxMbTJ2NklJN0VFdVB6OWJBdWZUNi1MSE55Q3NaYzFtY3M4Ty16VndkaVhzckdJeG5pd18zdTFBLURSQ1FsNEYyNmREUTVRMHdtUlZCdkZJTWVFRjNlSXRXOWg5QmltWldOZw?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794414029000,
+     "bias": "LONG",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "msci-is-dropping-strategy-from-its-index-and-the-exclusion-c",
+   "title": "MSCI is dropping Strategy from its index, and the exclusion could hit its bitcoin-buying machine",
+   "summary": "MSCI’s decision to exclude Strategy from its equity indexes could hamper the company’s ability to buy more bitcoin, according to some analysts.",
+   "link": "https://www.coindesk.com/markets/2026/11/12/msci-is-dropping-strategy-from-its-index-and-the-exclusion-could-hit-its-bitcoin-buying-machine",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/f79b91e8670bd9e03760460c3a3750d7d34a5150-5021x3350.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "crypto",
+   "firstSeen": 1794382214000,
+   "lastSeen": 1794520324000,
+   "sources": [
+    "Bitcoin.com",
+    "Cryptonews",
+    "BeInCrypto",
+    "CryptoPotato",
+    "The Block",
+    "CoinDesk",
+    "U.Today",
+    "Cointelegraph",
+    "Investing.com",
+    "NewsBTC",
+    "Decrypt",
+    "CryptoSlate"
+   ],
+   "count": 14,
+   "bias": "SHORT",
+   "strength": 60,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 4,
+    "NEUTRAL": 10
+   },
+   "impact": false,
+   "score": 55.7,
+   "assets": [
+    "STOCKS",
+    "BTC"
+   ],
+   "keywords": [
+    "index",
+    "msci",
+    "strategy"
+   ],
+   "related": [
+    {
+     "title": "Strategy stock sheds 5% amid MSCI index removal, Bitcoin sell-off",
+     "link": "https://cointelegraph.com/markets/strategy-shares-fall-5-msci-index-removal-bitcoin",
+     "source": "Cointelegraph",
+     "time": 1794520324000,
+     "bias": "SHORT",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M78SKXFN30X2QXCVG2NCJ1VY/hi-how-strategyb-turned-k-into-m-using-a-high-risk-high-precision-strategy.png"
+    },
+    {
+     "title": "Strategy Made $19.5 Billion in Profit. So Why Is MSCI Removing It From Stock Indexes?",
+     "link": "https://decrypt.co/383204/why-msci-removing-bitcoin-treasury-strategy-stock-indexes",
+     "source": "Decrypt",
+     "time": 1794518763000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/strategy-logo-x-twitter-gID_7.png"
+    },
+    {
+     "title": "MSCI Drops Saylor's Strategy From Its Index Amid BTC Sell-Off",
+     "link": "https://u.today/msci-drops-saylors-strategy-from-its-index-amid-btc-sell-off",
+     "source": "U.Today",
+     "time": 1794498977000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "MSCI Confirms Strategy and Metaplanet Removal at November’s Rebalance",
+     "link": "https://www.newsbtc.com/bitcoin-news/msci-confirms-strategy-metaplanet-removal-november-2026/",
+     "source": "NewsBTC",
+     "time": 1794495600000,
+     "bias": "NEUTRAL",
+     "image": "https://www.newsbtc.com/wp-content/uploads/2026/11/N12-01_msci-confirms-strategy-metaplanet-removal-november-2026-750x422.png"
+    },
+    {
+     "title": "Strategy spent more than twice as much on preferred-share buybacks as Bitcoin. Now comes its MSCI exit",
+     "link": "https://cryptoslate.com/strategy-spent-more-than-twice-as-much-on-preferred-share-buybacks-as-bitcoin-now-comes-its-msci-exit/",
+     "source": "CryptoSlate",
+     "time": 1794487558000,
+     "bias": "NEUTRAL",
+     "image": "https://cryptoslate.com/wp-content/uploads/2026/11/strategy-bitcoin-buyback-tension.webp"
+    },
+    {
+     "title": "MSCI confirms Strategy’s removal from indexes at end of November",
+     "link": "https://cointelegraph.com/news/msci-confirms-strategys-removal-from-indexes-end-november",
+     "source": "Cointelegraph",
+     "time": 1794442153000,
+     "bias": "NEUTRAL",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M76H4XXFRZZF8PWNZVYPMH4D/hi-the-bitcoin-treasury-model-is-breaking-but-microstrategys-isnt-heres-why.jpg"
+    }
+   ]
+  },
+  {
+   "id": "widespread-microsoft-outage-takes-down-outlook-and-other-365",
+   "title": "Widespread Microsoft outage takes down Outlook and other 365 services",
+   "summary": "A Microsoft outage on Thursday affected users of services like Outlook, Teams and 365.",
+   "link": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html",
+   "source": "CNBC",
+   "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB224_L.jpg",
+   "category": "markets",
+   "firstSeen": 1794510219000,
+   "lastSeen": 1794533972000,
+   "sources": [
+    "TechCrunch",
+    "The Independent",
+    "CNBC",
+    "Investing.com",
+    "Al Jazeera",
+    "Engadget",
+    "Wired Security",
+    "BleepingComputer",
+    "SecurityWeek",
+    "BBC Business"
+   ],
+   "count": 10,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 10,
+    "NEUTRAL": 0
+   },
+   "impact": false,
+   "score": 44.4,
+   "assets": [],
+   "keywords": [
+    "365",
+    "outage",
+    "outlook",
+    "microsoft"
+   ],
+   "related": [
+    {
+     "title": "Microsoft struggling to restore service as global outage affects Outlook and Teams",
+     "link": "https://www.bbc.co.uk/news/articles/c5gm3g9ldz8xo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC Business",
+     "time": 1794533972000,
+     "bias": "SHORT",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/28a7/live/2a181e50-defa-11f1-b877-3169a3b63f2c.jpg"
+    },
+    {
+     "title": "Is Outlook down? Widespread outage hits Microsoft and OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMXpkU19kTGVrbk9uVTRvUURQc3N4bjFORHp1UVVhQ29rN0Z4TVl3YlY2ZERjelJtUTl4WmJhdGhMZWk4LTdrbFNVLW1ISjVacVRzMFMtQ0pzVVJWRVZuUk90U2ZSaGFud1luYm5GcUhPa2ZHa3JVTzl0MUpvRW9kSmFkd01yOE5tYmkxbUFHeXY5Y09OZy1vd2hFX0FxRmxJMlp0dzUwZ0hBTUttTVE?oc=5",
+     "source": "The Independent",
+     "time": 1794520140000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Microsoft outage hits tens of thousands of users",
+     "link": "https://www.aljazeera.com/news/2026/11/12/microsoft-outage-hits-tens-of-thousands-of-users?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": 1794517389000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams",
+     "link": "https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/",
+     "source": "SecurityWeek",
+     "time": 1794516930000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide",
+     "link": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/",
+     "source": "BleepingComputer",
+     "time": 1794514516000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Major Microsoft Outlook Outage Leaves People With Email Jobs Unable to Email",
+     "link": "https://www.wired.com/story/major-microsoft-outlook-outage-hits-365-customers-north-america/",
+     "source": "Wired Security",
+     "time": 1794513693000,
+     "bias": "SHORT",
+     "image": "https://media.wired.com/photos/6af619fa66909349c1be40f4/master/pass/Security_Microsoft365Outage-ezgif.com-video-to-gif-converter%20(1).gif"
+    }
+   ]
+  },
+  {
+   "id": "anthropic-s-ipo-is-about-six-times-oversubscribed-bloomberg",
+   "title": "Anthropic's IPO Is About Six Times Oversubscribed - Bloomberg News",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa0F6WF9mNHJLdndTZWp4YmxYa08yQ0VnaXFRRmlJcUFZWWJIZlNVdmxIblZHbWtKTXEtSnBPRl9fM3V2NVZrMkJCYm51WmhIcEl6ejNBaGtUbnVxazNjWmd6RmFiUU5OaVlVV1JFRlVwa3hIdnFmbl8wb1J5LUxNakI2Tl90SDJ2cEhjZ2JESVY4a05lZ1lweXQ0dmdzV0xMU21yYVM3OElhMC1QUnN1OTBqTUtlbzhfZmV6dFV1UkFleERvZkdFNFJMTEo0U28?oc=5",
+   "source": "TradingView",
+   "image": null,
+   "category": "ai",
+   "firstSeen": 1794403761000,
+   "lastSeen": 1794525258000,
+   "sources": [
+    "Investing.com",
+    "Invezz",
+    "Yahoo Finance Singapore",
+    "Bloomberg.com",
+    "TradingView",
+    "The Lufkin Daily News",
+    "Quartz",
+    "Seeking Alpha",
+    "Yahoo Finance"
+   ],
+   "count": 14,
+   "bias": "LONG",
+   "strength": 18,
+   "sentimentCounts": {
+    "LONG": 2,
+    "SHORT": 0,
+    "NEUTRAL": 12
+   },
+   "impact": false,
+   "score": 44.1,
+   "assets": [],
+   "keywords": [
+    "bloomberg",
+    "multiple",
+    "six",
+    "oversubscribed",
+    "time"
+   ],
+   "related": [
+    {
+     "title": "AI Trade Barometer: Anthropic’s IPO Is Reportedly Six-Times Oversubscribed",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTFRGS1QxUlprRjJ5a0tUV1Q0eXRGSUtWZWlHSHpUVi1ESVZDcmJXVzl4MWRKdC05WnhBSUQ0Y0pWUGdzRG9DclBwR3dXNDVFSlpFaHFFV0RDX3Qwc3RfQmtfOS11dFlMcFlhMV90akRvSXM0RkhaOTZ1RTBvQ1VBTWYtS2VhWHluVk53T1liSTdaS0N6MW5IYUYwbGd6QQ?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794525258000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic’s IPO is about six times oversubscribed, Bloomberg News reports By Reuters",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNeWtURkpqX0tqbGdoS1RHdHdFcFR4RGYtYzF0aXBLd19DMEhzbmpnVDc4NFZzMkJfSy1wQTAxcFhHV0NEZDRCa0pMbU56OXE4YXBuQ0pjSDZrZVkyUW5kbDZhb1BkX1pOWG95eVRKdjNwNFRKZHdRWTNVUmxaTUU3djVPdjFtNXpwNm5qV09CUGpWdkhMeUdWV09NYkdEaXJQeFJMNUgwQWcwWlh6WkN0SWVWenc2d3k0cWFiWmVwNVhrMXoyNFU0?oc=5",
+     "source": "Investing.com",
+     "time": 1794519610000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic's IPO is about six times oversubscribed, Bloomberg News reports",
+     "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPUUpyMEJBLUQtX2R1SXc0SVJlM0k4dG9nZ1NMVlphcURTX3FXVXBicDJRMzZNekhIZGQzZ0NLYzhfUkcyNFlBUlU4eTR4VnhXSXZKWjJzSmNBamdrRUMwSjJRbFluR1dRenRyTnNSU2tFcDVWUzJ0dERBb0oxZXdTSnhEVms1WXpkZ0V1eUxTN1M0S1BGcXFTWV8zOUNWVFBTc2NmNGJBdEFqMXU5MXZPczl3NjN6M19STEo2MXc0TGRfT2Z5dkpzeGRPYVM5RDFsTnVmRUxQQmpvUmVCc0p3Vzc0UmxpSnhBS2I0SGJHTTR1NWY2M2lxSlljYkZXN2JF?oc=5",
+     "source": "The Lufkin Daily News",
+     "time": 1794519053000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO demand jumps to six times available shares",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRk45eXBjcEJXWDJ3dkhTX3g4M1o1U3FwWWozTUJwMGlOcW51VEZQMC0tTUZEOWJOaVA1QldNbUJ4alpzVkZ2d1RQQVRzWmlkWU5YUHRRUnlfYV9IUkFra0J2cnhUc2pITF9yQnZoTkRQZjlkZ3hrMmt1QWh1NVo5Uk1JVW1Pc1JmVjB4b1BXajdBZkhweDR1RXlXckxQeGFyU1BQd2s5TmpSTVJMNWpFYVpMRQ?oc=5",
+     "source": "Investing.com",
+     "time": 1794518407000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic’s IPO Is About Six Times Oversubscribed",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeWxnOC1MRXVQbUJwaDdiSDE3TzdIbVRyYU5qWnF5YzkycUVPTXV0bUhOWEIzWU1xejMyQXJxaGtHT2dQbk1iTExkc29hYjBpQWRsY3RTaEtsTVhVaFJjOHl5aW5nb0dDYzRwcWxjVXpkbWw1bU5lSFhwVHo4aGw4bHJZYlNZTUVoN2VwYnhBWmNDNURMbXNmN2FvaEVONS1CVG1MY004MzdMbTRJd1E2eQ?oc=5",
+     "source": "Bloomberg.com",
+     "time": 1794517214000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Watch Anthropic’s IPO Is Said to Be Multiple Times Oversubscribed",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXRvQUltcHhWR21GZUNVZU1HM2RLbnR3WF9Ea24wcFd2aHMtY3J0UlJ1WTdsdllTLTZCRXhLbGdianZYNXZSOHpyazExbG4zLVRHQUl5bktDNG9Ed0ctVnZ1SmJpQW5HVU5rMnpFOVA2ajZxaWIxRmdtYnh6Q2E4a3UzOFZLVExvZ2kzdS1LVlZCUG5pX09ydmdfYXpBaHV4RHZHWGU1WUdzSGVIVlZaVw?oc=5",
+     "source": "Bloomberg.com",
+     "time": 1794419903000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "tsmc-approves-up-to-1-billion-investment-plan-in-anthropic-o",
+   "title": "TSMC Approves Up to $1 Billion Investment Plan in Anthropic, OpenAI",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNT3ZlYXlWNllKZkZETDl2YUpGcXdKYnBpc01rZ2pMenZYcXJrcmVhbFdlUW5oQnFWeTZ1dlN2S2RwVFFUaVJIUWk0UVJsOHk4R25nSGt4NnlfYTZVNXZvTzlrcXU4V2ZGNUNQQTY1amMwcHZ3bC00aTFBMTRKcFExdThaQlY2Nmp4ek1qSXRDdVVuLUlOSWVPQWMtSHlqT0g3RmlCbQ?oc=5",
+   "source": "WSJ",
+   "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/TSMC-Fab-18-1152x648.jpg",
+   "category": "ai",
+   "firstSeen": 1794320169000,
+   "lastSeen": 1794508567000,
+   "sources": [
+    "Reuters",
+    "WSJ",
+    "Quartz",
+    "Yahoo Finance",
+    "Latin Times",
+    "qz.com",
+    "Ars Technica",
+    "MacDailyNews",
+    "Tech Times"
+   ],
+   "count": 10,
+   "bias": "LONG",
+   "strength": 60,
+   "sentimentCounts": {
+    "LONG": 7,
+    "SHORT": 0,
+    "NEUTRAL": 3
+   },
+   "impact": false,
+   "score": 43.6,
+   "assets": [
+    "STOCKS"
+   ],
+   "keywords": [
+    "tsmc",
+    "investment",
+    "$1",
+    "openai"
+   ],
+   "related": [
+    {
+     "title": "TSMC is investing up to $1 billion in both Anthropic and OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9NdS15ZXNZRWxMajJyY194ZFNiRVNiRm51eERkN3lGTkVIbjV4aWY4UlJpYXpHdGFXckNqb042YVZUYmxDWHdHSTFyZnQwRWZ5c0h0RndseUQ1Y25qTlNSYUFVaW5WSlluWHRQbTBEcS1Eck9SbWlQa0R1dw?oc=5",
+     "source": "Latin Times",
+     "time": 1794508567000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "TSMC board approves up to $1 billion in Anthropic and OpenAI investments",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9PRW1CaWktMy1QN2JGMXp2c1d4Z3VZWnluR0FLRVp4RnByN2FwN2NMU3AzdGZsOHEtQm5yTHZ2SFZ4S2hZVzRQVXljTks5RnczVXVWZ0p2UERWczZ3QWN3WDI5d0RxYU1idHhjTEcyZkdTRmtKN0xhUjFPRmRBZw?oc=5",
+     "source": "qz.com",
+     "time": 1794473005000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic, OpenAI Get $1B Investment from TSMC—How Will This Affect the AI Industry?",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQR2xnN1NwRTVDRkhrdXU0WEF0THFPdlBVZnI1Nnc2TExVWFl2a3V5UlVjTUNtU25laEtObnhtUEdSRXNla0JweUtkeXpfTDhEam5CbzVvYkJSYmdpSHhINmFBN1FSb3p4UU9pcjhMV1RSeTRwVExya1FscEg1NEktUXFOaXpDOFVnNFpWcFg1eGN5dWFfbUVmSDRvMmRBSXo4Wkp0RHl6THdIQXBmczlWR3NqWDVVeENZNmRxcHA1dV82d000dXc?oc=5",
+     "source": "Tech Times",
+     "time": 1794467117000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Apple supplier TSMC invests $1 billion in Anthropic and OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc0NFN2lDa3lpWl9ZNWZBMWdqZExobG10QVozZXlFYjE5Qkp5YnVWUWE4V2s2b3pzT21mbVVmd1RQV1VDY3lEa0VYWVFHa215NFdvMm1FYThhZEhWRGR4T01tWkV2RmdiZm9uMEVDbDBTWWpPcXRPbU5rU3dINzBURzd1WTFMV0l2LVJoVUdYdVhWdktQT0VrMnY3ZXlfTGvSAaQBQVVfeXFMTXNNTkNLVk1oMHVnWnlFMkV0b2tFa1hsRkp0d04xWFo2S3cwbVQ5b0xCR2RjY0RqX05ZUUQ2dTJ4TDR5QmFrZmFsejY5aWFLdWNoTzcyN2djMk1LOTh5dkZqU3RhcS1tTE1uOXlXOC05RHF1SFJyRmdDRFdjTi0xR05tWlY5aWw3TTBGdkZSS3dMcXQ2NlF4V1NNekFCbDFzX2J5djk?oc=5",
+     "source": "MacDailyNews",
+     "time": 1794422731000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI",
+     "link": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
+     "source": "Ars Technica",
+     "time": 1794421000000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/TSMC-Fab-18-1152x648.jpg"
+    },
+    {
+     "title": "TSMC plans up to $1bn investment in Anthropic, OpenAI",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZklnSkwxMVFPYnVQNUpzdVAtaXg0LXU0R1dBeTBDUGhScllSemQ4bWlBOW1mdmNHdzRuQV83RFdZWENqNXlDWFBqbkxtYU1jNWVuSHRoMVB3Qmtyd2hGMFl1Rk9PTXZkc2xQMUZhRjh2T3hiNEdoMlBmUFhndmFLWTFEQlpqaFFfRlFwT2NuT1paR2EwdHNBOGN3YlBYamRX?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794403722000,
+     "bias": "LONG",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-launches-claude-for-manufacturing",
+   "title": "Anthropic launches ‘Claude for Manufacturing’",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWRmQ1BneGdsLUtIeUJmSS1HeUpjVnRib1o1cnJOamNsV3k1aGNFZnR4X0J2ZjdxR1VfcGg4VUt0dHBNWlQ1SDJXRDREaDZwYk80clNHVGdoeG5icjFOdFFHUmNQLWtYOV9RWkRudWRlQ3cyQzNRdVQyRllBalFjUlEtQ0Y5RnFnV1VNbmE4ckFDc1ZK?oc=5",
+   "source": "Manufacturing Dive",
+   "image": null,
+   "category": "ai",
+   "firstSeen": 1794331800000,
+   "lastSeen": 1794516360000,
+   "sources": [
+    "TechCrunch",
+    "Computerworld",
+    "Crypto Briefing",
+    "Manufacturing Dive",
+    "FourWeekMBA",
+    "Unite.AI",
+    "Business Insider",
+    "Yahoo Finance"
+   ],
+   "count": 8,
+   "bias": "LONG",
+   "strength": 36,
+   "sentimentCounts": {
+    "LONG": 6,
+    "SHORT": 0,
+    "NEUTRAL": 2
+   },
+   "impact": false,
+   "score": 37.2,
+   "assets": [],
+   "keywords": [
+    "manufacturing",
+    "launche",
+    "claude"
+   ],
+   "related": [
+    {
+     "title": "Echo Harbor Tech Launches Three Unbiased News Products Built with BairesDev and Anthropic’s Claude",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVUo2VFJEN1M3ZmtDS3hfajM0aVQ0VFdGM1FONTFOaHV0emJCNTdxcy05OFZTUzVaaFFjMC1obXAyQU8wTUZ6SVROeEN1VWF4aEZsZElxeHlvdmRLby1sbzRYT3V1UWlaQlczWlJRVVpVSHotclRGMTVTMHRSWFBLZVlvNGVDeVZYdzhDaWh0b1dRVFdydmthMFRfYw?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794516360000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches Claude for Manufacturing Mid-IPO Roadshow",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQanNaSGVGVmNvTVYtWGZlZ2J3bWtpRmc1VE01U1lkUjBMcmV0UUNueU1JdW1UaDU0S2JHTGRyalVZVTBGdFNyQXZPRXY0UVdfd3BVM1RpYS1FYUk4TkM3cWlHdWM2SXhfbUQ5SVVxdTUwQ0cwYWYtelNXc1NRVFZPenM0QUN6ZHhVZXpEUw?oc=5",
+     "source": "FourWeekMBA",
+     "time": 1794510413000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches Claude for Manufacturing With 17 Workflow Skills",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlgxNnVMWnBTVDVqRnpidmxSQ3J5a3VlM1lXZTlCMU1OVXNrbkZzcHJXMl9nWjJDd1JUQUZuM0Y5Rl83Qlg1TDFRUE8xcVpBdWU5dDRfS0hTNGxDNG9YRmxkUkM4S1F0T3U4RmE2cm5mLTJjQUNkTFN0ZG1CMHhxQ21vdlRpaVlqLWlSQnNGWWpJdGs?oc=5",
+     "source": "Unite.AI",
+     "time": 1794507302000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Claude is getting a factory job with a new manufacturing push",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5heE5rT2ppM3BneTFWUVhycmVaXzRzQ1ZBU09id2pSWmRac3haeW01VUgweW5LWHhtdm9ycHNlc002azA3VWRDUmE5TktPYzFwdXRzODVrZURUM0x1T014VUdnVURHMXh1S3pJLVFNQ2FaVms?oc=5",
+     "source": "Crypto Briefing",
+     "time": 1794502962000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "With IPO looming, Anthropic launches Claude product for manufacturers",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRVFzTkpNdV9uc2JnQUFWcTF0c0Y1UnRVcU1ETUZHRGZVUjlRNGpBWXI5UGF4TThRWEFEc1J2alNTbmFYSUEzXzNhb1p4RlRpRDdmd1BSdi1xeXB4aFgwQTlUalZYc19yM2U1S2JYWFVWQWRvSUM3RF9ETkN2bWY0T2g1ZEtWemNpYThCM3lBZFhMRlM5VHRuTG94WDA?oc=5",
+     "source": "Business Insider",
+     "time": 1794502800000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic targets workplace collaboration with Claude Meetings",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOUdzLVY0dmZ6LWlTTjEyVTBRRlFIWG0yV2dWekxnSlZhUDlaN3hrWmttX0ZmQ0pJQVBxb3p1ZlluZTZQLTZBa2RRcklIN0pvZG9QNDgyVkdvQWlKQ0NpOHR4bGNjRFpHMlQ2ak92eUR1RDhxMEFPZWp4dFc0enh0YUQyQ0lGT0sxN3Nqc3I2WlhGN2hPa1FLYWl4b3NSVmNubU01WjNhdmZBZ1hvOTBvM3lzcw?oc=5",
+     "source": "Computerworld",
+     "time": 1794420943000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "the-ai-boom-was-built-around-jensen-huang-what-happens-now",
+   "title": "The AI boom was built around Jensen Huang. What happens now?",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOHVXWDVZQjItWDNRQmJuM0JYVl9kMnJ6Q3l6ZDdqY1RVaDlyRzkybnFSZlpVZGlDQWhTOGp2UUZsTlRvUjVxbDBFZkozNVBuUWVqQUFERGhISXoxUmNVaUx1eFVVTzRnQ2hRaXdhZ2ZJbWRtRU1hU1NKbTJoVERGT2VtVC1Na0YxajFWZENMZXJhUGdh?oc=5",
+   "source": "Fast Company",
+   "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-nvidia-jensen-huang-gID_7.png",
+   "category": "crypto",
+   "firstSeen": 1794249063000,
+   "lastSeen": 1794504093000,
+   "sources": [
+    "Decrypt",
+    "Wired AI",
+    "BeInCrypto",
+    "The Verge AI",
+    "MarketWatch",
+    "Fast Company"
+   ],
+   "count": 7,
+   "bias": "SHORT",
+   "strength": 24,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 2,
+    "NEUTRAL": 5
+   },
+   "impact": true,
+   "score": 34.8,
+   "assets": [
+    "STOCKS",
+    "RATES"
+   ],
+   "keywords": [
+    "happen",
+    "boom",
+    "jensen",
+    "huang"
+   ],
+   "related": [
+    {
+     "title": "What Happens to the AI Boom Now That Nvidia CEO Jensen Huang Is Gone?",
+     "link": "https://beincrypto.com/ai-boom-nvidia-jensen-huang-gone/",
+     "source": "BeInCrypto",
+     "time": 1794504093000,
+     "bias": "SHORT",
+     "image": "https://assets.beincrypto.com/img/cFNKQiJzubcvZOeJdhqGyyNtOc0=/smart/ca4478974e2449b5b5ed9d6070a94279"
+    },
+    {
+     "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+     "source": "The Verge AI",
+     "time": 1794495691000,
+     "bias": "NEUTRAL",
+     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/STKP210_JENSEN_HUANG_A.jpg?quality=90&strip=all&crop=0,0,100,100"
+    },
+    {
+     "title": "Jensen Huang built Nvidia into a behemoth. His scandal puts the entire AI boom in jeopardy.",
+     "link": "https://www.marketwatch.com/story/jensen-huang-built-nvidia-into-a-behemoth-his-scandal-puts-the-entire-ai-boom-in-jeopardy-c374b079?mod=mw_rss_topstories",
+     "source": "MarketWatch",
+     "time": 1794468600000,
+     "bias": "NEUTRAL",
+     "image": "https://images.mktw.net/im-07328527"
+    },
+    {
+     "title": "What Happens to Nvidia Stock if Jensen Huang Is Fired? History Has a Warning",
+     "link": "https://beincrypto.com/nvidia-stock-jensen-huang-fired-history/",
+     "source": "BeInCrypto",
+     "time": 1794464148000,
+     "bias": "SHORT",
+     "image": "https://assets.beincrypto.com/img/bmBBsp_DmzrNDU9WwxBuOTxTUEo=/smart/9e35358b55ec4a24bb1b19ae49bbaeb7"
+    },
+    {
+     "title": "Jensen Huang’s Troubles Leave the AI Industry Reeling",
+     "link": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+     "source": "Wired AI",
+     "time": 1794269899000,
+     "bias": "NEUTRAL",
+     "image": "https://media.wired.com/photos/6af20d5c5d3e4adc0dc34622/master/pass/What-Jensen-Huangs-Spy-Scandal-Means-For-AI-Industry-Business-2219673294.jpg"
+    },
+    {
+     "title": "Nvidia's $350 Billion Scare: What Happens If Jensen Huang Leaves?",
+     "link": "https://decrypt.co/382838/nvidias-350-billion-scare-what-happens-if-jensen-huang-leaves",
+     "source": "Decrypt",
+     "time": 1794249063000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-nvidia-jensen-huang-gID_7.png"
+    }
+   ]
+  },
+  {
+   "id": "north-korean-hackers-create-memecoins-to-launder-funds-from",
+   "title": "North Korean hackers create memecoins to launder funds from Binance hack: Elliptic",
+   "summary": "The blockchain firm traced stolen funds through six new tokens on NEAR, where hackers used liquidity pools to obscure transfers between wallets.",
+   "link": "https://cointelegraph.com/news/north-korean-hackers-memecoins-launder-binance-hack-elliptic",
+   "source": "Cointelegraph",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M70X59B82FS5F3H9N89JXV87/hi-north-korea-hack-3.jpg",
+   "category": "crypto",
+   "firstSeen": 1794236444000,
+   "lastSeen": 1794344841000,
+   "sources": [
+    "CoinDesk",
+    "Cointelegraph",
+    "Cryptonews",
+    "U.Today",
+    "Decrypt",
+    "CryptoPotato"
+   ],
+   "count": 6,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 6,
+    "NEUTRAL": 0
+   },
+   "impact": false,
+   "score": 29.9,
+   "assets": [],
+   "keywords": [
+    "launder",
+    "meme",
+    "memecoin",
+    "korean",
+    "north",
+    "coin"
+   ],
+   "related": [
+    {
+     "title": "North Korea Is Creating Fake Meme Coins to Launder Millions From the $6.4B Binance Hack",
+     "link": "https://cryptopotato.com/north-korea-is-creating-fake-meme-coins-to-launder-millions-from-the-6-4b-binance-hack/",
+     "source": "CryptoPotato",
+     "time": 1794344841000,
+     "bias": "SHORT",
+     "image": "https://cryptopotato.com/wp-content/uploads/2023/08/hacker_cover.jpg"
+    },
+    {
+     "title": "North Korea Hackers Launches Elon Musk Memecoins to Launder $6.4B Binance Hack",
+     "link": "https://cryptonews.com/news/north-korea-memecoins-binance-hack/",
+     "source": "Cryptonews",
+     "time": 1794316697000,
+     "bias": "SHORT",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794316452-screenshot-2026-11-10-at-8-12-22pm.jpg"
+    },
+    {
+     "title": "Binance Hack Launderers Mint Elon Musk and Animal Meme Coins to Move Stolen Crypto",
+     "link": "https://decrypt.co/382873/binance-hack-elon-musk-animal-meme-coins-launder-stolen-crypto",
+     "source": "Decrypt",
+     "time": 1794252962000,
+     "bias": "SHORT",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/dprk-north-korea-hacker-decrypt-style-gID_7.jpg"
+    },
+    {
+     "title": "North Korean Hackers Flip Stolen Binance Funds Into NEAR Meme Coins",
+     "link": "https://u.today/north-korean-hackers-flip-stolen-binance-funds-into-near-meme-coins",
+     "source": "U.Today",
+     "time": 1794244405000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
+     "link": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
+     "source": "CoinDesk",
+     "time": 1794236444000,
+     "bias": "SHORT",
+     "image": "https://cdn.sanity.io/images/s3y3vcno/production/c18c9af8ef94bcbc9a17fac89a01b83bfc76fd8f-5472x3648.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip"
+    }
+   ]
+  },
+  {
+   "id": "deutsche-bank-goes-live-with-digital-asset-custody-service-s",
+   "title": "Deutsche Bank goes live with digital asset custody service, signs asset management deal",
+   "summary": "Deutsche Bank launched its digital asset custody service and signed an agreement covering tokenized funds, crypto ETCs, and stablecoins.",
+   "link": "https://www.theblock.co/news/business/2026-11-11-deutsche-bank-goes-live-with-digital-asset-custody-service-signs-asset-management-deal-437851",
+   "source": "The Block",
+   "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/Screenshot-2026-11-11-at-11.27.09.png",
+   "category": "crypto",
+   "firstSeen": 1794392323000,
+   "lastSeen": 1794489480000,
+   "sources": [
+    "U.Today",
+    "The Block",
+    "Cointelegraph",
+    "Bitcoin.com",
+    "Decrypt",
+    "Finextra"
+   ],
+   "count": 7,
+   "bias": "LONG",
+   "strength": 51,
+   "sentimentCounts": {
+    "LONG": 4,
+    "SHORT": 0,
+    "NEUTRAL": 3
+   },
+   "impact": false,
+   "score": 29.5,
+   "assets": [
+    "USDT/USDC",
+    "BTC",
+    "ETH"
+   ],
+   "keywords": [
+    "deutsche",
+    "custody",
+    "asset",
+    "digital",
+    "bank"
+   ],
+   "related": [
+    {
+     "title": "Sparkasse Bank Malta launches digital asset trading services",
+     "link": "https://www.finextra.com/pressarticle/111653/sparkasse-bank-malta-launches-digital-asset-trading-services",
+     "source": "Finextra",
+     "time": 1794489480000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "BNY taps Figment to support staking on its digital asset custody platform",
+     "link": "https://www.theblock.co/news/business/2026-11-12-bny-taps-figment-to-support-staking-on-its-digital-asset-custody-platform-438538",
+     "source": "The Block",
+     "time": 1794488702000,
+     "bias": "NEUTRAL",
+     "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/Screenshot-2026-11-12-at-12.20.58.png"
+    },
+    {
+     "title": "Deutsche Bank Goes Live With Crypto Custody After a Five-Year Buildup",
+     "link": "https://decrypt.co/383067/deutsche-bank-goes-live-with-crypto-custody-after-a-five-year-buildup",
+     "source": "Decrypt",
+     "time": 1794423962000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2026/08/bitcoin-savings-decrypt-style-gID_7.jpg"
+    },
+    {
+     "title": "Deutsche Bank Brings Bitcoin Custody Into Its Institutional Banking Empire",
+     "link": "https://news.bitcoin.com/crypto-news/deutsche-bank-brings-bitcoin-custody-institutional-banking-empire/",
+     "source": "Bitcoin.com",
+     "time": 1794406746000,
+     "bias": "LONG",
+     "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/deutsche-bank-brings-bitcoin-custody-into-its-institutional-banking-empire-768x432.png"
+    },
+    {
+     "title": "Deutsche Bank launches crypto custody for companies and institutions",
+     "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu",
+     "source": "Cointelegraph",
+     "time": 1794405738000,
+     "bias": "LONG",
+     "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M75D0RVNVRMGT5GMDFRH6PZQ/hi-us-banks-have-deeper-interest-in-digital-than-previously-thought.jpg"
+    },
+    {
+     "title": "Deutsche Bank Opens Digital Asset Custody to Paying Institutional Clients",
+     "link": "https://u.today/deutsche-bank-opens-digital-asset-custody-to-paying-institutional-clients",
+     "source": "U.Today",
+     "time": 1794392323000,
+     "bias": "LONG",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "hot-us-inflation-raises-odds-of-half-point-fed-hike-in-decem",
+   "title": "Hot US inflation raises odds of half-point Fed hike in December",
+   "summary": "US inflation came in above forecasts in October, increasing expectations of a bigger rate hike in December and raising concerns for crypto investors.",
+   "link": "https://cointelegraph.com/news/hot-us-inflation-raises-rate-hike-crypto",
+   "source": "Cointelegraph",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7336RAJMBE41VQRYSYWFP63/us-federal-reserve-1.jpg",
+   "category": "crypto",
+   "firstSeen": 1794328077000,
+   "lastSeen": 1794381136000,
+   "sources": [
+    "Decrypt",
+    "Bloomberg.com",
+    "Cryptonews",
+    "CNBC Finance",
+    "Cointelegraph"
+   ],
+   "count": 5,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 5,
+    "NEUTRAL": 0
+   },
+   "impact": true,
+   "score": 28.9,
+   "assets": [
+    "BTC",
+    "RATES"
+   ],
+   "keywords": [
+    "half-point",
+    "december",
+    "hot",
+    "hike",
+    "fear",
+    "fed"
+   ],
+   "related": [
+    {
+     "title": "Bitcoin Price Cooked? Gensler 2.0 Fears as Fed Blocks Crypto Bank",
+     "link": "https://cryptonews.com/news/bitcoin-price-gensler-2-fears-fed-crypto-bank/",
+     "source": "Cryptonews",
+     "time": 1794381136000,
+     "bias": "SHORT",
+     "image": "https://cryptonews.com/wp-content/uploads/2026/11/1794381006-screenshot-2026-11-11-at-2-07-27pm.jpg"
+    },
+    {
+     "title": "Watch Hot Inflation, AI Selloff & Anthropic IPO",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR2ZWU3RnWDVHSnBiVmkyWkNlYk84WjN2enotTW1yN1dSQk5HNkRRbXl6SHIxSTZKamotRHVuaXR2TGF5TkkwM0xOOVVFNDNKamlJMFkzY2ZwQVZOOUx1R2ljcUsxbjdJako3WF9BQ1lYM0VhRzE0MTcyNnJsbFlXWQ?oc=5",
+     "source": "Bloomberg.com",
+     "time": 1794354516000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
+     "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
+     "source": "CNBC Finance",
+     "time": 1794330824000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Bitcoin Falls as Hot US Inflation Fuels Fears of Bigger Fed Rate Hike",
+     "link": "https://decrypt.co/382950/bitcoin-falls-hot-us-inflation-fears-bigger-fed-rate-hike",
+     "source": "Decrypt",
+     "time": 1794328077000,
+     "bias": "SHORT",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/bitcoin-decrypt-style-neon-gID_7.png"
+    }
+   ]
+  }
+ ],
+ "roundups": [
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "Bitcoin: Correction or Reset?",
+   "summary": "Bitcoin has spent four days below its $75,717 short-term holder cost basis. ETF flows, options, CPI and the Anthropic listing will decide: correction or reset? The post Bitcoin: Correction or Reset? appeared first on Bit",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/bitcoin-correction-or-reset/",
+   "image": "https://blog.bitfinex.com/wp-content/uploads/2026/11/image-56-1024x583.png?ver=1794406718",
+   "time": 1794407505000
+  },
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "After the Equity Rout, CPI Sets Direction",
+   "summary": "The post After the Equity Rout, CPI Sets Direction appeared first on Bitfinex blog .",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/after-the-equity-rout-cpi-sets-direction/",
+   "image": null,
+   "time": 1794242040000
+  },
+  {
+   "source": "Cointelegraph",
+   "category": "crypto",
+   "title": "BTC price eyes $73K amid Nvidia volatility: Three things to know in Bitcoin this week",
+   "summary": "Bitcoin price action fell to its lowest levels since mid-August as Nvidia reports added to sell-side pressure across stock-market futures.",
+   "link": "https://cointelegraph.com/markets/btc-price-nvidia-volatility-three-things-bitcoin-this-week",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6ZPZ3XN7CEBDWKGJCADW5H6/ai-falling-stock-prices-960x644-960x644.webp",
+   "time": 1794218620000
+  },
+  {
+   "source": "Bitcoin.com",
+   "category": "crypto",
+   "title": "Blue Wave, Red Week — Week in Review",
+   "summary": "This editorial is from this week’s edition of the newsletter Week in Review, sent to subscribers on Friday. Subscribe to the newsletter to get this weekly editorial the second it’s finished. The newsletter also includes ",
+   "link": "https://news.bitcoin.com/opinion-and-analysis/blue-wave-red-week-week-in-review/",
+   "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/blue-wave-red-week--week-in-review-768x432.png",
+   "time": 1794146401000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "Wall Street Week Ahead",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964825-wall-street-week-ahead?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794136436000
+  },
+  {
+   "source": "The Verge Installer",
+   "category": "tech",
+   "title": "Zelda is back and better than ever",
+   "summary": "Hi, friends! Welcome to Installer No. 151, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, get psyched because it's officially Bad Holiday Movie Season, and also you can read all t",
+   "link": "https://www.theverge.com/tech/1028930/zelda-ocarina-godzilla-minus-zero-affinity-installer",
+   "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Installer-151.jpg?quality=90&strip=all&crop=0,0,100,100",
+   "time": 1794059341000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "What Moved Markets This Week",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964579-what-moved-markets-this-week?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794051446000
+  },
+  {
+   "source": "O'Reilly Radar",
+   "category": "ai",
+   "title": "This Week in AI: The Cost of Progress",
+   "summary": "New frontier models arrived this week as investors showed signs of growing cautious about AI spending. On the latest episode of This Week in AI, we examined those developments, along with research into how models learn a",
+   "link": "https://www.oreilly.com/radar/this-week-in-ai-the-cost-of-progress/",
+   "image": "https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/08/USE_THIS_thisweek-ai-radar-1600x840-1.png",
+   "time": 1793984106000
+  }
+ ]
+}
