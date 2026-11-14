@@ -1,0 +1,1246 @@
+{
+ "generated": 1794624693685,
+ "date": "2026-11-14",
+ "window": {
+  "from": 1794019893685,
+  "to": 1794624693685
+ },
+ "stats": {
+  "stories": 3019,
+  "sources": 290
+ },
+ "pinned": [],
+ "highlights": [
+  {
+   "id": "nvidia-perps-crash-7-as-ceo-jensen-huang-reportedly-faces-th",
+   "title": "Nvidia perps crash 7% as CEO Jensen Huang reportedly faces the axe",
+   "summary": "Nvidia perps are down 7% on Hyperliquid as traders react to reports that CEO Jensen Huang may be removed. Bitcoin continues to trade in a familiar price range.",
+   "link": "https://www.coindesk.com/markets/2026/11/12/bitcoin-listless-nvidia-perps-crash-7-as-ceo-jensen-huang-reportedly-faces-the-axe",
+   "source": "CoinDesk",
+   "image": "https://cdn.sanity.io/images/s3y3vcno/production/2d2163bd3612c24db4c4a5e6035b02e59b03e953-1889x1295.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+   "category": "tech",
+   "firstSeen": 1794191972000,
+   "lastSeen": 1794618000000,
+   "sources": [
+    "Cryptonews",
+    "BeInCrypto",
+    "The Verge AI",
+    "Decrypt",
+    "Wired AI",
+    "TechCrunch AI",
+    "CryptoPotato",
+    "Engadget",
+    "Ars Technica",
+    "CNBC Tech",
+    "BBC Business",
+    "TechCrunch",
+    "Al Jazeera",
+    "CNBC Finance",
+    "MarketWatch",
+    "Cointelegraph",
+    "Investing.com",
+    "CNBC",
+    "The Block",
+    "CoinDesk",
+    "Finextra",
+    "Yahoo Finance",
+    "Bitcoin.com",
+    "Fortune",
+    "Reuters",
+    "Nacionale",
+    "U.Today",
+    "Fast Company",
+    "Traders Union",
+    "CryptoSlate",
+    "The Verge",
+    "BBC World",
+    "Investor's Business Daily",
+    "Bloomberg.com",
+    "Business Insider",
+    "Yahoo Finance Singapore"
+   ],
+   "count": 158,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 7,
+    "SHORT": 40,
+    "NEUTRAL": 111
+   },
+   "impact": true,
+   "score": 280,
+   "assets": [
+    "BTC",
+    "STOCKS",
+    "HYPE",
+    "RATES",
+    "XRP"
+   ],
+   "keywords": [
+    "jensen",
+    "huang"
+   ],
+   "related": [
+    {
+     "title": "Can Elon Musk Bring Jensen Huang Back as Nvidia CEO?",
+     "link": "https://beincrypto.com/elon-musk-jensen-huang-nvidia-ceo-return/",
+     "source": "BeInCrypto",
+     "time": 1794618000000,
+     "bias": "NEUTRAL",
+     "image": "https://assets.beincrypto.com/img/-iy5LCGQWMfbhO1Ry2TgqdyjWZs=/smart/31abc7b2c3e547a38e2e532825a4f6f0"
+    },
+    {
+     "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+     "link": "https://www.cnbc.com/2026/11/13/nvidia-jensen-huang-washington-congress.html",
+     "source": "CNBC",
+     "time": 1794614076000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
+     "link": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
+     "source": "BBC World",
+     "time": 1794610831000,
+     "bias": "NEUTRAL",
+     "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c559/live/a40793d0-df4a-11f1-a48c-75dd2efdacb5.jpg"
+    },
+    {
+     "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+     "link": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+     "source": "TechCrunch",
+     "time": 1794609780000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Could a Former Nvidia Executive Replace Jensen Huang? Arm’s Rene Haas Emerges as Candidate",
+     "link": "https://decrypt.co/383276/nvidia-arm-ceo-rene-haas-replace-jensen-huang",
+     "source": "Decrypt",
+     "time": 1794608163000,
+     "bias": "NEUTRAL",
+     "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/nvidia-logo-decrypt-style-1-gID_7.png"
+    },
+    {
+     "title": "AMD and other chip stocks slide as Wall Street rethinks the AI trade without Jensen Huang",
+     "link": "https://www.marketwatch.com/story/amd-and-other-chip-stocks-slide-as-wall-street-rethinks-the-ai-trade-without-jensen-huang-2fb74547?mod=mw_rss_topstories",
+     "source": "MarketWatch",
+     "time": 1794604200000,
+     "bias": "NEUTRAL",
+     "image": "https://images.mktw.net/im-47012568"
+    }
+   ]
+  },
+  {
+   "id": "microsoft-365-outage-hits-outlook-email-and-teams-calendars",
+   "title": "Microsoft 365 outage hits Outlook email and Teams calendars worldwide",
+   "summary": "Microsoft began a wider patch rollout Friday as the outage disrupted government email and Microsoft 365 connectors in ChatGPT and Claude.",
+   "link": "https://cointelegraph.com/news/microsoft-365-global-outage-outlook-teams-ai-services",
+   "source": "Cointelegraph",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M79XNS0NYCVT2FWE48H7WKBH/hi-microsoft-windows-data-blackout-downs.jpg",
+   "category": "ai",
+   "firstSeen": 1794418428000,
+   "lastSeen": 1794615479000,
+   "sources": [
+    "Yahoo Finance",
+    "Engadget",
+    "Wired AI",
+    "BBC Business",
+    "Al Jazeera",
+    "SecurityWeek",
+    "SNJ Today",
+    "www.trendingtopics.eu",
+    "BleepingComputer",
+    "CNBC",
+    "The Independent",
+    "Cointelegraph",
+    "Data Center Dynamics",
+    "BBC World",
+    "Investing.com",
+    "The Verge",
+    "Benzinga",
+    "Nacionale",
+    "Startup Fortune",
+    "Inc.com",
+    "MarketWatch",
+    "Finextra"
+   ],
+   "count": 28,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 27,
+    "NEUTRAL": 1
+   },
+   "impact": false,
+   "score": 101.4,
+   "assets": [],
+   "keywords": [
+    "365",
+    "outlook",
+    "outage",
+    "microsoft"
+   ],
+   "related": [
+    {
+     "title": "Microsoft services begin recovering after global outage",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/14/microsoft-services-begin-recovering-after-global-outage?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": 1794615479000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Microsoft says services still returning amid widespread outage",
+     "link": "https://www.aljazeera.com/news/2026/11/13/microsoft-says-services-still-returning-amid-widespread-outage?traffic_source=rss",
+     "source": "Al Jazeera",
+     "time": 1794600973000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "What the Microsoft 365 outage should change in a bank’s 2027 AI plan",
+     "link": "https://www.finextra.com/blogposting/33467/what-the-microsoft-365-outage-should-change-in-a-banks-2027-ai-plan",
+     "source": "Finextra",
+     "time": 1794599767000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Microsoft 365 Crawls Back to Life After a 24-Hour Outage",
+     "link": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/",
+     "source": "Wired AI",
+     "time": 1794596937000,
+     "bias": "SHORT",
+     "image": "https://media.wired.com/photos/6af75c7bac6958eb8481a5e6/master/pass/Security_MicrosoftBackOnline_v1.jpg"
+    },
+    {
+     "title": "Microsoft points to ‘broad recovery and stability’ after widespread Outlook outage",
+     "link": "https://www.marketwatch.com/story/microsoft-stock-slumps-on-outage-that-includes-the-copilot-tool-it-has-been-heavily-promoting-4007dc4f?mod=mw_rss_topstories",
+     "source": "MarketWatch",
+     "time": 1794595080000,
+     "bias": "SHORT",
+     "image": "https://images.mktw.net/im-38565839"
+    },
+    {
+     "title": "The Microsoft Outage Also Hit ChatGPT and Claude. But There’s an Easy Workaround",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPXzEtUGhBWDIxZFJGeUU2RGR4YTJTck9RcjFPOXFjelFBWDk1RjdwakJidW1mRXBJMEVCZ2Nvb0Vxa2JhN3ZQZDM0TU1tMUpRT0QyWjRGcmp1YTBHZ2lpa2dXUk10VDRkQjVpekNBX0tGT1h4WXN2WVEtODdBbGpnUjZjNGh2RXNFSng2RHJkLWRqQm1selA2c19qYUtmNHhiREJiaEhWdU1RamtqZHB3WGxfaEUzcGhs?oc=5",
+     "source": "Inc.com",
+     "time": 1794593055000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-s-ipo-is-about-six-times-oversubscribed",
+   "title": "Anthropic’s IPO Is About Six Times Oversubscribed",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeWxnOC1MRXVQbUJwaDdiSDE3TzdIbVRyYU5qWnF5YzkycUVPTXV0bUhOWEIzWU1xejMyQXJxaGtHT2dQbk1iTExkc29hYjBpQWRsY3RTaEtsTVhVaFJjOHl5aW5nb0dDYzRwcWxjVXpkbWw1bU5lSFhwVHo4aGw4bHJZYlNZTUVoN2VwYnhBWmNDNURMbXNmN2FvaEVONS1CVG1MY004MzdMbTRJd1E2eQ?oc=5",
+   "source": "Bloomberg.com",
+   "image": "https://content-media.investing.com/news/moved_LYNXMPEM4D1DG_L.jpg",
+   "category": "tech",
+   "firstSeen": 1794411225000,
+   "lastSeen": 1794609065000,
+   "sources": [
+    "Quartz",
+    "Seeking Alpha",
+    "Bloomberg.com",
+    "Yahoo Finance",
+    "TradingView",
+    "The Lufkin Daily News",
+    "Reuters",
+    "Investing.com",
+    "investingLive",
+    "Silicon Republic",
+    "marketscreener.com",
+    "The Business Times",
+    "Dataconomy",
+    "Crypto Briefing",
+    "Unite.AI",
+    "The Times of India",
+    "Coinpaper",
+    "Proactive financial news",
+    "BigGo Finance",
+    "FXLeaders"
+   ],
+   "count": 30,
+   "bias": "NEUTRAL",
+   "strength": 6,
+   "sentimentCounts": {
+    "LONG": 2,
+    "SHORT": 1,
+    "NEUTRAL": 27
+   },
+   "impact": true,
+   "score": 97.8,
+   "assets": [
+    "STOCKS"
+   ],
+   "keywords": [
+    "oversubscribed",
+    "six",
+    "time"
+   ],
+   "related": [
+    {
+     "title": "Anthropic IPO Could Raise $64 Billion as Orders Reach Six Times",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTVJFZEE2WWt0QjdIaWQ4Y3N6c0t5aWRxUTVFUHFvb0dPQ1VWcXB4c0NTb0Vmd0RORlBvQzlrT2hnY1FVRlZXYkJMZkJPWHJKd0puUGhOblV1TlJrZmFWX1FySG1MSXBmZ2dWMzF5Zlkwd2g4YXhwVER0eFAxWkVwVDZ6eGQ3a3pUMVRIeA?oc=5",
+     "source": "Unite.AI",
+     "time": 1794609065000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO Said to Rebuff China Orders as Demand Hits 6X Supply",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPR3hsLVBTM2pWbDRkR19yWklOR1ZtN3RUOExucTIzM28tRFl6UnpIMVc0dE9TZ2tlMnhsSkpqbS1yZW1nUllIeXNqVE1Cc0ZCSjhFa0x6bloyQ3MxbGdsVkRmMmZRNU14VlBBVjRseWJyaDZ6TzZEX2o0UTlUZENaanBhY3JRWmdxT0lxNWNoS2o5OWladzU5Y1IyRjNMc1c3R3dmc0pwbk5IY3h3TVE?oc=5",
+     "source": "FXLeaders",
+     "time": 1794604398000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic's $1.4 Trillion IPO Bars Mainland China and Hong Kong Buyers as Demand Hits Six Times Supply",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5scmhudHkzb2NySUFZU3lIOVBIZEZCby1XNUVkb3k5UzdXLXRpWlpkNEtCTU9BYW1USzQtcDNtRzZlcHFrS0hyQnlNYUlCa1MwM18tSW9INXJTdFh3VVZMN0Q3dGJCZkE0YzRJR3JpR1R1ZDBQcmc?oc=5",
+     "source": "BigGo Finance",
+     "time": 1794597900000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "US October PPI Below Expectations; Nasdaq Futures Climb; Anthropic IPO Six Times Oversubscribed",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PbW1GdzVTU2J4eGpzWmVhdXpiLXpTOXQtNjRvSHZYYUl6bVplQVM2MWIyVFFsVV83alhCVFpqSDlXS2dsX0RGZlBSUG40NWdzNGxaOFRkQWNPaGpHM1pxeDNSNEJLcU1HQ1c4bVhaSkRyQ1NLMmc?oc=5",
+     "source": "BigGo Finance",
+     "time": 1794594900000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "US energy rig count drops for first time in six weeks",
+     "link": "https://www.investing.com/news/economy-news/us-energy-rig-count-drops-for-first-time-in-six-weeks-5026324",
+     "source": "Investing.com",
+     "time": 1794594554000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM4D1DG_L.jpg"
+    },
+    {
+     "title": "Anthropic IPO reportedly 6 times oversubscribed",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUGZYbnBObktHN3NKM3pEWnBtRGMzRnA4b1lYUWttMlJZQ3ZpUFlsaFNVRlpTNDAxeDgwaUtMMTQ3SUN2WWtQUG5BcElZdHJuUjBSblNrT2ppQm93SFU4dTRfVE1xX1hxd1pKYzVDQXRqNHVBNG5Id1dNXzBYSEwwalNOWm1rRjFLUFNtTWRQTk1qRnpLa2ZNclZR?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794587258000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-targets-valuation-of-up-to-1-4-trillion-for-blockb",
+   "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O.",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPaWplYjFtNjRwemt5Y0dEYV9Wem5ET3FLYXpQOFo0MWttT0hPOW5HN3BRM3hYZWU0YUYwdUJIemhKR0Q4aGw4dWxGbWZ6QlZZcHM3Sm5kMkZsaVVaOE1jOVJueHFSMERPS3lPZHptelZseENfMk0zeGlPUGtZODJEaUZuUmVYbXNucG1xVW1HZw?oc=5",
+   "source": "The New York Times",
+   "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b401/live/fd7836e0-dbdf-11f1-b348-cb75a5659779.jpg",
+   "category": "tech",
+   "firstSeen": 1794225982000,
+   "lastSeen": 1794590100000,
+   "sources": [
+    "BBC Business",
+    "Business Insider Africa",
+    "The Wealth Advisor",
+    "Reuters",
+    "Mashable",
+    "Moomoo",
+    "The New York Times",
+    "Forbes",
+    "The Verge AI",
+    "The Defiant",
+    "Yahoo Finance",
+    "Latin Times",
+    "Fortune",
+    "조선일보",
+    "Crypto Briefing",
+    "Barchart.com",
+    "Benzinga",
+    "investingLive",
+    "The Motley Fool",
+    "Crowdfund Insider",
+    "Billionaires.Africa"
+   ],
+   "count": 25,
+   "bias": "LONG",
+   "strength": 15,
+   "sentimentCounts": {
+    "LONG": 6,
+    "SHORT": 3,
+    "NEUTRAL": 16
+   },
+   "impact": false,
+   "score": 94.8,
+   "assets": [
+    "STOCKS"
+   ],
+   "keywords": [
+    "$1.4",
+    "target",
+    "valuation"
+   ],
+   "related": [
+    {
+     "title": "Anthropic’s Valuation Target Has Slipped From $2 Trillion to Under $1.5 Trillion. Here’s Why",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNa1FVRHVvTHVsT0JFR2FpbmRlaS1JUFpCTm96bks4azFtdHVLRld6cWJWRjg2RkI2V0YzdGpaN3ZaQVRUQ1Y5V1htU2N6YXRaVjJkeHVLMnozWjF5bmY3eHRDOUtlb0lTODhRazdmb0dxX2xYTTJKRDIyamMtR08tZmQ2cldCOEplVVgzN01BQ192b1d1MXJrN0NyNUtyUXRYaDduUGFsd2xSOXhNWkROd3BOWWJmbDJXaWJPOHc0WGt6ekNaeWlYMg?oc=5",
+     "source": "The Motley Fool",
+     "time": 1794590100000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO At $1.4 Trillion: Investors’ Problem Is Price, Not Growth",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM0tTa19MNG5MS3RubnJlQ09ydm9yYnZXTWtaYlpxNHBTQmVFUTFpSjZrTG5QS19JeFVjdW5URGpOanI1dHVXZlUwV0RQVEtGajMwczVLaVRPOG4zN2ZUV2JRbXMybUNTQU1pelNESFAyUnlzWk96RG1DZWlCdWNxUmlQWVdfVGNBOGFkOE5CMWdKQkhCZ0s2Q19IRENfb3hx?oc=5",
+     "source": "Benzinga",
+     "time": 1794589623000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic’s $1.4 trillion IPO valuation could reshape how U.S. investors value AI",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPclgxNnlJSW5ENGVOVVBGSk9MdHF0YTJSRlFncmZueVpJWVJkcmJZZHlqRFZMMzM3YlAtalVvWU9MbWFaTGh3VGhUT0pPS0tQODRUS3drOW9qTlBQV0I1cVotTUxRSTZIMzZqRUtWWUl4R2ZMTnRDcXNsZ0d5RlNkZEZtbWU5aHpEQWRQa29ZQ0VFMkp1?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794589380000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Why Billionaire investor Bill Ackman isn't touching Anthropic",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUVhEUkw3dGN6VjFWU3dIekZmWWRIWXBtXzhXb1hxYUhhUVFpYWhnSDIwVkhpMjlKLS1oUW4xZmI4MmJ4TmtPeFVNVHRCNC1tOHNmYzF2S09jYzlpaXVob09iZmpvb2ZDeFlSbzVZaC0wZVRlaVdsOW1NbGxwUEs5VlF0ZThSM19nVFJwYzktSUhBWWk3SkJBM01hZEhnNFNmbTVVVlcyV3RBcVk?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794586150000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "American billionaire Bill Ackman questions Anthropic's $1.4 trillion IPO valuation",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaGN3NU1rMXRvZ1lTTm1tcmxpVWFDaGhETnIxSXNkZXRaOUQzNW1KbHZiQmdFaHhaTlowWmp6Y3pNZW1xM2NIN2VTZGNHeGZzejhIX3N4d0tXR0pnRVNxTTdBcUd6VE1ZeXFlVThEcWVtb3JQZkhDRmQ0dm1hYjVFSVE2VHpYVmNzZng3MDJoR2wyakxTV0wtcVpJZzQzZzNadVRWR0ZMRi0xSkZfWmtQUllHSEtHTl9hanlxcUpiTXRjQQ?oc=5",
+     "source": "Billionaires.Africa",
+     "time": 1794575124000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO Arrives On Crypto.com Stocks Amid $1.4 Trillion Valuation Push",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYmJTRHYxZlRGUlNUYmRVMFVKRUo4UURlOVN5VENqNk9ZcTJGcDgwb1d2V1RzVWx0R2dhTmtuSlM0emhfVGtQQkFnY3VmQVdFaFVrRHpaSlJoVm01MDZqbTlTMTZhVl81dy1XNjMwLWttanVOOFoyMEs5QzZXcnlZejJwUERYNHAwd2I2MFFwN2RYbm9yUFFMZi15dzNEZ3JkbHBCNkg4MnFKelNQYTVJX1UtS2RUVlBLZzJMaHY3VFdIdw?oc=5",
+     "source": "Crowdfund Insider",
+     "time": 1794528825000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "openai-launches-chatgpt-wallet-allowing-its-dots-ai-agents-t",
+   "title": "OpenAI launches ChatGPT Wallet, allowing its 'dots' AI agents to make purchases for users",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0wYUx6c1hJYlJuVVB3MUMxT3ViR21IZWdtXy1RbkQ3c1FGeDVzM2E0VHRNVllGN01FTGFSaURNeS1oUC1leTQ3N05fV0VQR3JvdWJYMjYyNXU2TTZLY00tZU5nbGZfQlBxYnVWaEFGcF9uMTBlR0UtY1d2Sm0?oc=5",
+   "source": "CNBC",
+   "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/STKS539_AI_AGENTS_SHOPPING_B.jpg?quality=90&strip=all&crop=0,0,100,100",
+   "category": "ai",
+   "firstSeen": 1794582001000,
+   "lastSeen": 1794623664000,
+   "sources": [
+    "CNBC",
+    "The Defiant",
+    "Reuters",
+    "9to5Mac",
+    "Seeking Alpha",
+    "TestingCatalog AI News",
+    "Anadolu Ajansı",
+    "Finextra",
+    "TechCrunch",
+    "SQ Magazine",
+    "The Verge",
+    "Mashable",
+    "citybiz",
+    "Chain Store Age",
+    "NewsCord",
+    "Benzinga"
+   ],
+   "count": 17,
+   "bias": "LONG",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 13,
+    "SHORT": 0,
+    "NEUTRAL": 4
+   },
+   "impact": false,
+   "score": 69.7,
+   "assets": [],
+   "keywords": [
+    "purchase",
+    "chatgpt",
+    "wallet",
+    "launche",
+    "agent",
+    "openai"
+   ],
+   "related": [
+    {
+     "title": "ChatGPT Wallet Lets OpenAI's Dots AI Agents Shop On Your Behalf Without Accessing Actual Card Details",
+     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWhSdDY4UU1NV212WnA1Vm9taWxQMmU5bE52OTdKZ0hPQ3lOeE1PRm9nQl9EeUFURm9ZNHFwUUdQbWV3Y0xlQzgxS2xjUHNsSzB4MUVrcTZ4N2ZlRGdNdFdLamhYQUlvaEt3ZXV0amthQi11SmVsaUNfUC1XRkczVGV0S3RZb2s?oc=5",
+     "source": "Benzinga",
+     "time": 1794623664000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "OpenAI launches ChatGPT Wallet, claiming it's a safe way to have AI shop for you",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHeTFKZ0NySWhLdXF5bXRNLU5MOHJUUU9WcTVwOGFOc2xNaEstLVp6cy1Ia3BKTzJFczNBY2NOTW56SHJIWXRzY2UxY2NhQmJnQUgtZG5MemVpOG5XcWtUdjhWUzRjbjQ?oc=5",
+     "source": "Mashable",
+     "time": 1794616181000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "OpenAI Launches ChatGPT Wallet Letting “Dots” Agents Buy With User Approval: 22 outlets compared",
+     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPV3E1TEZ1TmZIb0F4SEhJMmpGNzBJMWREYndyM1NrWXFQY1oweDYyZ2pVYTlldzgyV01CQ1VzUEtheWUxeHJ3OU92Qm9zWUtiUk5jRlloMWVmNG1tOXQtTzJCbmpkb2VsalFyNFJoTXNfaVNENXBBNjctNlgzZ29pTTFUa0N3NWJkVWtwQ0szLXUycllQUXl0OERzWlk1Y0lOdW1SVThGSHFKWjZMVEVpLUpLZXpWUTBEeHlTdmRLb2VWaUxJOGJ0bGVMYUhDSjRiQUpiNl8xUFR6dnU0a0lJM3lJMlpNSktDb2c?oc=5",
+     "source": "NewsCord",
+     "time": 1794611975000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+     "source": "The Verge",
+     "time": 1794602710000,
+     "bias": "LONG",
+     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/STKS539_AI_AGENTS_SHOPPING_B.jpg?quality=90&strip=all&crop=0,0,100,100"
+    },
+    {
+     "title": "OpenAI introduces digital wallet for ChatGPT",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZTUZXR0c1SHU5ZlNJdDNvNlhqYndBNWQ2SnJDaENJLW9Ob1U2MUd2UW9iWHFfVUdabmJXR21BSVYwN19IQ0xxa3lWMkk3UTNNVnNtXzhqblRGZXJidmhpcWFjdnBaZXpESnR1NS1ITXp4dTVq?oc=5",
+     "source": "Chain Store Age",
+     "time": 1794599815000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "OpenAI Introduces ChatGPT Wallet, Bringing AI Agents Into the Checkout Process",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRW94NlE4VjBURXZMRWR1Qk5qNktSOTNBZWEwT1VlanFRbkJPYTZoc0VncUd1Ylh5NkpvQVFaSF9nYkRjbV9LbWtCQVhMY09LTkRObENiU0dmeFN4UGROdE5IWWtVVFUwaWNYd0NDYWVyNC1haGRvUjIwU1dIdVctcHAwRnhBcE0tMnV1b1VZenB4eEtxRkNOZVVIR1ZZRE1qeEE2T3VqSEFJbFVSbVliTmczRmhDUVE?oc=5",
+     "source": "citybiz",
+     "time": 1794594537000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "openai-posts-steep-losses-even-as-quarterly-revenue-rises-to",
+   "title": "OpenAI posts steep losses even as quarterly revenue rises to $10 billion, WSJ reports",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQSWgwbFNYa2Z4R1pzeU83WUhSVTUwSG9vTC1tT0lfV0FMZk1oWGlNellpU083T2M2VGJDV19fLXhJY3N4dHJUUnUxMTNSeU1XdVdtd3YxNWZ6RWxlcTE1RTRyZDB5UDAweUhFTk9wRjVmNGlzSFUxOEpZTkc0TEdJY05DN3VNRDlidmJnVlJHTEY5dTJaakVFX0x3Mkl2TEZFTDBfN3dBTXhZVkxVRG41X2lyMENmWVFJQ2hHbWs0bHdzem5NSER6d0xhMjl0dw?oc=5",
+   "source": "Reuters",
+   "image": "https://assets.beincrypto.com/img/OjVhRxOjWyrhuxfO5fVYzo2p3gE=/smart/d62bfa60d9cf4ec9aeb89ffdef249ee8",
+   "category": "ai",
+   "firstSeen": 1794354840000,
+   "lastSeen": 1794583833000,
+   "sources": [
+    "Reuters",
+    "WSJ",
+    "Euronews.com",
+    "Yahoo Finance",
+    "PYMNTS.com",
+    "Futurism",
+    "Quartz",
+    "Forbes",
+    "Mexico Business News",
+    "Bloomberg.com",
+    "Boston Herald",
+    "Coinpaper",
+    "BeInCrypto"
+   ],
+   "count": 14,
+   "bias": "SHORT",
+   "strength": 66,
+   "sentimentCounts": {
+    "LONG": 1,
+    "SHORT": 8,
+    "NEUTRAL": 5
+   },
+   "impact": true,
+   "score": 64.6,
+   "assets": [
+    "USD"
+   ],
+   "keywords": [
+    "losse",
+    "$10",
+    "revenue",
+    "openai"
+   ],
+   "related": [
+    {
+     "title": "OpenAI Q3 Revenue Hits US$10 Billion; Operating Losses Widen",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONEtEc3FveG8xeWNfTmZuLW1qSXVoek1iNHZYdUlYMVFKRndfRmlWeEFKMG1yakx2QkFBcWdjSm5sWDJSN3VVbnJCN0N6YkN3MlBvYjR4bXlmSDZoV3JNaGdZVk53U1FUOHpQOW85T0VqZ2ZaU3hTc3ZfX3pMOWVmRjBYUmdpSXZCckxSMzhaNThGR2dlakNTelNCM1FfQURXWGZLeGhfMA?oc=5",
+     "source": "Mexico Business News",
+     "time": 1794583833000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "OpenAI Is Sustaining Enormous Losses",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBaRkZHTlAxTW5JZVprMjlvU3dRSlpyYWpHS0RhUW5ZUEYySmxKUkpGaUdpNXZyekk0VGhPTmoyVDB3QVpzdk9mVE9abFNvWk9zM3R5bVpVc2ZoRGhrUHd1TVVCeWpMSWZEbFh5eG1KQkVSQjA1dFE?oc=5",
+     "source": "Futurism",
+     "time": 1794499817000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Crypto Hack Losses Head Past On-Chain Revenue for First Time Since 2020",
+     "link": "https://beincrypto.com/crypto-hack-losses-surpass-revenue-2026/",
+     "source": "BeInCrypto",
+     "time": 1794458705000,
+     "bias": "SHORT",
+     "image": "https://assets.beincrypto.com/img/OjVhRxOjWyrhuxfO5fVYzo2p3gE=/smart/d62bfa60d9cf4ec9aeb89ffdef249ee8"
+    },
+    {
+     "title": "Ticker: OpenAI revenue soars; IBM to end immigration sponsorship for some",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOHA0SkNodzVCeHlMdUxVYlNxY2ZfQjl2T3dUQ21YMmJiNHo0NVdkaEY5b2h3Y3hSZ25zTnd2VE40UHpqa3hZeWVkdmVyNHVwbm9qM3pMNEhxZ0lUcUxoMzh5Q240RHJVMHhNeEZLTEJabVJUTGRwRm9YNDBxR2xyUHZGZ3Rld3BMSm9jNWt3ZVd3X0RBRFppeTZDeWdzU29yaFhVb0dGZXRtd1RxUUlSd0t3?oc=5",
+     "source": "Boston Herald",
+     "time": 1794431603000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "OpenAI Hits $10 Billion in Quarterly Revenue, But Losses Grew Too",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRGhEV2tHR3l6RXQ5cFcteDZxRDBSS05Jd0U0ZEFxSXZIUGlMOGIxUzVhRTdmNzBCbUhDcDljTFFoSkF1MEpMaEJLYmhCU01LcDJUbnA4Tl9fajdlWHprWDBwVnNQckhGemg1RGgySXRfN092REtCQXBTejF6bmxPOGxZeER4X1p4SnRGUzRBVEFVMjZOSjVhb2pPdDM?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794423731000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "OpenAI Revenue Hits $10 Billion As Losses Mount",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSUkwM0VlVzJ0bktHVWNReTBqb29sMy13UGppSVpqdW9Kei01RHlFMnBTWk1vZ3p1YVBtbDl4eURfT1ZmWGxtVk1RQWJnM0pLQ3pGTVBqdVhpM2xCWFI0eUdNQk5oUWxSeGUxNU4za1Q3ejl6bmQ3QUdQM0h5ODhOODNqQUZ1YUJ4RDRRVg?oc=5",
+     "source": "PYMNTS.com",
+     "time": 1794422091000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "claude-code-has-plenty-of-growth-ahead-says-jim-cramer",
+   "title": "Claude code has plenty of growth ahead, says Jim Cramer",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZ0RTUDlMTGZVaTkxNkczSkNuUHY5MEVNcXRYWURSd1NCTFBvdHBWSFNsNEJJaXN1SkZqZkNRak5yeERtenlKZnp3bUNvYXMteTJlNV8yWWRUNXpPNVF1QUJNQkt0dlRlRkh1Z3BfcVJpRzJNc1hkS2tWOVE4WDA2Qlp0YVhFV2piNmNBTFoyV1pqbjF5alp2Vmc4VWIxS2ZTT1IyRTIzRHEzak04NDRtOQ?oc=5",
+   "source": "CNBC",
+   "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt51641f3329337b62/6af209f8c974042ad49c3fce/office-Portra-GettyImages-1691188392_REVISED_FOR_16_BY_9.jpg?width=720&quality=80&disable=upscale",
+   "category": "ai",
+   "firstSeen": 1794247710000,
+   "lastSeen": 1794589862000,
+   "sources": [
+    "Dark Reading",
+    "ZDNET",
+    "HackerNoon",
+    "GeekWire",
+    "Mashable",
+    "CSO Online",
+    "Tom's Guide",
+    "MakeUseOf",
+    "Yahoo Finance",
+    "CNBC"
+   ],
+   "count": 10,
+   "bias": "SHORT",
+   "strength": 63,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 4,
+    "NEUTRAL": 6
+   },
+   "impact": true,
+   "score": 53.4,
+   "assets": [],
+   "keywords": [
+    "code",
+    "claude"
+   ],
+   "related": [
+    {
+     "title": "Anthropic Claude down: Why it said it was unable to authenticate code",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcDBjX2hrQXlxUEV2Q3pZVUlzVUpPcTU1TFpiaGY4bEtualhpY2FWemdBQnlpclpESjlVSkxobHJ1NDJyZU9FZlJSQW9odU1zUmdvazJqUXV6YmxPYmRDc19HWnNBTDRwRHVGcWJLc1VGZDd4RWxHUTF0Z0lKd05vOA?oc=5",
+     "source": "Mashable",
+     "time": 1794589862000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Claude Code Workshop with Provectus – Seattle",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNV9pUFRCbzZWLWN5X3o3ZHVhOGFIaEFwWXZINXFpcXR3TmhsYjBsMVdySl9sQkloX1NMZ1pYSWJHTUhWYVV5b3Jua1hWc1czLVVFMFUwa0NOaTRsQzVqMWlaQXdmWlUtNWUydDB1SkozeFBKMXkwZjRRcGw5UnZNdkZQSmE0VEpXckhiVA?oc=5",
+     "source": "GeekWire",
+     "time": 1794580570000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Agent Skills Compatibility: How Claude Code, Vibe, and Copilot Compare",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUGFKQnVPbUo0bXNBcHk3bEVmNTZLYW5CLWs2NmEzSmlHVUdWODA5LWVHQmVtLTAzZU9BUFNfS19wU3k4T2Y5bUJpVWFkX25ZajJ2eDBIVm1ud244RHpHekJFdkpESkRyS0tpbHdqODZTZng4WEJlODA0V0NTYmhXMzVBNkx2clJPaUVjdGd0NTRHejN5?oc=5",
+     "source": "HackerNoon",
+     "time": 1794554415000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Goldman Pulls Claude Code From Its Traders as AI’s Biggest Spend Category Is “Starting to Plateau”",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeWJjaHQ4a09ibHpfdWZQUWVfcEVjOGMyT2h1aUU5ZTNfWnRUdlJnWVVIWmxEd05qVGtQT2JjczQ1SVlfNXlPMERBdE1GMzBxb2ZySF9TQjNUSnkxRVM3eV9nMlB4YUxGNlFTbVJnZzJkQ28zNDAtMkxtZC1CVnhhdDRCeENVRGRCTXpIQnQ1U2hPdUQySWJ1Z09xM2g2dw?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794522058000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "I let Claude Code fix my gaming laptop, and the stutters mostly disappeared",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUEIwVlRzY3dDZkRRZDI1MXhHR0ptU2NGNnJlRDM5UGE1dURXTm1sLU8yemFaQ0dDTmpwcDNFcUE1TDNHV210TGVyNG02M0ZMb0o3NFo3WWxiNGwtUHJySFdiYmNKMmtZTi02cmlndmlMTGJxTkp4amxVUjdRUlVRSjF6RQ?oc=5",
+     "source": "MakeUseOf",
+     "time": 1794511816000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Claude Code isn't just for coding — it can find what's slowing down your PC",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdkJKV1l0MTJ5aXo5SFlfN2M3alIzeWl3eTV3cEQwUURJc01iSXBnVkZmdXU2TUNackk3bmFpSjdPNFJ3N2p6RVZISTVYaDhMMW9NWDZmSU1xd2JoSmFGSVBycUdPLTF3NXVhaGNJeXJLazhHM0pONXF5TTFkcmowM2RkbHdMRVd6bENVQ3NwT3F2Q1N1Q1M0SzQ4NzdvMzkxVWhIcktvTV9TUEU?oc=5",
+     "source": "Tom's Guide",
+     "time": 1794469500000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-launches-claude-for-manufacturing",
+   "title": "Anthropic launches ‘Claude for Manufacturing’",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWRmQ1BneGdsLUtIeUJmSS1HeUpjVnRib1o1cnJOamNsV3k1aGNFZnR4X0J2ZjdxR1VfcGg4VUt0dHBNWlQ1SDJXRDREaDZwYk80clNHVGdoeG5icjFOdFFHUmNQLWtYOV9RWkRudWRlQ3cyQzNRdVQyRllBalFjUlEtQ0Y5RnFnV1VNbmE4ckFDc1ZK?oc=5",
+   "source": "Manufacturing Dive",
+   "image": null,
+   "category": "ai",
+   "firstSeen": 1794331800000,
+   "lastSeen": 1794602951000,
+   "sources": [
+    "TechCrunch",
+    "Computerworld",
+    "Crypto Briefing",
+    "Manufacturing Dive",
+    "FourWeekMBA",
+    "Advanced Manufacturing",
+    "Manufacturing Business Technology",
+    "Business Insider",
+    "Unite.AI",
+    "Yahoo Finance"
+   ],
+   "count": 10,
+   "bias": "LONG",
+   "strength": 36,
+   "sentimentCounts": {
+    "LONG": 6,
+    "SHORT": 0,
+    "NEUTRAL": 4
+   },
+   "impact": false,
+   "score": 46.7,
+   "assets": [],
+   "keywords": [
+    "manufacturing",
+    "launche",
+    "claude"
+   ],
+   "related": [
+    {
+     "title": "Infor, Anthropic Bring Claude Into Manufacturing ERP",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWGZlSHFXWi1UR3RoT3E4cDRsYlBoTmlJS3BLckN5aW5kT3FuMlpjXzRhX25oNm4yQk9FdGZsNmhyLWZMbzhIUFM3ckJaRE1XWnNRcVBaU0V3WmxvNzk5RmlQXzdsbGFUNGZlYWFTSGw2QVZVS2Y3cmR6azBVdDNtY3RGb0lxalZ6T1JyUldXSkpHY0p4TWF3TEpJYXo0ZUJRRjZtVjhwLVdmY3hOdE5RSDhR?oc=5",
+     "source": "Manufacturing Business Technology",
+     "time": 1794602951000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic Debuts Claude for Manufacturing",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeVdsM0hiRENUa1gtLVB0N19HSGVrNXFqYTlHT2p6a2gzQk11VVppcXQ5dno4V1A1czlDd09Rbk1hMTBuVzlzNW0tbG90dmRTYS10WDdtRzdYWGZacmJJb3ZYNVE1RlVmWll1Vk42ZEtRNEVMQmNGc2xnS09iN1dHRVhvX2RmTG9XTUxxcnhIaW9TTGhyUkF6VHROT0FLcTcza2VIV3pMLWs3SGF6bTJueWpPOFlwNkE4a3ZvYUoyOEhqVGM3aEx1bWt5UFc3UmNKTnRwTm9B?oc=5",
+     "source": "Advanced Manufacturing",
+     "time": 1794594600000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Echo Harbor Tech Launches Three Unbiased News Products Built with BairesDev and Anthropic’s Claude",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVUo2VFJEN1M3ZmtDS3hfajM0aVQ0VFdGM1FONTFOaHV0emJCNTdxcy05OFZTUzVaaFFjMC1obXAyQU8wTUZ6SVROeEN1VWF4aEZsZElxeHlvdmRLby1sbzRYT3V1UWlaQlczWlJRVVpVSHotclRGMTVTMHRSWFBLZVlvNGVDeVZYdzhDaWh0b1dRVFdydmthMFRfYw?oc=5",
+     "source": "Yahoo Finance",
+     "time": 1794516360000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches Claude for Manufacturing Mid-IPO Roadshow",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQanNaSGVGVmNvTVYtWGZlZ2J3bWtpRmc1VE01U1lkUjBMcmV0UUNueU1JdW1UaDU0S2JHTGRyalVZVTBGdFNyQXZPRXY0UVdfd3BVM1RpYS1FYUk4TkM3cWlHdWM2SXhfbUQ5SVVxdTUwQ0cwYWYtelNXc1NRVFZPenM0QUN6ZHhVZXpEUw?oc=5",
+     "source": "FourWeekMBA",
+     "time": 1794510413000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic Launches Claude for Manufacturing With 17 Workflow Skills",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlgxNnVMWnBTVDVqRnpidmxSQ3J5a3VlM1lXZTlCMU1OVXNrbkZzcHJXMl9nWjJDd1JUQUZuM0Y5Rl83Qlg1TDFRUE8xcVpBdWU5dDRfS0hTNGxDNG9YRmxkUkM4S1F0T3U4RmE2cm5mLTJjQUNkTFN0ZG1CMHhxQ21vdlRpaVlqLWlSQnNGWWpJdGs?oc=5",
+     "source": "Unite.AI",
+     "time": 1794507302000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Claude is getting a factory job with a new manufacturing push",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5heE5rT2ppM3BneTFWUVhycmVaXzRzQ1ZBU09id2pSWmRac3haeW01VUgweW5LWHhtdm9ycHNlc002azA3VWRDUmE5TktPYzFwdXRzODVrZURUM0x1T014VUdnVURHMXh1S3pJLVFNQ2FaVms?oc=5",
+     "source": "Crypto Briefing",
+     "time": 1794502962000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "smartstop-director-david-mueller-sells-13-621-in-sma-shares",
+   "title": "SmartStop director David Mueller sells $13,621 in SMA shares",
+   "summary": "",
+   "link": "https://www.investing.com/news/insider-trading-news/smartstop-director-david-mueller-sells-13621-in-sma-shares-93CH-5020090",
+   "source": "Investing.com",
+   "image": "https://content-media.investing.com/news/moved_LYNXMPEM4416N_1200_L.jpg",
+   "category": "markets",
+   "firstSeen": 1794385811000,
+   "lastSeen": 1794618080000,
+   "sources": [
+    "Bitcoin.com",
+    "U.Today",
+    "Dataconomy",
+    "Investing.com"
+   ],
+   "count": 20,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 19,
+    "NEUTRAL": 1
+   },
+   "impact": true,
+   "score": 44,
+   "assets": [
+    "XRP",
+    "STOCKS",
+    "RATES"
+   ],
+   "keywords": [
+    "director",
+    "sell",
+    "share"
+   ],
+   "related": [
+    {
+     "title": "Puma Biotechnology director Michael Miller sells $121,456 in shares",
+     "link": "https://www.investing.com/news/insider-trading-news/puma-biotechnology-director-michael-miller-sells-121456-in-shares-93CH-5026861",
+     "source": "Investing.com",
+     "time": 1794618080000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM3Q0WG_1200_L.jpg"
+    },
+    {
+     "title": "Accel Entertainment CAO Kozlik sells $49,689 in shares",
+     "link": "https://www.investing.com/news/insider-trading-news/accel-entertainment-cao-kozlik-sells-49689-in-shares-93CH-5026859",
+     "source": "Investing.com",
+     "time": 1794618067000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM3Q0V4_1200_L.jpg"
+    },
+    {
+     "title": "Sinclair director Robert E. Smith sells $2.73 million of class A stock",
+     "link": "https://www.investing.com/news/insider-trading-news/sinclair-director-robert-e-smith-sells-273-million-of-class-a-stock-93CH-5026832",
+     "source": "Investing.com",
+     "time": 1794616278000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM40318_1200_L.jpg"
+    },
+    {
+     "title": "Septerna director Alan Ezekowitz sells $3.93M in SEPN stock",
+     "link": "https://www.investing.com/news/insider-trading-news/septerna-director-alan-ezekowitz-sells-393m-in-sepn-stock-93CH-5026831",
+     "source": "Investing.com",
+     "time": 1794616266000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM431A2_1200_L.jpg"
+    },
+    {
+     "title": "Travel + Leisure Co. director Michael Brown sells $1.59 million in shares",
+     "link": "https://www.investing.com/news/insider-trading-news/travel--leisure-co-director-michael-brown-sells-159-million-in-shares-93CH-5024681",
+     "source": "Investing.com",
+     "time": 1794564972000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/moved_LYNXMPEM4510G_1200_L.jpg"
+    },
+    {
+     "title": "Pagaya CFO Dobres sells $174,420 in class A ordinary shares",
+     "link": "https://www.investing.com/news/insider-trading-news/pagaya-cfo-dobres-sells-174420-in-class-a-ordinary-shares-93CH-5023979",
+     "source": "Investing.com",
+     "time": 1794537952000,
+     "bias": "SHORT",
+     "image": "https://content-media.investing.com/news/Pagaya_800x533_L_1660804883.jpg"
+    }
+   ]
+  },
+  {
+   "id": "anthropic-s-dario-amodei-can-t-always-have-his-way",
+   "title": "Anthropic’s Dario Amodei Can’t Always Have His Way",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQzlPQ3JlZTMtT0lveklCazhZQkhCOXJGNlZVSHpreHo5T25MYWY2djZKLVlCMDFqU3gtUFdJVXB4MmdEdFVGLXJPWkZxOEJ2dmlDVU1zY1RvZVBxTjdkZ21JRlk1NklycjE3VjNwYnR6X2I5M2diTU9IV3l6WTR3d2RzcV9kaVBuVHAta2NzN2NXdmpBLWtFeWV0YWdpckswWEM1dHBpTQ?oc=5",
+   "source": "Bloomberg.com",
+   "image": null,
+   "category": "ai",
+   "firstSeen": 1794488583000,
+   "lastSeen": 1794606135000,
+   "sources": [
+    "Bloomberg.com",
+    "Crypto Briefing",
+    "Business Insider",
+    "Oncodaily",
+    "The New York Times",
+    "Barron's",
+    "Yahoo Finance",
+    "Financial Times",
+    "WSJ"
+   ],
+   "count": 12,
+   "bias": "SHORT",
+   "strength": 12,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 2,
+    "NEUTRAL": 10
+   },
+   "impact": false,
+   "score": 41.7,
+   "assets": [],
+   "keywords": [
+    "dario",
+    "amodei"
+   ],
+   "related": [
+    {
+     "title": "Anthropic CEO Dario Amodei: Can AI Cure Cancer by 2036?",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBZS1NsWlNibFVnSmE5Yk05ZTBqbk5KVmZOcWlEa2pwRTl0UjBSVTdQeEZCcGFxRFhJM3NpaVZ4MkpuM2tZdHRiWUlEMEF0cGpvbDVkeGVkTFlKNGJmdU5LanZuRjNaMVdwUHhCVTN2a0FYaUJQSWc?oc=5",
+     "source": "Oncodaily",
+     "time": 1794606135000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "4 Takeaways From Dario Amodei’s Anthropic IPO Chat With Jamie Dimon",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1yaHg4TDhXQUw1LXRIMFh2eWxJRy1PQ2JscTl1S0FXcVpLeHV0a2pDU1I1eXZNel9xOTk5Zl8wbUdwQUtHSEVKdHlscndDb1k5SkFNYVRWbHJxdW0zcVRod0hlMmhMWFR6VEY2YkNnNzJwS2xmMW5CNjgyc1JHQQ?oc=5",
+     "source": "Barron's",
+     "time": 1794601680000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic’s Dario Amodei ‘not super fussed’ about market turmoil ahead of IPO",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOTd1OTNDQlBsYUpZU2JwcjlOQlZkc2t2b3c4ZkpubWc2Q0JqekxWSmVRaDJkeTRCd29uLUNXSzRrcDVUTnVHaGVrV0dpYVFNdHBtXzZjUWdZY1FrNUo4MGl1QkFZbE05ZmhhZmR3N01PX1Z1QTZDbFc3MmFnVE9teHBxVjQ?oc=5",
+     "source": "Financial Times",
+     "time": 1794598886000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "The 4 types of people Dario Amodei said he won’t hire — and what Anthropic looks for instead",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQa283c1h5YlcwMGFkTWxMTzVrUVJOWnVzUlU1WHNSLWxyNy1JdTNqZHJaWVFYcFRXSUNmSDlHQkl4cDRWcjdmVTh2UHJobmdLZE40WW5OekF4bW8zcHdCRGlSNzBiN2o4eHJTNVRSb1MtaWNxaXl2Z284ZHpBdklfQ2JDVUdCZV84dEREZUtfVDE1S0pBQVRxVnp1b25KZC1YcDhz?oc=5",
+     "source": "Business Insider",
+     "time": 1794598380000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic CEO Dario Amodei says compute is a 'huge uncertainty' as he pitches IPO",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObGloQzIwU0kxN3RZRUFORDBOU3plaGQxNnNPby03NmZ5TG1jcGxwMjhlS3RNb2hKQkdtbzh2Z293VEU1NF9yaXZHaFkwLXNFa0RINXZkdnd2TEd2enpNdHBPbTBPbkZFeGNpYjM3V2s1QW1lZ2FXX3V5VVJHclJEMG80dWVhU2g3M01sXzlXc0Jtdw?oc=5",
+     "source": "Business Insider",
+     "time": 1794596520000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic Chief Tells Jamie Dimon He Hopes IPO Will ‘Underpromise and Overdeliver’",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRHZzSkNrdXkyNGh6enBWc0xtLVE0UkpKM2hadjNwc0wtV2t6SzJHVE9KRXdEYkZRaTZTdVlKanFocEwwLTc0OUJ3SlVacXNiV1RyeEdtTENBLUNKVWZwdTZqc0h6dHlFaFJWeWFESGJ3X216bmdBZHVfci15cmQzbmk4YkZpSGpaNFctWlVPcEkxZGN4M3hXUHg4azd0M3R2WjFjc0ZtTFhjYnpMSm1Od2h2Yzl3SkNB?oc=5",
+     "source": "WSJ",
+     "time": 1794595646000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-a",
+   "title": "Anthropic Sets IPO Price Range at $70 to $78, Valuing Company at Up to $1.4 Trillion",
+   "summary": "The Claude developer is also lining up $26 billion from Nvidia, Google and other tech giants in a private placement alongside the listing.",
+   "link": "https://decrypt.co/382939/anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-at-up-to-1-4-trillion",
+   "source": "Decrypt",
+   "image": "https://cdn.decrypt.co/wp-content/uploads/2026/06/decrypt-style-anthropic-dario-amodei-2-gID_7.png",
+   "category": "tech",
+   "firstSeen": 1794310811000,
+   "lastSeen": 1794590400000,
+   "sources": [
+    "CNBC",
+    "Decrypt",
+    "Yahoo Finance",
+    "The Motley Fool",
+    "TechCrunch AI",
+    "TechCrunch",
+    "Brave New Coin",
+    "NeoTeo"
+   ],
+   "count": 11,
+   "bias": "LONG",
+   "strength": 33,
+   "sentimentCounts": {
+    "LONG": 4,
+    "SHORT": 0,
+    "NEUTRAL": 7
+   },
+   "impact": false,
+   "score": 41.7,
+   "assets": [],
+   "keywords": [
+    "$78",
+    "$70",
+    "range",
+    "sets",
+    "$1.4",
+    "share"
+   ],
+   "related": [
+    {
+     "title": "Anthropic Set Its IPO Share Price Range at $70 to $78, Valuing It at Up to $1.4 Trillion",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNy04SXFDblVieHY2RDZpUXVpeWlHdFl4NTBoVDFJXzZkVkg5Z2tqR3phSW9xVU1xSnNiaVBReTExNWlKWGp2Ui1jNEVUOXNST1RpZS1VcDI2VlpHMk9JQk9RUUNpU05PeXJkRDVjZjR6c1lNYTdORkMzMzE5ZXY1QmNyeDdBYi1aZVcwZkhpOVNYOGJMTEs3aGVoYXpHd1FocmhlWTFFZi10Q2NvSHBjSnJkbVR6VEs2S3g4M25pSQ?oc=5",
+     "source": "The Motley Fool",
+     "time": 1794590400000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO terms: $70–$78 proposed share range",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcmVfc19FUHM4RnNsYzdOWWNNNy1yS3Z6R2R3N1RBRHBIOXphazAxTDFaWmJiUnd6YS02RDNXaGF2eXh4aWVhSkdGakVBRkVjM0pXM19FbWVHTE5kRm9JTXlwYnQ5cFQ0Q3F1S3VIQTB6eXVVNGVPcGZYbGhVVHBmRHQzNA?oc=5",
+     "source": "NeoTeo",
+     "time": 1794545067000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic IPO Targets Up to $64B as Claude Maker Sets $70–$78 Share Range",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdFV2amtKejFLazBpdi1veXRmUTB4V2gzTjR5VVRQS1JwX2lvZC1lWEpVaV9JMlZtMzluSnlmT2dnUThGMmtpekoyc2NaQUpCTlllZHprbEhiWVZETlE4QnVEYUdaTENyRG9BN2dyVVZXLTRqU09HWVRhMEJ3M0U1MnFn?oc=5",
+     "source": "Brave New Coin",
+     "time": 1794398404000,
+     "bias": "LONG",
+     "image": null
+    },
+    {
+     "title": "Anthropic's IPO valuation could reach $1.4 trillion",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxORjR2WDhDZ0RFeE91Q1hycUZMMDFoSUFSTW5hYllsYW1MU3BKUzE3dU9NaFVXWldMMHpzay16UENiSEM1THZqRTZNbFY3NTB2d2Z5QndkaDJqeGQ1NVNEN1kyVkxMTUp2ajEwZ0xUQnhXeS1UdEp5QmhCY2R4R3ZtODlYNW5IclVJdUhyYUNoUDZBUU5rT1ZKNU5hWkI?oc=5",
+     "source": "CNBC",
+     "time": 1794391350000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic sets IPO price range",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5LQTN2NjVhNGhIMjQ0NGxyLTYzU1lXWjZVX2tyMS1kYXdydlM2cVNhOUZaekRaWU5qMFVSNVlOcVROdUt1NlVFTjd0SlhLanE2OUtuNTR6V2ppdGVjXzdTbzc3ZV94ZmJ1M0VkZTlaT3dzQlA2T2pucDlseWVrZw?oc=5",
+     "source": "CNBC",
+     "time": 1794381590000,
+     "bias": "NEUTRAL",
+     "image": null
+    },
+    {
+     "title": "Anthropic sets IPO price range of $70 to $78, looks to start trading Nov. 19, sources say",
+     "link": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html",
+     "source": "CNBC",
+     "time": 1794325320000,
+     "bias": "NEUTRAL",
+     "image": null
+    }
+   ]
+  },
+  {
+   "id": "nonprofits-sue-openai-google-anthropic-meta-and-spacex-ai-un",
+   "title": "Nonprofits sue OpenAI, Google, Anthropic, Meta and SpaceX AI units to halt frontier AI development",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ubnZ1eWVOZ3ZyYzhhNVY2WXN3RFEyc3RIazZ6WVVoUHhJVHpDLWN1azdOWU95NmpibWJNam9Bb1p3LVVyX2RpMF8xdXRrZl9nMDAzaml3?oc=5",
+   "source": "Cryptonews.net",
+   "image": null,
+   "category": "ai",
+   "firstSeen": 1794507704000,
+   "lastSeen": 1794589014000,
+   "sources": [
+    "TradingView",
+    "Reuters",
+    "Crypto Briefing",
+    "BigGo Finance",
+    "Cryptonews.net",
+    "Dataconomy",
+    "Business and Human Rights Centre"
+   ],
+   "count": 7,
+   "bias": "SHORT",
+   "strength": 100,
+   "sentimentCounts": {
+    "LONG": 0,
+    "SHORT": 7,
+    "NEUTRAL": 0
+   },
+   "impact": false,
+   "score": 33.4,
+   "assets": [],
+   "keywords": [
+    "nonprofit",
+    "frontier",
+    "development",
+    "halt",
+    "lawsuit",
+    "sue"
+   ],
+   "related": [
+    {
+     "title": "USA: Coalition of civil society organisations sues Anthropic, Google, Meta, OpenAI and SpaceXSI to halt development of new AI models",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPc2hmTjNsN2lPR1FpVldWZmlBOFcyU0ZMeWJBejhzeHdYU201dVhCMmZqSGlkYUlzanRaMGx0eWdERjJqN2wyT2dySFluNERBZEtNLVlZWDhJVGZELVF3N3pCOU9wVHFFSFBKa1oxZExTTzQzTkptX296clczUG9LMEhRR2Nka3A1aWJRaUUwaTYzRXV2Mzl4NzY2Tl9Ha093SDktNzR4aGYtc2NpSTdUTlRndjFzNTdYY3RXVHhLcmw4UVdseXZRdWFn?oc=5",
+     "source": "Business and Human Rights Centre",
+     "time": 1794589014000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Nonprofits Sue OpenAI, Google And Meta To Halt Advanced AI Development",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMkxKakdYQ3BIZ1VzQ1ZGTHhmcWJtZ2lIalBGbHJzS1hXM0hvZzVidThjR3FmRm9vb1NHWGE5WHhSU2xtXzQ2cnRkbTh4bGl4VFFMWGxLQVJrblNBQnJOYTFKcUs0ZFRHeTlPVTZrbC1lUmZtdm5OLW5Qc01LUnExLUs3SWluNmd0NWZKa3JjcUZQTUt3NjEw?oc=5",
+     "source": "Dataconomy",
+     "time": 1794555359000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "Nonprofits Sue OpenAI, Anthropic, Google and Meta to Halt Frontier AI Buildout",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JNEswR2NyUVYyNkhCQWZKV2ZDUTljZl9RZTlnNlM2UDVHMmlWU2x0dDVJWUFfeXhCUU9kNzN1MS1UeW02Z083QmZxZ1FoM0dEck1DNm5JU0JiN1g5ekxaeUU3UXJIWVI3alBtMUlNZFlabG1QMHc?oc=5",
+     "source": "BigGo Finance",
+     "time": 1794521100000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "OpenAI, Google, Anthropic face lawsuit to stop advanced AI model development",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOXl2RzRQSV9mblN2NFluY3RWd2RHT2ppZkhwLUVweU9yR3h3X3lJUWRTSlRNakNVSTI4ZV9VOURiUnNLT1pNQkRfS0lwNS1JaV9hczN0c24zbXdPY3JwcUlNMXNrVXlUdkFkSlc3YWdFRWVrWVFqZzM5dUNTZ19BeXotWXZIZFhWakpIWWM4bDJjWTVNdlJTcWNNT1BLSHRwd0pBdA?oc=5",
+     "source": "Crypto Briefing",
+     "time": 1794519382000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "OpenAI, Google, Anthropic hit with lawsuit seeking halt to frontier AI development",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWTR4ak5BdnRmV3hzYTZOcVhBYklWU01YRmtLak03b2hmeC1PMTd5blRQWUkxR2Q1ZXZWRC0xNkNxVDVoN2VOdTVlX1hFMXgwS1Y5TW1fUGt4NThQaEhRVFdna1YxUDhLTnBYUFJ6WTlFajlLM1BZTTRwNk5sWFMydkZtMlJNUnU4MWlDcUN6QmNtVHdUT1pLNXd6QXc4QVk0WmMtM1JxWU5XVC1PUGRIMVJNY2wzN1Z1d2N6WWJkbw?oc=5",
+     "source": "Reuters",
+     "time": 1794515749000,
+     "bias": "SHORT",
+     "image": null
+    },
+    {
+     "title": "OpenAI, Google, Anthropic hit with lawsuit seeking halt to frontier AI development",
+     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNcEFMdGNmZlBEMkJaYkVMQWVMRVlkdnFXWlAtSVNaV2laQ3RlOEJjTzIta1VjU2xsOWIzeEtRZUM1bVNSb0tVRTEwdmZsV1JRSEluLWRTV25DRXQ2WXpUdTZuME8zVUVobmcwZi1ZbVprb3ZSZ0dMTWdHdUl2SEVvV3psamZqTnMtS3g2WnRyemNqS2MzbVF3NTRBX1VxbjI1WmpSOGtaV1o3bzBEXzN6RzQ2SGRJWGpkNE9TenFqeC1wNEg5NE9Qd3AwRkZaX0t3a1F0VXA0QmV5QVA4aUt1TjdUYjI?oc=5",
+     "source": "TradingView",
+     "time": 1794507704000,
+     "bias": "SHORT",
+     "image": null
+    }
+   ]
+  }
+ ],
+ "roundups": [
+  {
+   "source": "O'Reilly Radar",
+   "category": "ai",
+   "title": "This Week in AI: Who Gets to Benefit from AI?",
+   "summary": "AI is becoming more capable at handling everyday tasks, but benefiting from that progress depends increasingly on where people live, what language they speak, and how much control they have over the technology. On the la",
+   "link": "https://www.oreilly.com/radar/this-week-in-ai-who-gets-to-benefit-from-ai/",
+   "image": "https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/08/USE_THIS_thisweek-ai-radar-1600x840-1.png",
+   "time": 1794588886000
+  },
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "Bitcoin: Correction or Reset?",
+   "summary": "Bitcoin has spent four days below its $75,717 short-term holder cost basis. ETF flows, options, CPI and the Anthropic listing will decide: correction or reset? The post Bitcoin: Correction or Reset? appeared first on Bit",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/bitcoin-correction-or-reset/",
+   "image": "https://blog.bitfinex.com/wp-content/uploads/2026/11/image-56-1024x583.png?ver=1794406718",
+   "time": 1794407505000
+  },
+  {
+   "source": "Bitfinex Alpha",
+   "category": "crypto",
+   "title": "After the Equity Rout, CPI Sets Direction",
+   "summary": "The post After the Equity Rout, CPI Sets Direction appeared first on Bitfinex blog .",
+   "link": "https://blog.bitfinex.com/bitfinex-alpha/after-the-equity-rout-cpi-sets-direction/",
+   "image": null,
+   "time": 1794242040000
+  },
+  {
+   "source": "Cointelegraph",
+   "category": "crypto",
+   "title": "BTC price eyes $73K amid Nvidia volatility: Three things to know in Bitcoin this week",
+   "summary": "Bitcoin price action fell to its lowest levels since mid-August as Nvidia reports added to sell-side pressure across stock-market futures.",
+   "link": "https://cointelegraph.com/markets/btc-price-nvidia-volatility-three-things-bitcoin-this-week",
+   "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6ZPZ3XN7CEBDWKGJCADW5H6/ai-falling-stock-prices-960x644-960x644.webp",
+   "time": 1794218620000
+  },
+  {
+   "source": "Bitcoin.com",
+   "category": "crypto",
+   "title": "Blue Wave, Red Week — Week in Review",
+   "summary": "This editorial is from this week’s edition of the newsletter Week in Review, sent to subscribers on Friday. Subscribe to the newsletter to get this weekly editorial the second it’s finished. The newsletter also includes ",
+   "link": "https://news.bitcoin.com/opinion-and-analysis/blue-wave-red-week-week-in-review/",
+   "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/blue-wave-red-week--week-in-review-768x432.png",
+   "time": 1794146401000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "Wall Street Week Ahead",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964825-wall-street-week-ahead?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794136436000
+  },
+  {
+   "source": "The Verge Installer",
+   "category": "tech",
+   "title": "Zelda is back and better than ever",
+   "summary": "Hi, friends! Welcome to Installer No. 151, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, get psyched because it's officially Bad Holiday Movie Season, and also you can read all t",
+   "link": "https://www.theverge.com/tech/1028930/zelda-ocarina-godzilla-minus-zero-affinity-installer",
+   "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Installer-151.jpg?quality=90&strip=all&crop=0,0,100,100",
+   "time": 1794059341000
+  },
+  {
+   "source": "Seeking Alpha",
+   "category": "markets",
+   "title": "What Moved Markets This Week",
+   "summary": "",
+   "link": "https://seekingalpha.com/article/4964579-what-moved-markets-this-week?source=feed_tag_wall_st_breakfast",
+   "image": null,
+   "time": 1794051446000
+  },
+  {
+   "source": "O'Reilly Radar",
+   "category": "ai",
+   "title": "This Week in AI: The Cost of Progress",
+   "summary": "New frontier models arrived this week as investors showed signs of growing cautious about AI spending. On the latest episode of This Week in AI, we examined those developments, along with research into how models learn a",
+   "link": "https://www.oreilly.com/radar/this-week-in-ai-the-cost-of-progress/",
+   "image": "https://www.oreilly.com/radar/wp-content/uploads/sites/3/2026/08/USE_THIS_thisweek-ai-radar-1600x840-1.png",
+   "time": 1793984106000
+  }
+ ]
+}
